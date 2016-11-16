@@ -136,12 +136,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="MainSplash.cpp" />
+    <ClCompile Include="StudentSplash.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MyForm.h">
+    <ClInclude Include="MainSplash.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="StudentSplash.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\..\Desktop\Attempt 2\Attempt 2\Text.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Art\calendar-and-clock.ico" />
+    <Image Include="..\Art\EnTec.jpg" />
+    <Image Include="..\Art\EnTec_vert_color.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MainSplash.resx">
+      <DependentUpon>MainSplash.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentSplash.resx">
+      <DependentUpon>StudentSplash.h</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

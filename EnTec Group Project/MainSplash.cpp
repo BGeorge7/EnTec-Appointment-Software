@@ -1,4 +1,4 @@
-#include "MyForm.h"
+#include "MainSplash.h"
 
 using namespace System;
 using namespace System::Windows::Forms;
@@ -10,6 +10,6 @@ void Main(array<String^>^ args)
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 
-	EnTec_Group_Project::MyForm form;
+	EnTec_Group_Project::MainSplash form;
 	Application::Run(%form);
 }

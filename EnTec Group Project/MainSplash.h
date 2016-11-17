@@ -1,7 +1,6 @@
 #pragma once
 #include "StudentSplash.h"
 
-
 namespace EnTec_Group_Project {
 
 	using namespace System;
@@ -137,6 +136,7 @@ namespace EnTec_Group_Project {
 				this->Hide();
 				StudentSplash^ spS = gcnew StudentSplash();
 				spS->ShowDialog();
+				this->Show();
 			}
 			System::Void btnAdvisor_Click(System::Object^  sender, System::EventArgs^  e)
 			{

@@ -136,10 +136,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DegreeSelect.cpp" />
     <ClCompile Include="MainSplash.cpp" />
     <ClCompile Include="StudentSplash.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DegreeSelect.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="MainSplash.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -156,6 +160,9 @@
     <Image Include="..\Art\EnTec_vert_color.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="DegreeSelect.resx">
+      <DependentUpon>DegreeSelect.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainSplash.resx">
       <DependentUpon>MainSplash.h</DependentUpon>
     </EmbeddedResource>

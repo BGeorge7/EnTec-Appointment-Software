@@ -12,4 +12,5 @@ void Main(array<String^>^ args)
 
 	EnTec_Group_Project::MainSplash form;
 	Application::Run(%form);
+
 }

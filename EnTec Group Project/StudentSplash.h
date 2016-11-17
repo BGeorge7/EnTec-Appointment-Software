@@ -1,4 +1,5 @@
 #pragma once
+#include "DegreeSelect.h"
 
 namespace EnTec_Group_Project {
 
@@ -34,6 +35,7 @@ namespace EnTec_Group_Project {
 				delete components;
 			}
 		}
+
 	private: System::Windows::Forms::PictureBox^  pictureBox1;
 	private: System::Windows::Forms::Label^  lblStudent1;
 	private: System::Windows::Forms::Label^  lblName;
@@ -159,6 +161,7 @@ namespace EnTec_Group_Project {
 			this->btnNext->TabIndex = 8;
 			this->btnNext->Text = L"Next";
 			this->btnNext->UseVisualStyleBackColor = true;
+			this->btnNext->Click += gcnew System::EventHandler(this, &StudentSplash::btnNext_Click);
 			// 
 			// btnBack
 			// 
@@ -168,6 +171,7 @@ namespace EnTec_Group_Project {
 			this->btnBack->TabIndex = 9;
 			this->btnBack->Text = L"Back";
 			this->btnBack->UseVisualStyleBackColor = true;
+			this->btnBack->Click += gcnew System::EventHandler(this, &StudentSplash::btnBack_Click);
 			// 
 			// StudentSplash
 			// 
@@ -196,5 +200,16 @@ namespace EnTec_Group_Project {
 #pragma endregion
 
 
+private: System::Void btnNext_Click(System::Object^  sender, System::EventArgs^  e) {
+
+	this->Hide();
+	DegreeSelect^ degreeForm = gcnew DegreeSelect();
+	degreeForm->ShowDialog();
+	this->Show();
+
+}
+private: System::Void btnBack_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->Hide();
+}
 };
 }

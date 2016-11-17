@@ -121,10 +121,10 @@ namespace EnTec_Group_Project {
 			this->rdMAGIC->AutoSize = true;
 			this->rdMAGIC->Location = System::Drawing::Point(540, 12);
 			this->rdMAGIC->Name = L"rdMAGIC";
-			this->rdMAGIC->Size = System::Drawing::Size(59, 17);
+			this->rdMAGIC->Size = System::Drawing::Size(74, 17);
 			this->rdMAGIC->TabIndex = 5;
 			this->rdMAGIC->TabStop = true;
-			this->rdMAGIC->Text = L"MAGIC";
+			this->rdMAGIC->Text = L"MAGIC 25";
 			this->rdMAGIC->UseVisualStyleBackColor = true;
 			// 
 			// btnNext

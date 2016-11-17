@@ -135,6 +135,7 @@ namespace EnTec_Group_Project {
 			this->btnNext->TabIndex = 6;
 			this->btnNext->Text = L"Next";
 			this->btnNext->UseVisualStyleBackColor = true;
+			this->btnNext->Click += gcnew System::EventHandler(this, &DegreeSelect::btnNext_Click);
 			// 
 			// DegreeSelect
 			// 
@@ -157,5 +158,7 @@ namespace EnTec_Group_Project {
 
 		}
 #pragma endregion
-	};
+	private: System::Void btnNext_Click(System::Object^  sender, System::EventArgs^  e) {
+	}
+};
 }

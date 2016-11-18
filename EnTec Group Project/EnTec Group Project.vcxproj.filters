@@ -14,7 +14,7 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
     <Filter Include="Notes">
-      <UniqueIdentifier>{12b009ec-bcdc-456d-89d1-60a5d4c8271c}</UniqueIdentifier>
+      <UniqueIdentifier>{9d9c4b20-9733-4efc-ab06-025ff84a1aa9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -40,11 +40,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\..\..\..\Desktop\Attempt 2\Attempt 2\Text.txt">
-      <Filter>Notes</Filter>
-    </Text>
-  </ItemGroup>
-  <ItemGroup>
     <Image Include="..\Art\calendar-and-clock.ico">
       <Filter>Resource Files</Filter>
     </Image>
@@ -62,5 +57,13 @@
     <EmbeddedResource Include="StudentSplash.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
+    <EmbeddedResource Include="DegreeSelect.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\Project Notes.txt">
+      <Filter>Notes</Filter>
+    </Text>
   </ItemGroup>
 </Project>

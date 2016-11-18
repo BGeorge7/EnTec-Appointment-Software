@@ -1,0 +1,15 @@
+STANDERDIZATION FILE
+The purpose of this file is to list standardizations of our program so that we can all be on the same page
+in terms of look and programing styles and fucntions
+
+Standard window resolution for students
+----768x432----
+All windows on the student side of the program should be of this size
+//768/2 = 384
+
+Each Page should use the calander icon and have the follow text at the top
+----EnTec Advisor Apointments----
+
+Next/Back Button Size
+----83, 23----
+

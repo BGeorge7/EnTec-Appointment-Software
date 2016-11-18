@@ -152,9 +152,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\..\..\..\Desktop\Attempt 2\Attempt 2\Text.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <Image Include="..\Art\calendar-and-clock.ico" />
     <Image Include="..\Art\EnTec.jpg" />
     <Image Include="..\Art\EnTec_vert_color.jpg" />
@@ -169,6 +166,9 @@
     <EmbeddedResource Include="StudentSplash.resx">
       <DependentUpon>StudentSplash.h</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\Project Notes.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

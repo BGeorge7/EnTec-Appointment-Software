@@ -3,14 +3,14 @@ The purpose of this file is to list standardizations of our program so that we c
 in terms of look and programing styles and fucntions
 
 Standard window resolution for students
-----768x432----
+----768, 432----
 All windows on the student side of the program should be of this size
 //768/2 = 384
+Advisor side uses a different resolution
+----629, 573----
 
 Each Page should use the calander icon and have the follow text at the top
 ----EnTec Advisor Apointments----
 
 Next/Back Button Size
 ----83, 23----
-
-Testing to see any changes on the other side

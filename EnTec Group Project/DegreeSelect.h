@@ -1,4 +1,5 @@
 #pragma once
+#include "TimeSelect.h"
 
 
 namespace EnTec_Group_Project {
@@ -194,6 +195,7 @@ namespace EnTec_Group_Project {
 			// tbEngineeringOther
 			// 
 			this->tbEngineeringOther->Location = System::Drawing::Point(28, 329);
+			this->tbEngineeringOther->MaxLength = 34;
 			this->tbEngineeringOther->Name = L"tbEngineeringOther";
 			this->tbEngineeringOther->Size = System::Drawing::Size(191, 20);
 			this->tbEngineeringOther->TabIndex = 15;
@@ -387,6 +389,7 @@ namespace EnTec_Group_Project {
 			// tbTechnologyOther
 			// 
 			this->tbTechnologyOther->Location = System::Drawing::Point(27, 238);
+			this->tbTechnologyOther->MaxLength = 34;
 			this->tbTechnologyOther->Name = L"tbTechnologyOther";
 			this->tbTechnologyOther->Size = System::Drawing::Size(191, 20);
 			this->tbTechnologyOther->TabIndex = 16;
@@ -598,6 +601,7 @@ namespace EnTec_Group_Project {
 			this->btnBack->TabIndex = 7;
 			this->btnBack->Text = L"Back";
 			this->btnBack->UseVisualStyleBackColor = true;
+			this->btnBack->Click += gcnew System::EventHandler(this, &DegreeSelect::btnBack_Click);
 			// 
 			// DegreeSelect
 			// 
@@ -627,8 +631,7 @@ namespace EnTec_Group_Project {
 
 		}
 #pragma endregion
-	private: System::Void btnNext_Click(System::Object^  sender, System::EventArgs^  e) {
-	}
+	
 private: System::Void radioButton6_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 }
 
@@ -651,6 +654,17 @@ private: System::Void rbMAGIC_CheckedChanged(System::Object^  sender, System::Ev
 		this->gbMAGIC->Enabled = false;
 	else
 		this->gbMAGIC->Enabled = true;
+}
+//Back and Next buttons
+private: System::Void btnNext_Click(System::Object^  sender, System::EventArgs^  e) {
+	
+	this->Hide();
+	TimeSelect^ timeForm = gcnew TimeSelect();
+	timeForm->ShowDialog();
+	this->Show();
+}
+private: System::Void btnBack_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->Hide();
 }
 };
 }

@@ -47,6 +47,8 @@ namespace EnTec_Group_Project {
 	private: System::Windows::Forms::TextBox^  textBox2;
 	private: System::Windows::Forms::Button^  btnNext;
 	private: System::Windows::Forms::Button^  btnBack;
+	private: System::Windows::Forms::Label^  label1;
+	private: System::Windows::Forms::Button^  button1;
 
 	protected:
 
@@ -74,6 +76,8 @@ namespace EnTec_Group_Project {
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->btnNext = (gcnew System::Windows::Forms::Button());
 			this->btnBack = (gcnew System::Windows::Forms::Button());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -173,12 +177,35 @@ namespace EnTec_Group_Project {
 			this->btnBack->UseVisualStyleBackColor = true;
 			this->btnBack->Click += gcnew System::EventHandler(this, &StudentSplash::btnBack_Click);
 			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label1->Location = System::Drawing::Point(344, 289);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(25, 18);
+			this->label1->TabIndex = 10;
+			this->label1->Text = L"Or";
+			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(314, 310);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(83, 59);
+			this->button1->TabIndex = 11;
+			this->button1->Text = L"Edit Or Cancel Previous Appointment";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &StudentSplash::button1_Click);
+			// 
 			// StudentSplash
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::White;
 			this->ClientSize = System::Drawing::Size(752, 393);
+			this->Controls->Add(this->button1);
+			this->Controls->Add(this->label1);
 			this->Controls->Add(this->btnBack);
 			this->Controls->Add(this->btnNext);
 			this->Controls->Add(this->textBox2);
@@ -210,6 +237,10 @@ private: System::Void btnNext_Click(System::Object^  sender, System::EventArgs^ 
 }
 private: System::Void btnBack_Click(System::Object^  sender, System::EventArgs^  e) {
 	this->Hide();
+}
+private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+	//TODO: Edit Dialog
+	//TODO: Make this button look better it's existance kills me
 }
 };
 }

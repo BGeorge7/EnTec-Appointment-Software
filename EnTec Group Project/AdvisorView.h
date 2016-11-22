@@ -52,6 +52,9 @@ namespace EnTec_Group_Project {
 	private: System::Windows::Forms::GroupBox^  groupBox1;
 	private: System::Windows::Forms::Label^  label3;
 	private: System::Windows::Forms::Label^  label2;
+	private: System::Windows::Forms::GroupBox^  groupBox2;
+	private: System::Windows::Forms::Label^  label4;
+	private: System::Windows::Forms::Label^  label5;
 
 	private:
 		/// <summary>
@@ -82,10 +85,14 @@ namespace EnTec_Group_Project {
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->btnRefresh = (gcnew System::Windows::Forms::Button());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
-			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->label5 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->groupBox1->SuspendLayout();
+			this->groupBox2->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// dataGridView1
@@ -227,21 +234,11 @@ namespace EnTec_Group_Project {
 			this->groupBox1->Controls->Add(this->label3);
 			this->groupBox1->Controls->Add(this->label2);
 			this->groupBox1->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->groupBox1->Location = System::Drawing::Point(440, 189);
+			this->groupBox1->Location = System::Drawing::Point(440, 137);
 			this->groupBox1->Name = L"groupBox1";
 			this->groupBox1->Size = System::Drawing::Size(161, 100);
 			this->groupBox1->TabIndex = 8;
 			this->groupBox1->TabStop = false;
-			// 
-			// label2
-			// 
-			this->label2->AutoSize = true;
-			this->label2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->label2->Location = System::Drawing::Point(34, 16);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(96, 13);
-			this->label2->TabIndex = 0;
-			this->label2->Text = L"Currently Attending";
 			// 
 			// label3
 			// 
@@ -253,11 +250,55 @@ namespace EnTec_Group_Project {
 			this->label3->TabIndex = 1;
 			this->label3->Text = L"George Barroso";
 			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->label2->Location = System::Drawing::Point(34, 16);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(96, 13);
+			this->label2->TabIndex = 0;
+			this->label2->Text = L"Currently Attending";
+			// 
+			// groupBox2
+			// 
+			this->groupBox2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
+			this->groupBox2->Controls->Add(this->label4);
+			this->groupBox2->Controls->Add(this->label5);
+			this->groupBox2->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->groupBox2->Location = System::Drawing::Point(440, 300);
+			this->groupBox2->Name = L"groupBox2";
+			this->groupBox2->Size = System::Drawing::Size(161, 100);
+			this->groupBox2->TabIndex = 9;
+			this->groupBox2->TabStop = false;
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->label4->Location = System::Drawing::Point(55, 43);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(46, 13);
+			this->label4->TabIndex = 1;
+			this->label4->Text = L"Tim Bob";
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->label5->Location = System::Drawing::Point(18, 16);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(127, 13);
+			this->label5->TabIndex = 0;
+			this->label5->Text = L"Student Currently Waiting";
+			this->label5->Click += gcnew System::EventHandler(this, &AdvisorView::label5_Click);
+			// 
 			// AdvisorView
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(613, 534);
+			this->Controls->Add(this->groupBox2);
 			this->Controls->Add(this->groupBox1);
 			this->Controls->Add(this->btnRefresh);
 			this->Controls->Add(this->button1);
@@ -274,6 +315,8 @@ namespace EnTec_Group_Project {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
+			this->groupBox2->ResumeLayout(false);
+			this->groupBox2->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -284,6 +327,8 @@ namespace EnTec_Group_Project {
 	private: System::Void radioButton2_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 	}
 private: System::Void dataGridView1_CellContentClick(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e) {
+}
+private: System::Void label5_Click(System::Object^  sender, System::EventArgs^  e) {
 }
 };
 }

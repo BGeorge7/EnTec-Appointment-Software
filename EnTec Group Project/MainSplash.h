@@ -9,19 +9,18 @@ namespace EnTec_Group_Project {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace System::Windows::Forms;
 
 	/// <summary>
 	/// Summary for MainSplash
 	/// </summary>
 	public ref class MainSplash : public System::Windows::Forms::Form
 	{
+
 	public:
 		MainSplash(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: Add the constructor code here
-			//
 		}
 
 	protected:
@@ -133,11 +132,9 @@ namespace EnTec_Group_Project {
 		private: 
 			System::Void btnStudent_Click(System::Object^  sender, System::EventArgs^  e)
 			{
+				StudentSplash^ studentForm = gcnew StudentSplash(this);
 				this->Hide();
-				StudentSplash^ spS = gcnew StudentSplash();
-				spS->ShowDialog();
-				this->Show();
-				//tets comment
+				studentForm->ShowDialog;
 			}
 			System::Void btnAdvisor_Click(System::Object^  sender, System::EventArgs^  e)
 			{

@@ -137,7 +137,6 @@ namespace EnTec_Group_Project {
 				StudentSplash^ spS = gcnew StudentSplash();
 				spS->ShowDialog();
 				this->Show();
-				//tets comment
 			}
 			System::Void btnAdvisor_Click(System::Object^  sender, System::EventArgs^  e)
 			{

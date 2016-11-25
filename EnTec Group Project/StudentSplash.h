@@ -1,6 +1,5 @@
 #pragma once
 #include "DegreeSelect.h"
-#include "MainSplash.h"
 
 namespace EnTec_Group_Project {
 
@@ -10,24 +9,19 @@ namespace EnTec_Group_Project {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
-	using namespace System::Windows::Forms;
 
 	/// <summary>
 	/// Summary for StudentSplash
 	/// </summary>
 	public ref class StudentSplash : public System::Windows::Forms::Form
 	{
-	private: MainSplash^ frPrevious;
-	private: DegreeSelect^ degreeForm = gcnew DegreeSelect();
 	public:
-		StudentSplash(MainSplash^ frPrevious)
-		{
-			this->frPrevious = frPrevious;
-			InitializeComponent();
-		}
 		StudentSplash(void)
 		{
 			InitializeComponent();
+			//
+			//TODO: Add the constructor code here
+			//
 		}
 
 	protected:
@@ -236,14 +230,14 @@ namespace EnTec_Group_Project {
 private: System::Void btnNext_Click(System::Object^  sender, System::EventArgs^  e) {
 
 	this->Hide();
+	DegreeSelect^ degreeForm = gcnew DegreeSelect();
 	degreeForm->ShowDialog();
+	this->Show();
 
 }
 private: System::Void btnBack_Click(System::Object^  sender, System::EventArgs^  e) {
 	this->Hide();
-	this->frPrevious->Show();
 }
-
 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 	//TODO: Edit Dialog
 	//TODO: Make this button look better it's existance kills me

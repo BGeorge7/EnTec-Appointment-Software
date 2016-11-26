@@ -1,5 +1,6 @@
 #pragma once
 #include "FinalizeScreen.h"
+#include <stdlib.h> 
 //TODO Fill the empty space or redesign this
 namespace EnTec_Group_Project {
 
@@ -15,7 +16,14 @@ namespace EnTec_Group_Project {
 	/// </summary>
 	public ref class TimeSelect : public System::Windows::Forms::Form
 	{
+	private: Form^ previous;
+	private: FinalizeScreen^ finalizeForm = gcnew FinalizeScreen(this);
 	public:
+		TimeSelect(Form^ previous)
+		{
+			this->previous = previous;
+			InitializeComponent();
+		}
 		TimeSelect(void)
 		{
 			InitializeComponent();
@@ -38,11 +46,14 @@ namespace EnTec_Group_Project {
 	private: System::Windows::Forms::ListBox^  lbAdvisorList;
 	protected:
 	private: System::Windows::Forms::PictureBox^  pictureBox1;
-	private: System::Windows::Forms::DateTimePicker^  dateTimePicker1;
-	private: System::Windows::Forms::Label^  label1;
+	private: System::Windows::Forms::DateTimePicker^  dateTimePicker;
+	private: System::Windows::Forms::Label^  lbTitle;
+
+
 	private: System::Windows::Forms::Button^  btnNext;
 	private: System::Windows::Forms::Button^  btnBack;
-	private: System::Windows::Forms::ComboBox^  comboBox1;
+	private: System::Windows::Forms::ComboBox^  cbReason;
+
 
 
 	private:
@@ -61,11 +72,11 @@ namespace EnTec_Group_Project {
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(TimeSelect::typeid));
 			this->lbAdvisorList = (gcnew System::Windows::Forms::ListBox());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
-			this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
-			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->dateTimePicker = (gcnew System::Windows::Forms::DateTimePicker());
+			this->lbTitle = (gcnew System::Windows::Forms::Label());
 			this->btnNext = (gcnew System::Windows::Forms::Button());
 			this->btnBack = (gcnew System::Windows::Forms::Button());
-			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
+			this->cbReason = (gcnew System::Windows::Forms::ComboBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -90,24 +101,24 @@ namespace EnTec_Group_Project {
 			this->pictureBox1->TabIndex = 1;
 			this->pictureBox1->TabStop = false;
 			// 
-			// dateTimePicker1
+			// dateTimePicker
 			// 
-			this->dateTimePicker1->Location = System::Drawing::Point(471, 119);
-			this->dateTimePicker1->Name = L"dateTimePicker1";
-			this->dateTimePicker1->Size = System::Drawing::Size(269, 20);
-			this->dateTimePicker1->TabIndex = 2;
-			this->dateTimePicker1->ValueChanged += gcnew System::EventHandler(this, &TimeSelect::dateTimePicker1_ValueChanged);
+			this->dateTimePicker->Location = System::Drawing::Point(471, 119);
+			this->dateTimePicker->Name = L"dateTimePicker";
+			this->dateTimePicker->Size = System::Drawing::Size(269, 20);
+			this->dateTimePicker->TabIndex = 2;
+			this->dateTimePicker->ValueChanged += gcnew System::EventHandler(this, &TimeSelect::dateTimePicker1_ValueChanged);
 			// 
-			// label1
+			// lbTitle
 			// 
-			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->lbTitle->AutoSize = true;
+			this->lbTitle->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(103, 95);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(536, 16);
-			this->label1->TabIndex = 3;
-			this->label1->Text = L"Please Select an Advisor, Then Select a Date and Time. When You Are Done Press Ne"
+			this->lbTitle->Location = System::Drawing::Point(103, 95);
+			this->lbTitle->Name = L"lbTitle";
+			this->lbTitle->Size = System::Drawing::Size(536, 16);
+			this->lbTitle->TabIndex = 3;
+			this->lbTitle->Text = L"Please Select an Advisor, Then Select a Date and Time. When You Are Done Press Ne"
 				L"xt";
 			// 
 			// btnNext
@@ -130,18 +141,18 @@ namespace EnTec_Group_Project {
 			this->btnBack->UseVisualStyleBackColor = true;
 			this->btnBack->Click += gcnew System::EventHandler(this, &TimeSelect::btnBack_Click);
 			// 
-			// comboBox1
+			// cbReason
 			// 
-			this->comboBox1->FormattingEnabled = true;
-			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(5) {
+			this->cbReason->FormattingEnabled = true;
+			this->cbReason->Items->AddRange(gcnew cli::array< System::Object^  >(5) {
 				L"Registration", L"MAP", L"IEP", L"Career Planning",
 					L"SAP"
 			});
-			this->comboBox1->Location = System::Drawing::Point(227, 119);
-			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(212, 21);
-			this->comboBox1->TabIndex = 6;
-			this->comboBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &TimeSelect::comboBox1_SelectedIndexChanged);
+			this->cbReason->Location = System::Drawing::Point(227, 119);
+			this->cbReason->Name = L"cbReason";
+			this->cbReason->Size = System::Drawing::Size(212, 21);
+			this->cbReason->TabIndex = 6;
+			this->cbReason->SelectedIndexChanged += gcnew System::EventHandler(this, &TimeSelect::comboBox1_SelectedIndexChanged);
 			// 
 			// TimeSelect
 			// 
@@ -150,16 +161,17 @@ namespace EnTec_Group_Project {
 			this->BackColor = System::Drawing::Color::White;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->ClientSize = System::Drawing::Size(752, 393);
-			this->Controls->Add(this->comboBox1);
+			this->Controls->Add(this->cbReason);
 			this->Controls->Add(this->btnBack);
 			this->Controls->Add(this->btnNext);
-			this->Controls->Add(this->label1);
-			this->Controls->Add(this->dateTimePicker1);
+			this->Controls->Add(this->lbTitle);
+			this->Controls->Add(this->dateTimePicker);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->lbAdvisorList);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"TimeSelect";
 			this->Text = L"EnTec Advisor Apointments";
+			this->FormClosed += gcnew System::Windows::Forms::FormClosedEventHandler(this, &TimeSelect::TimeSelect_FormClosed);
 			this->Load += gcnew System::EventHandler(this, &TimeSelect::TimeSelect_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
@@ -172,17 +184,21 @@ namespace EnTec_Group_Project {
 	private: System::Void comboBox1_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
 	}
 private: System::Void btnBack_Click(System::Object^  sender, System::EventArgs^  e) {
+
 	this->Hide();
+	this->previous->Show();
+
 }
 private: System::Void btnNext_Click(System::Object^  sender, System::EventArgs^  e) {
 
 	this->Hide();
-	FinalizeScreen^ finalizeForm = gcnew FinalizeScreen();
-	finalizeForm->ShowDialog();
-	this->Show();
+	this->finalizeForm->ShowDialog();
 
 }
 private: System::Void TimeSelect_Load(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void TimeSelect_FormClosed(System::Object^  sender, System::Windows::Forms::FormClosedEventArgs^  e) {
+	exit(0);
 }
 };
 }

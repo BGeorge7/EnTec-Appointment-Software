@@ -1,5 +1,6 @@
 #pragma once
 #include "DegreeSelect.h"
+#include <stdlib.h>
 
 namespace EnTec_Group_Project {
 
@@ -15,13 +16,17 @@ namespace EnTec_Group_Project {
 	/// </summary>
 	public ref class StudentSplash : public System::Windows::Forms::Form
 	{
+	private: DegreeSelect^ degreeForm = gcnew DegreeSelect(this);
+	private: Form^ previous;
 	public:
+		StudentSplash(Form^ previous)
+		{
+			this->previous = previous;
+			InitializeComponent();
+		}
 		StudentSplash(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: Add the constructor code here
-			//
 		}
 
 	protected:
@@ -169,6 +174,7 @@ namespace EnTec_Group_Project {
 			// 
 			// btnBack
 			// 
+			this->btnBack->Enabled = false;
 			this->btnBack->Location = System::Drawing::Point(12, 358);
 			this->btnBack->Name = L"btnBack";
 			this->btnBack->Size = System::Drawing::Size(83, 23);
@@ -219,6 +225,7 @@ namespace EnTec_Group_Project {
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"StudentSplash";
 			this->Text = L"EnTec Advisor Apointments";
+			this->FormClosed += gcnew System::Windows::Forms::FormClosedEventHandler(this, &StudentSplash::StudentSplash_FormClosed);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -230,17 +237,20 @@ namespace EnTec_Group_Project {
 private: System::Void btnNext_Click(System::Object^  sender, System::EventArgs^  e) {
 
 	this->Hide();
-	DegreeSelect^ degreeForm = gcnew DegreeSelect();
-	degreeForm->ShowDialog();
-	this->Show();
+	this->degreeForm->ShowDialog();
 
 }
 private: System::Void btnBack_Click(System::Object^  sender, System::EventArgs^  e) {
 	this->Hide();
+	this->previous->Show();
 }
 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+
 	//TODO: Edit Dialog
 	//TODO: Make this button look better it's existance kills me
+}
+private: System::Void StudentSplash_FormClosed(System::Object^  sender, System::Windows::Forms::FormClosedEventArgs^  e) {
+	exit(0);
 }
 };
 }

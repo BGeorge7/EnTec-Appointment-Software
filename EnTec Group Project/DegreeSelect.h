@@ -1,5 +1,6 @@
 #pragma once
 #include "TimeSelect.h"
+#include <stdlib.h> 
 
 
 namespace EnTec_Group_Project {
@@ -16,13 +17,17 @@ namespace EnTec_Group_Project {
 	/// </summary>
 	public ref class DegreeSelect : public System::Windows::Forms::Form
 	{
+	private: Form^ previous;
+	private: TimeSelect^ timeForm = gcnew TimeSelect(this);
 	public:
+		DegreeSelect(Form^ previous)
+		{
+			this->previous = previous;
+			InitializeComponent();
+		}
 		DegreeSelect(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: Add the constructor code here
-			//
 		}
 
 	protected:
@@ -620,6 +625,7 @@ namespace EnTec_Group_Project {
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"DegreeSelect";
 			this->Text = L"EnTec Advisor Apointments";
+			this->FormClosed += gcnew System::Windows::Forms::FormClosedEventHandler(this, &DegreeSelect::DegreeSelect_FormClosed);
 			this->gbEngineering->ResumeLayout(false);
 			this->gbEngineering->PerformLayout();
 			this->gbTechnology->ResumeLayout(false);
@@ -655,16 +661,20 @@ private: System::Void rbMAGIC_CheckedChanged(System::Object^  sender, System::Ev
 	else
 		this->gbMAGIC->Enabled = true;
 }
+
 //Back and Next buttons
 private: System::Void btnNext_Click(System::Object^  sender, System::EventArgs^  e) {
 	
 	this->Hide();
-	TimeSelect^ timeForm = gcnew TimeSelect();
-	timeForm->ShowDialog();
-	this->Show();
+	this->timeForm->ShowDialog();
 }
 private: System::Void btnBack_Click(System::Object^  sender, System::EventArgs^  e) {
+	
 	this->Hide();
+	this->previous->Show();
+}
+private: System::Void DegreeSelect_FormClosed(System::Object^  sender, System::Windows::Forms::FormClosedEventArgs^  e) {
+	exit(0);
 }
 };
 }

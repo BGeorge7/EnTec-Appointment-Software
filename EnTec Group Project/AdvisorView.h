@@ -1,4 +1,5 @@
 #pragma once
+#include <stdlib.h> 
 
 namespace EnTec_Group_Project {
 
@@ -18,9 +19,6 @@ namespace EnTec_Group_Project {
 		AdvisorView(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: Add the constructor code here
-			//
 		}
 
 	protected:
@@ -34,7 +32,9 @@ namespace EnTec_Group_Project {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::DataGridView^  dataGridView1;
+	private: System::Windows::Forms::DataGridView^  dataGridAppointments;
+	protected:
+
 	protected:
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^  Time;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^  Date;
@@ -43,15 +43,27 @@ namespace EnTec_Group_Project {
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^  Status;
 	private: System::Windows::Forms::DataGridViewButtonColumn^  Done;
 	private: System::Windows::Forms::Label^  label1;
-	private: System::Windows::Forms::TextBox^  textBox1;
-	private: System::Windows::Forms::RadioButton^  radioButton1;
-	private: System::Windows::Forms::RadioButton^  radioButton2;
-	private: System::Windows::Forms::RadioButton^  radioButton3;
-	private: System::Windows::Forms::Button^  button1;
+	private: System::Windows::Forms::TextBox^  tbSearch;
+	private: System::Windows::Forms::RadioButton^  rbName;
+	private: System::Windows::Forms::RadioButton^  rbID;
+	private: System::Windows::Forms::RadioButton^  rdTime;
+	private: System::Windows::Forms::Button^  btnSearch;
+
+
+
+
+
 	private: System::Windows::Forms::Button^  btnRefresh;
 	private: System::Windows::Forms::GroupBox^  groupBox1;
-	private: System::Windows::Forms::Label^  label3;
-	private: System::Windows::Forms::Label^  label2;
+	private: System::Windows::Forms::Label^  gb1lb2;
+
+	private: System::Windows::Forms::Label^  gb1lb1;
+
+	private: System::Windows::Forms::GroupBox^  groupBox2;
+	private: System::Windows::Forms::Label^  gb2lb2;
+
+	private: System::Windows::Forms::Label^  gb2lb1;
+
 
 	private:
 		/// <summary>
@@ -67,7 +79,7 @@ namespace EnTec_Group_Project {
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(AdvisorView::typeid));
-			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			this->dataGridAppointments = (gcnew System::Windows::Forms::DataGridView());
 			this->Time = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Date = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->StudentName = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
@@ -75,34 +87,37 @@ namespace EnTec_Group_Project {
 			this->Status = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Done = (gcnew System::Windows::Forms::DataGridViewButtonColumn());
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->radioButton1 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton2 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton3 = (gcnew System::Windows::Forms::RadioButton());
-			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->tbSearch = (gcnew System::Windows::Forms::TextBox());
+			this->rbName = (gcnew System::Windows::Forms::RadioButton());
+			this->rbID = (gcnew System::Windows::Forms::RadioButton());
+			this->rdTime = (gcnew System::Windows::Forms::RadioButton());
+			this->btnSearch = (gcnew System::Windows::Forms::Button());
 			this->btnRefresh = (gcnew System::Windows::Forms::Button());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
+			this->gb1lb2 = (gcnew System::Windows::Forms::Label());
+			this->gb1lb1 = (gcnew System::Windows::Forms::Label());
+			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
+			this->gb2lb2 = (gcnew System::Windows::Forms::Label());
+			this->gb2lb1 = (gcnew System::Windows::Forms::Label());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridAppointments))->BeginInit();
 			this->groupBox1->SuspendLayout();
+			this->groupBox2->SuspendLayout();
 			this->SuspendLayout();
 			// 
-			// dataGridView1
+			// dataGridAppointments
 			// 
-			this->dataGridView1->AllowUserToAddRows = false;
-			this->dataGridView1->AllowUserToDeleteRows = false;
-			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(6) {
-				this->Time, this->Date,
-					this->StudentName, this->ID, this->Status, this->Done
+			this->dataGridAppointments->AllowUserToAddRows = false;
+			this->dataGridAppointments->AllowUserToDeleteRows = false;
+			this->dataGridAppointments->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridAppointments->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(6) {
+				this->Time,
+					this->Date, this->StudentName, this->ID, this->Status, this->Done
 			});
-			this->dataGridView1->Location = System::Drawing::Point(12, 12);
-			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->ReadOnly = true;
-			this->dataGridView1->Size = System::Drawing::Size(419, 510);
-			this->dataGridView1->TabIndex = 0;
-			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &AdvisorView::dataGridView1_CellContentClick);
+			this->dataGridAppointments->Location = System::Drawing::Point(12, 12);
+			this->dataGridAppointments->Name = L"dataGridAppointments";
+			this->dataGridAppointments->ReadOnly = true;
+			this->dataGridAppointments->Size = System::Drawing::Size(419, 510);
+			this->dataGridAppointments->TabIndex = 0;
 			// 
 			// Time
 			// 
@@ -160,57 +175,56 @@ namespace EnTec_Group_Project {
 			this->label1->TabIndex = 1;
 			this->label1->Text = L"Search";
 			// 
-			// textBox1
+			// tbSearch
 			// 
-			this->textBox1->Location = System::Drawing::Point(437, 25);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(164, 20);
-			this->textBox1->TabIndex = 2;
+			this->tbSearch->Location = System::Drawing::Point(437, 25);
+			this->tbSearch->Name = L"tbSearch";
+			this->tbSearch->Size = System::Drawing::Size(164, 20);
+			this->tbSearch->TabIndex = 2;
 			// 
-			// radioButton1
+			// rbName
 			// 
-			this->radioButton1->AutoSize = true;
-			this->radioButton1->Location = System::Drawing::Point(440, 52);
-			this->radioButton1->Name = L"radioButton1";
-			this->radioButton1->Size = System::Drawing::Size(53, 17);
-			this->radioButton1->TabIndex = 3;
-			this->radioButton1->TabStop = true;
-			this->radioButton1->Text = L"Name";
-			this->radioButton1->UseVisualStyleBackColor = true;
+			this->rbName->AutoSize = true;
+			this->rbName->Location = System::Drawing::Point(440, 52);
+			this->rbName->Name = L"rbName";
+			this->rbName->Size = System::Drawing::Size(53, 17);
+			this->rbName->TabIndex = 3;
+			this->rbName->TabStop = true;
+			this->rbName->Text = L"Name";
+			this->rbName->UseVisualStyleBackColor = true;
 			// 
-			// radioButton2
+			// rbID
 			// 
-			this->radioButton2->AutoSize = true;
-			this->radioButton2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
-			this->radioButton2->Location = System::Drawing::Point(499, 52);
-			this->radioButton2->Name = L"radioButton2";
-			this->radioButton2->Size = System::Drawing::Size(36, 17);
-			this->radioButton2->TabIndex = 4;
-			this->radioButton2->TabStop = true;
-			this->radioButton2->Text = L"ID";
-			this->radioButton2->UseVisualStyleBackColor = true;
-			this->radioButton2->CheckedChanged += gcnew System::EventHandler(this, &AdvisorView::radioButton2_CheckedChanged);
+			this->rbID->AutoSize = true;
+			this->rbID->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
+			this->rbID->Location = System::Drawing::Point(499, 52);
+			this->rbID->Name = L"rbID";
+			this->rbID->Size = System::Drawing::Size(36, 17);
+			this->rbID->TabIndex = 4;
+			this->rbID->TabStop = true;
+			this->rbID->Text = L"ID";
+			this->rbID->UseVisualStyleBackColor = true;
 			// 
-			// radioButton3
+			// rdTime
 			// 
-			this->radioButton3->AutoSize = true;
-			this->radioButton3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
-			this->radioButton3->Location = System::Drawing::Point(541, 52);
-			this->radioButton3->Name = L"radioButton3";
-			this->radioButton3->Size = System::Drawing::Size(48, 17);
-			this->radioButton3->TabIndex = 5;
-			this->radioButton3->TabStop = true;
-			this->radioButton3->Text = L"Time";
-			this->radioButton3->UseVisualStyleBackColor = true;
+			this->rdTime->AutoSize = true;
+			this->rdTime->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
+			this->rdTime->Location = System::Drawing::Point(541, 52);
+			this->rdTime->Name = L"rdTime";
+			this->rdTime->Size = System::Drawing::Size(48, 17);
+			this->rdTime->TabIndex = 5;
+			this->rdTime->TabStop = true;
+			this->rdTime->Text = L"Time";
+			this->rdTime->UseVisualStyleBackColor = true;
 			// 
-			// button1
+			// btnSearch
 			// 
-			this->button1->Location = System::Drawing::Point(440, 75);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(161, 23);
-			this->button1->TabIndex = 6;
-			this->button1->Text = L"Search";
-			this->button1->UseVisualStyleBackColor = true;
+			this->btnSearch->Location = System::Drawing::Point(440, 75);
+			this->btnSearch->Name = L"btnSearch";
+			this->btnSearch->Size = System::Drawing::Size(161, 23);
+			this->btnSearch->TabIndex = 6;
+			this->btnSearch->Text = L"Search";
+			this->btnSearch->UseVisualStyleBackColor = true;
 			// 
 			// btnRefresh
 			// 
@@ -224,56 +238,92 @@ namespace EnTec_Group_Project {
 			// groupBox1
 			// 
 			this->groupBox1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
-			this->groupBox1->Controls->Add(this->label3);
-			this->groupBox1->Controls->Add(this->label2);
+			this->groupBox1->Controls->Add(this->gb1lb2);
+			this->groupBox1->Controls->Add(this->gb1lb1);
 			this->groupBox1->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->groupBox1->Location = System::Drawing::Point(440, 189);
+			this->groupBox1->Location = System::Drawing::Point(440, 169);
 			this->groupBox1->Name = L"groupBox1";
 			this->groupBox1->Size = System::Drawing::Size(161, 100);
 			this->groupBox1->TabIndex = 8;
 			this->groupBox1->TabStop = false;
 			// 
-			// label2
+			// gb1lb2
 			// 
-			this->label2->AutoSize = true;
-			this->label2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->label2->Location = System::Drawing::Point(34, 16);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(96, 13);
-			this->label2->TabIndex = 0;
-			this->label2->Text = L"Currently Attending";
+			this->gb1lb2->AutoSize = true;
+			this->gb1lb2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->gb1lb2->Location = System::Drawing::Point(43, 43);
+			this->gb1lb2->Name = L"gb1lb2";
+			this->gb1lb2->Size = System::Drawing::Size(81, 13);
+			this->gb1lb2->TabIndex = 1;
+			this->gb1lb2->Text = L"George Barroso";
 			// 
-			// label3
+			// gb1lb1
 			// 
-			this->label3->AutoSize = true;
-			this->label3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->label3->Location = System::Drawing::Point(43, 43);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(81, 13);
-			this->label3->TabIndex = 1;
-			this->label3->Text = L"George Barroso";
+			this->gb1lb1->AutoSize = true;
+			this->gb1lb1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->gb1lb1->Location = System::Drawing::Point(34, 16);
+			this->gb1lb1->Name = L"gb1lb1";
+			this->gb1lb1->Size = System::Drawing::Size(96, 13);
+			this->gb1lb1->TabIndex = 0;
+			this->gb1lb1->Text = L"Currently Attending";
+			// 
+			// groupBox2
+			// 
+			this->groupBox2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
+			this->groupBox2->Controls->Add(this->gb2lb2);
+			this->groupBox2->Controls->Add(this->gb2lb1);
+			this->groupBox2->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->groupBox2->Location = System::Drawing::Point(440, 295);
+			this->groupBox2->Name = L"groupBox2";
+			this->groupBox2->Size = System::Drawing::Size(161, 100);
+			this->groupBox2->TabIndex = 9;
+			this->groupBox2->TabStop = false;
+			// 
+			// gb2lb2
+			// 
+			this->gb2lb2->AutoSize = true;
+			this->gb2lb2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->gb2lb2->Location = System::Drawing::Point(53, 40);
+			this->gb2lb2->Name = L"gb2lb2";
+			this->gb2lb2->Size = System::Drawing::Size(46, 13);
+			this->gb2lb2->TabIndex = 1;
+			this->gb2lb2->Text = L"Tim Bob";
+			// 
+			// gb2lb1
+			// 
+			this->gb2lb1->AutoSize = true;
+			this->gb2lb1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->gb2lb1->Location = System::Drawing::Point(17, 16);
+			this->gb2lb1->Name = L"gb2lb1";
+			this->gb2lb1->Size = System::Drawing::Size(127, 13);
+			this->gb2lb1->TabIndex = 0;
+			this->gb2lb1->Text = L"Student Currently Waiting";
 			// 
 			// AdvisorView
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(613, 534);
+			this->Controls->Add(this->groupBox2);
 			this->Controls->Add(this->groupBox1);
 			this->Controls->Add(this->btnRefresh);
-			this->Controls->Add(this->button1);
-			this->Controls->Add(this->radioButton3);
-			this->Controls->Add(this->radioButton2);
-			this->Controls->Add(this->radioButton1);
-			this->Controls->Add(this->textBox1);
+			this->Controls->Add(this->btnSearch);
+			this->Controls->Add(this->rdTime);
+			this->Controls->Add(this->rbID);
+			this->Controls->Add(this->rbName);
+			this->Controls->Add(this->tbSearch);
 			this->Controls->Add(this->label1);
-			this->Controls->Add(this->dataGridView1);
+			this->Controls->Add(this->dataGridAppointments);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"AdvisorView";
 			this->Text = L"EnTec Advisor Apointments";
+			this->FormClosed += gcnew System::Windows::Forms::FormClosedEventHandler(this, &AdvisorView::AdvisorView_FormClosed);
 			this->Load += gcnew System::EventHandler(this, &AdvisorView::AdvisorView_Load);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridAppointments))->EndInit();
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
+			this->groupBox2->ResumeLayout(false);
+			this->groupBox2->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -281,9 +331,10 @@ namespace EnTec_Group_Project {
 #pragma endregion
 	private: System::Void AdvisorView_Load(System::Object^  sender, System::EventArgs^  e) {
 	}
-	private: System::Void radioButton2_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-	}
-private: System::Void dataGridView1_CellContentClick(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e) {
+
+
+private: System::Void AdvisorView_FormClosed(System::Object^  sender, System::Windows::Forms::FormClosedEventArgs^  e) {
+	exit(0);
 }
 };
 }

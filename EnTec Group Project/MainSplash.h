@@ -1,5 +1,7 @@
 #pragma once
 #include "StudentSplash.h"
+#include "AdvisorView.h"
+#include <stdlib.h> 
 //TODO Create New Way to Login
 namespace EnTec_Group_Project {
 
@@ -15,13 +17,11 @@ namespace EnTec_Group_Project {
 	/// </summary>
 	public ref class MainSplash : public System::Windows::Forms::Form
 	{
+	private: AdvisorView^ advisorForm = gcnew AdvisorView();
 	public:
 		MainSplash(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: Add the constructor code here
-			//
 		}
 
 	protected:
@@ -134,13 +134,19 @@ namespace EnTec_Group_Project {
 			System::Void btnStudent_Click(System::Object^  sender, System::EventArgs^  e)
 			{
 				this->Hide();
-				StudentSplash^ spS = gcnew StudentSplash();
-				spS->ShowDialog();
-				this->Show();
+				while (true)
+				{
+					StudentSplash^ studentForm = gcnew StudentSplash(this);
+					studentForm->ShowDialog();
+					studentForm->Hide();
+				}
+					
+
 			}
 			System::Void btnAdvisor_Click(System::Object^  sender, System::EventArgs^  e)
 			{
-
+				this->Hide();
+				this->advisorForm->Show();
 			}
 
 	};

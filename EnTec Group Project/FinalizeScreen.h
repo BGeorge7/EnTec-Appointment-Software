@@ -1,4 +1,5 @@
 #pragma once
+#include <stdlib.h> 
 
 namespace EnTec_Group_Project {
 
@@ -14,13 +15,16 @@ namespace EnTec_Group_Project {
 	/// </summary>
 	public ref class FinalizeScreen : public System::Windows::Forms::Form
 	{
+	private: Form^ previous;
 	public:
+		FinalizeScreen(Form^ previous)
+		{
+			this->previous = previous;
+			InitializeComponent();
+		}
 		FinalizeScreen(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: Add the constructor code here
-			//
 		}
 
 	protected:
@@ -35,33 +39,55 @@ namespace EnTec_Group_Project {
 			}
 		}
 	private: System::Windows::Forms::GroupBox^  groupBox1;
+	private: System::Windows::Forms::Label^  lbNameText;
+
+	private: System::Windows::Forms::Label^  lbNameTitle;
 	protected:
-	private: System::Windows::Forms::Label^  label2;
-	private: System::Windows::Forms::Label^  label1;
+
+
+
 	private: System::Windows::Forms::GroupBox^  groupBox2;
-	private: System::Windows::Forms::Label^  label3;
-	private: System::Windows::Forms::Label^  label4;
+	private: System::Windows::Forms::Label^  lbEmailText;
+
+	private: System::Windows::Forms::Label^  lbEmailTitle;
+
 	private: System::Windows::Forms::GroupBox^  groupBox3;
-	private: System::Windows::Forms::Label^  label5;
-	private: System::Windows::Forms::Label^  label6;
+	private: System::Windows::Forms::Label^  lbIDText;
+
+	private: System::Windows::Forms::Label^  lbIDTitle;
+
 	private: System::Windows::Forms::GroupBox^  groupBox4;
-	private: System::Windows::Forms::Label^  label7;
-	private: System::Windows::Forms::Label^  label8;
+	private: System::Windows::Forms::Label^  lbDegreeFText;
+
+	private: System::Windows::Forms::Label^  lbDegreeFTitle;
+
 	private: System::Windows::Forms::GroupBox^  groupBox5;
-	private: System::Windows::Forms::Label^  label9;
-	private: System::Windows::Forms::Label^  label10;
+	private: System::Windows::Forms::Label^  lbDegreeText;
+
+	private: System::Windows::Forms::Label^  lbDegreeTitle;
+
 	private: System::Windows::Forms::GroupBox^  groupBox6;
-	private: System::Windows::Forms::Label^  label11;
-	private: System::Windows::Forms::Label^  label12;
+	private: System::Windows::Forms::Label^  lbAdvisorText;
+
+	private: System::Windows::Forms::Label^  lbAdvisorTitle;
+
 	private: System::Windows::Forms::GroupBox^  groupBox7;
-	private: System::Windows::Forms::Label^  label13;
-	private: System::Windows::Forms::Label^  label14;
+	private: System::Windows::Forms::Label^  lbAppDText;
+
+	private: System::Windows::Forms::Label^  lbAppDTitle;
+
+
+
 	private: System::Windows::Forms::GroupBox^  groupBox8;
-	private: System::Windows::Forms::Label^  label15;
-	private: System::Windows::Forms::Label^  label16;
+	private: System::Windows::Forms::Label^  lbAppTText;
+
+	private: System::Windows::Forms::Label^  lbAppTTitle;
+
 	private: System::Windows::Forms::GroupBox^  groupBox9;
-	private: System::Windows::Forms::Label^  label17;
-	private: System::Windows::Forms::Label^  label18;
+	private: System::Windows::Forms::Label^  lbAppRText;
+
+	private: System::Windows::Forms::Label^  lbAppRTitle;
+
 	private: System::Windows::Forms::Button^  btnBack;
 	private: System::Windows::Forms::Button^  btnFinish;
 
@@ -89,32 +115,32 @@ namespace EnTec_Group_Project {
 		{
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(FinalizeScreen::typeid));
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->lbNameText = (gcnew System::Windows::Forms::Label());
+			this->lbNameTitle = (gcnew System::Windows::Forms::Label());
 			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->lbEmailText = (gcnew System::Windows::Forms::Label());
+			this->lbEmailTitle = (gcnew System::Windows::Forms::Label());
 			this->groupBox3 = (gcnew System::Windows::Forms::GroupBox());
-			this->label5 = (gcnew System::Windows::Forms::Label());
-			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->lbIDText = (gcnew System::Windows::Forms::Label());
+			this->lbIDTitle = (gcnew System::Windows::Forms::Label());
 			this->groupBox4 = (gcnew System::Windows::Forms::GroupBox());
-			this->label7 = (gcnew System::Windows::Forms::Label());
-			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->lbDegreeFText = (gcnew System::Windows::Forms::Label());
+			this->lbDegreeFTitle = (gcnew System::Windows::Forms::Label());
 			this->groupBox5 = (gcnew System::Windows::Forms::GroupBox());
-			this->label9 = (gcnew System::Windows::Forms::Label());
-			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->lbDegreeText = (gcnew System::Windows::Forms::Label());
+			this->lbDegreeTitle = (gcnew System::Windows::Forms::Label());
 			this->groupBox6 = (gcnew System::Windows::Forms::GroupBox());
-			this->label11 = (gcnew System::Windows::Forms::Label());
-			this->label12 = (gcnew System::Windows::Forms::Label());
+			this->lbAdvisorText = (gcnew System::Windows::Forms::Label());
+			this->lbAdvisorTitle = (gcnew System::Windows::Forms::Label());
 			this->groupBox7 = (gcnew System::Windows::Forms::GroupBox());
-			this->label13 = (gcnew System::Windows::Forms::Label());
-			this->label14 = (gcnew System::Windows::Forms::Label());
+			this->lbAppDText = (gcnew System::Windows::Forms::Label());
+			this->lbAppDTitle = (gcnew System::Windows::Forms::Label());
 			this->groupBox8 = (gcnew System::Windows::Forms::GroupBox());
-			this->label15 = (gcnew System::Windows::Forms::Label());
-			this->label16 = (gcnew System::Windows::Forms::Label());
+			this->lbAppTText = (gcnew System::Windows::Forms::Label());
+			this->lbAppTTitle = (gcnew System::Windows::Forms::Label());
 			this->groupBox9 = (gcnew System::Windows::Forms::GroupBox());
-			this->label17 = (gcnew System::Windows::Forms::Label());
-			this->label18 = (gcnew System::Windows::Forms::Label());
+			this->lbAppRText = (gcnew System::Windows::Forms::Label());
+			this->lbAppRTitle = (gcnew System::Windows::Forms::Label());
 			this->btnBack = (gcnew System::Windows::Forms::Button());
 			this->btnFinish = (gcnew System::Windows::Forms::Button());
 			this->groupBox1->SuspendLayout();
@@ -130,257 +156,257 @@ namespace EnTec_Group_Project {
 			// 
 			// groupBox1
 			// 
-			this->groupBox1->Controls->Add(this->label2);
-			this->groupBox1->Controls->Add(this->label1);
+			this->groupBox1->Controls->Add(this->lbNameText);
+			this->groupBox1->Controls->Add(this->lbNameTitle);
 			this->groupBox1->Location = System::Drawing::Point(12, 12);
 			this->groupBox1->Name = L"groupBox1";
 			this->groupBox1->Size = System::Drawing::Size(281, 38);
 			this->groupBox1->TabIndex = 0;
 			this->groupBox1->TabStop = false;
 			// 
-			// label1
+			// lbNameText
 			// 
-			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(6, 16);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(38, 13);
-			this->label1->TabIndex = 1;
-			this->label1->Text = L"Name:";
+			this->lbNameText->AutoSize = true;
+			this->lbNameText->Location = System::Drawing::Point(50, 16);
+			this->lbNameText->Name = L"lbNameText";
+			this->lbNameText->Size = System::Drawing::Size(71, 13);
+			this->lbNameText->TabIndex = 2;
+			this->lbNameText->Text = L"Jimmy Bob Jr.";
+			this->lbNameText->Click += gcnew System::EventHandler(this, &FinalizeScreen::label2_Click);
 			// 
-			// label2
+			// lbNameTitle
 			// 
-			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(50, 16);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(71, 13);
-			this->label2->TabIndex = 2;
-			this->label2->Text = L"Jimmy Bob Jr.";
-			this->label2->Click += gcnew System::EventHandler(this, &FinalizeScreen::label2_Click);
+			this->lbNameTitle->AutoSize = true;
+			this->lbNameTitle->Location = System::Drawing::Point(6, 16);
+			this->lbNameTitle->Name = L"lbNameTitle";
+			this->lbNameTitle->Size = System::Drawing::Size(38, 13);
+			this->lbNameTitle->TabIndex = 1;
+			this->lbNameTitle->Text = L"Name:";
 			// 
 			// groupBox2
 			// 
-			this->groupBox2->Controls->Add(this->label3);
-			this->groupBox2->Controls->Add(this->label4);
+			this->groupBox2->Controls->Add(this->lbEmailText);
+			this->groupBox2->Controls->Add(this->lbEmailTitle);
 			this->groupBox2->Location = System::Drawing::Point(12, 56);
 			this->groupBox2->Name = L"groupBox2";
 			this->groupBox2->Size = System::Drawing::Size(281, 38);
 			this->groupBox2->TabIndex = 3;
 			this->groupBox2->TabStop = false;
 			// 
-			// label3
+			// lbEmailText
 			// 
-			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(85, 16);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(111, 13);
-			this->label3->TabIndex = 2;
-			this->label3->Text = L"TestEmail@gmail.com";
-			this->label3->Click += gcnew System::EventHandler(this, &FinalizeScreen::label3_Click);
+			this->lbEmailText->AutoSize = true;
+			this->lbEmailText->Location = System::Drawing::Point(85, 16);
+			this->lbEmailText->Name = L"lbEmailText";
+			this->lbEmailText->Size = System::Drawing::Size(111, 13);
+			this->lbEmailText->TabIndex = 2;
+			this->lbEmailText->Text = L"TestEmail@gmail.com";
+			this->lbEmailText->Click += gcnew System::EventHandler(this, &FinalizeScreen::label3_Click);
 			// 
-			// label4
+			// lbEmailTitle
 			// 
-			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(6, 16);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(76, 13);
-			this->label4->TabIndex = 1;
-			this->label4->Text = L"Email Address:";
+			this->lbEmailTitle->AutoSize = true;
+			this->lbEmailTitle->Location = System::Drawing::Point(6, 16);
+			this->lbEmailTitle->Name = L"lbEmailTitle";
+			this->lbEmailTitle->Size = System::Drawing::Size(76, 13);
+			this->lbEmailTitle->TabIndex = 1;
+			this->lbEmailTitle->Text = L"Email Address:";
 			// 
 			// groupBox3
 			// 
-			this->groupBox3->Controls->Add(this->label5);
-			this->groupBox3->Controls->Add(this->label6);
+			this->groupBox3->Controls->Add(this->lbIDText);
+			this->groupBox3->Controls->Add(this->lbIDTitle);
 			this->groupBox3->Location = System::Drawing::Point(12, 100);
 			this->groupBox3->Name = L"groupBox3";
 			this->groupBox3->Size = System::Drawing::Size(281, 38);
 			this->groupBox3->TabIndex = 4;
 			this->groupBox3->TabStop = false;
 			// 
-			// label5
+			// lbIDText
 			// 
-			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(70, 16);
-			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(67, 13);
-			this->label5->TabIndex = 2;
-			this->label5->Text = L"1000458973";
+			this->lbIDText->AutoSize = true;
+			this->lbIDText->Location = System::Drawing::Point(70, 16);
+			this->lbIDText->Name = L"lbIDText";
+			this->lbIDText->Size = System::Drawing::Size(67, 13);
+			this->lbIDText->TabIndex = 2;
+			this->lbIDText->Text = L"1000458973";
 			// 
-			// label6
+			// lbIDTitle
 			// 
-			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(6, 16);
-			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(61, 13);
-			this->label6->TabIndex = 1;
-			this->label6->Text = L"Student ID:";
+			this->lbIDTitle->AutoSize = true;
+			this->lbIDTitle->Location = System::Drawing::Point(6, 16);
+			this->lbIDTitle->Name = L"lbIDTitle";
+			this->lbIDTitle->Size = System::Drawing::Size(61, 13);
+			this->lbIDTitle->TabIndex = 1;
+			this->lbIDTitle->Text = L"Student ID:";
 			// 
 			// groupBox4
 			// 
-			this->groupBox4->Controls->Add(this->label7);
-			this->groupBox4->Controls->Add(this->label8);
+			this->groupBox4->Controls->Add(this->lbDegreeFText);
+			this->groupBox4->Controls->Add(this->lbDegreeFTitle);
 			this->groupBox4->Location = System::Drawing::Point(12, 144);
 			this->groupBox4->Name = L"groupBox4";
 			this->groupBox4->Size = System::Drawing::Size(281, 38);
 			this->groupBox4->TabIndex = 5;
 			this->groupBox4->TabStop = false;
 			// 
-			// label7
+			// lbDegreeFText
 			// 
-			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(79, 16);
-			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(63, 13);
-			this->label7->TabIndex = 2;
-			this->label7->Text = L"Technology";
+			this->lbDegreeFText->AutoSize = true;
+			this->lbDegreeFText->Location = System::Drawing::Point(79, 16);
+			this->lbDegreeFText->Name = L"lbDegreeFText";
+			this->lbDegreeFText->Size = System::Drawing::Size(63, 13);
+			this->lbDegreeFText->TabIndex = 2;
+			this->lbDegreeFText->Text = L"Technology";
 			// 
-			// label8
+			// lbDegreeFTitle
 			// 
-			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(6, 16);
-			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(70, 13);
-			this->label8->TabIndex = 1;
-			this->label8->Text = L"Degree Field:";
+			this->lbDegreeFTitle->AutoSize = true;
+			this->lbDegreeFTitle->Location = System::Drawing::Point(6, 16);
+			this->lbDegreeFTitle->Name = L"lbDegreeFTitle";
+			this->lbDegreeFTitle->Size = System::Drawing::Size(70, 13);
+			this->lbDegreeFTitle->TabIndex = 1;
+			this->lbDegreeFTitle->Text = L"Degree Field:";
 			// 
 			// groupBox5
 			// 
-			this->groupBox5->Controls->Add(this->label9);
-			this->groupBox5->Controls->Add(this->label10);
+			this->groupBox5->Controls->Add(this->lbDegreeText);
+			this->groupBox5->Controls->Add(this->lbDegreeTitle);
 			this->groupBox5->Location = System::Drawing::Point(12, 188);
 			this->groupBox5->Name = L"groupBox5";
 			this->groupBox5->Size = System::Drawing::Size(281, 38);
 			this->groupBox5->TabIndex = 6;
 			this->groupBox5->TabStop = false;
 			// 
-			// label9
+			// lbDegreeText
 			// 
-			this->label9->AutoSize = true;
-			this->label9->Location = System::Drawing::Point(54, 16);
-			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(94, 13);
-			this->label9->TabIndex = 2;
-			this->label9->Text = L"Computer Science";
+			this->lbDegreeText->AutoSize = true;
+			this->lbDegreeText->Location = System::Drawing::Point(54, 16);
+			this->lbDegreeText->Name = L"lbDegreeText";
+			this->lbDegreeText->Size = System::Drawing::Size(94, 13);
+			this->lbDegreeText->TabIndex = 2;
+			this->lbDegreeText->Text = L"Computer Science";
 			// 
-			// label10
+			// lbDegreeTitle
 			// 
-			this->label10->AutoSize = true;
-			this->label10->Location = System::Drawing::Point(6, 16);
-			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(45, 13);
-			this->label10->TabIndex = 1;
-			this->label10->Text = L"Degree:";
+			this->lbDegreeTitle->AutoSize = true;
+			this->lbDegreeTitle->Location = System::Drawing::Point(6, 16);
+			this->lbDegreeTitle->Name = L"lbDegreeTitle";
+			this->lbDegreeTitle->Size = System::Drawing::Size(45, 13);
+			this->lbDegreeTitle->TabIndex = 1;
+			this->lbDegreeTitle->Text = L"Degree:";
 			// 
 			// groupBox6
 			// 
-			this->groupBox6->Controls->Add(this->label11);
-			this->groupBox6->Controls->Add(this->label12);
+			this->groupBox6->Controls->Add(this->lbAdvisorText);
+			this->groupBox6->Controls->Add(this->lbAdvisorTitle);
 			this->groupBox6->Location = System::Drawing::Point(299, 12);
 			this->groupBox6->Name = L"groupBox6";
 			this->groupBox6->Size = System::Drawing::Size(281, 38);
 			this->groupBox6->TabIndex = 7;
 			this->groupBox6->TabStop = false;
 			// 
-			// label11
+			// lbAdvisorText
 			// 
-			this->label11->AutoSize = true;
-			this->label11->Location = System::Drawing::Point(54, 16);
-			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(33, 13);
-			this->label11->TabIndex = 2;
-			this->label11->Text = L"Maria";
+			this->lbAdvisorText->AutoSize = true;
+			this->lbAdvisorText->Location = System::Drawing::Point(54, 16);
+			this->lbAdvisorText->Name = L"lbAdvisorText";
+			this->lbAdvisorText->Size = System::Drawing::Size(33, 13);
+			this->lbAdvisorText->TabIndex = 2;
+			this->lbAdvisorText->Text = L"Maria";
 			// 
-			// label12
+			// lbAdvisorTitle
 			// 
-			this->label12->AutoSize = true;
-			this->label12->Location = System::Drawing::Point(6, 16);
-			this->label12->Name = L"label12";
-			this->label12->Size = System::Drawing::Size(45, 13);
-			this->label12->TabIndex = 1;
-			this->label12->Text = L"Advisor:";
+			this->lbAdvisorTitle->AutoSize = true;
+			this->lbAdvisorTitle->Location = System::Drawing::Point(6, 16);
+			this->lbAdvisorTitle->Name = L"lbAdvisorTitle";
+			this->lbAdvisorTitle->Size = System::Drawing::Size(45, 13);
+			this->lbAdvisorTitle->TabIndex = 1;
+			this->lbAdvisorTitle->Text = L"Advisor:";
 			// 
 			// groupBox7
 			// 
-			this->groupBox7->Controls->Add(this->label13);
-			this->groupBox7->Controls->Add(this->label14);
+			this->groupBox7->Controls->Add(this->lbAppDText);
+			this->groupBox7->Controls->Add(this->lbAppDTitle);
 			this->groupBox7->Location = System::Drawing::Point(299, 56);
 			this->groupBox7->Name = L"groupBox7";
 			this->groupBox7->Size = System::Drawing::Size(281, 38);
 			this->groupBox7->TabIndex = 8;
 			this->groupBox7->TabStop = false;
 			// 
-			// label13
+			// lbAppDText
 			// 
-			this->label13->AutoSize = true;
-			this->label13->Location = System::Drawing::Point(104, 16);
-			this->label13->Name = L"label13";
-			this->label13->Size = System::Drawing::Size(59, 13);
-			this->label13->TabIndex = 2;
-			this->label13->Text = L"1/10/2017";
+			this->lbAppDText->AutoSize = true;
+			this->lbAppDText->Location = System::Drawing::Point(104, 16);
+			this->lbAppDText->Name = L"lbAppDText";
+			this->lbAppDText->Size = System::Drawing::Size(59, 13);
+			this->lbAppDText->TabIndex = 2;
+			this->lbAppDText->Text = L"1/10/2017";
 			// 
-			// label14
+			// lbAppDTitle
 			// 
-			this->label14->AutoSize = true;
-			this->label14->Location = System::Drawing::Point(6, 16);
-			this->label14->Name = L"label14";
-			this->label14->Size = System::Drawing::Size(95, 13);
-			this->label14->TabIndex = 1;
-			this->label14->Text = L"Appointment Date:";
+			this->lbAppDTitle->AutoSize = true;
+			this->lbAppDTitle->Location = System::Drawing::Point(6, 16);
+			this->lbAppDTitle->Name = L"lbAppDTitle";
+			this->lbAppDTitle->Size = System::Drawing::Size(95, 13);
+			this->lbAppDTitle->TabIndex = 1;
+			this->lbAppDTitle->Text = L"Appointment Date:";
 			// 
 			// groupBox8
 			// 
-			this->groupBox8->Controls->Add(this->label15);
-			this->groupBox8->Controls->Add(this->label16);
+			this->groupBox8->Controls->Add(this->lbAppTText);
+			this->groupBox8->Controls->Add(this->lbAppTTitle);
 			this->groupBox8->Location = System::Drawing::Point(299, 100);
 			this->groupBox8->Name = L"groupBox8";
 			this->groupBox8->Size = System::Drawing::Size(281, 38);
 			this->groupBox8->TabIndex = 9;
 			this->groupBox8->TabStop = false;
 			// 
-			// label15
+			// lbAppTText
 			// 
-			this->label15->AutoSize = true;
-			this->label15->Location = System::Drawing::Point(104, 16);
-			this->label15->Name = L"label15";
-			this->label15->Size = System::Drawing::Size(47, 13);
-			this->label15->TabIndex = 2;
-			this->label15->Text = L"8:45 AM";
+			this->lbAppTText->AutoSize = true;
+			this->lbAppTText->Location = System::Drawing::Point(104, 16);
+			this->lbAppTText->Name = L"lbAppTText";
+			this->lbAppTText->Size = System::Drawing::Size(47, 13);
+			this->lbAppTText->TabIndex = 2;
+			this->lbAppTText->Text = L"8:45 AM";
 			// 
-			// label16
+			// lbAppTTitle
 			// 
-			this->label16->AutoSize = true;
-			this->label16->Location = System::Drawing::Point(6, 16);
-			this->label16->Name = L"label16";
-			this->label16->Size = System::Drawing::Size(95, 13);
-			this->label16->TabIndex = 1;
-			this->label16->Text = L"Appointment Time:";
+			this->lbAppTTitle->AutoSize = true;
+			this->lbAppTTitle->Location = System::Drawing::Point(6, 16);
+			this->lbAppTTitle->Name = L"lbAppTTitle";
+			this->lbAppTTitle->Size = System::Drawing::Size(95, 13);
+			this->lbAppTTitle->TabIndex = 1;
+			this->lbAppTTitle->Text = L"Appointment Time:";
 			// 
 			// groupBox9
 			// 
-			this->groupBox9->Controls->Add(this->label17);
-			this->groupBox9->Controls->Add(this->label18);
+			this->groupBox9->Controls->Add(this->lbAppRText);
+			this->groupBox9->Controls->Add(this->lbAppRTitle);
 			this->groupBox9->Location = System::Drawing::Point(299, 144);
 			this->groupBox9->Name = L"groupBox9";
 			this->groupBox9->Size = System::Drawing::Size(281, 38);
 			this->groupBox9->TabIndex = 10;
 			this->groupBox9->TabStop = false;
 			// 
-			// label17
+			// lbAppRText
 			// 
-			this->label17->AutoSize = true;
-			this->label17->Location = System::Drawing::Point(121, 16);
-			this->label17->Name = L"label17";
-			this->label17->Size = System::Drawing::Size(24, 13);
-			this->label17->TabIndex = 2;
-			this->label17->Text = L"IEP";
+			this->lbAppRText->AutoSize = true;
+			this->lbAppRText->Location = System::Drawing::Point(121, 16);
+			this->lbAppRText->Name = L"lbAppRText";
+			this->lbAppRText->Size = System::Drawing::Size(24, 13);
+			this->lbAppRText->TabIndex = 2;
+			this->lbAppRText->Text = L"IEP";
 			// 
-			// label18
+			// lbAppRTitle
 			// 
-			this->label18->AutoSize = true;
-			this->label18->Location = System::Drawing::Point(6, 16);
-			this->label18->Name = L"label18";
-			this->label18->Size = System::Drawing::Size(109, 13);
-			this->label18->TabIndex = 1;
-			this->label18->Text = L"Appointment Reason:";
+			this->lbAppRTitle->AutoSize = true;
+			this->lbAppRTitle->Location = System::Drawing::Point(6, 16);
+			this->lbAppRTitle->Name = L"lbAppRTitle";
+			this->lbAppRTitle->Size = System::Drawing::Size(109, 13);
+			this->lbAppRTitle->TabIndex = 1;
+			this->lbAppRTitle->Text = L"Appointment Reason:";
 			// 
 			// btnBack
 			// 
@@ -421,6 +447,7 @@ namespace EnTec_Group_Project {
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"FinalizeScreen";
 			this->Text = L"EnTec Advisor Apointments";
+			this->FormClosed += gcnew System::Windows::Forms::FormClosedEventHandler(this, &FinalizeScreen::FinalizeScreen_FormClosed);
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
 			this->groupBox2->ResumeLayout(false);
@@ -456,10 +483,9 @@ private: System::Void btnFinish_Click(System::Object^  sender, System::EventArgs
 	MessageBox::Show("Apointment has been set!", "Done",
 	MessageBoxButtons::OK, MessageBoxIcon::Information);
 	this->Hide();
-	//TODO: Go Back to Start
-	//Refer to this: https://stackoverflow.com/questions/5768613/c-cli-how-to-open-a-new-form-and-back
-	//and this: http://www.functionx.com/vcnet/Lesson07.htm
-
+}
+private: System::Void FinalizeScreen_FormClosed(System::Object^  sender, System::Windows::Forms::FormClosedEventArgs^  e) {
+	exit(0);
 }
 };
 }

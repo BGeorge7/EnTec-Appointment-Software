@@ -478,6 +478,8 @@ namespace EnTec_Group_Project {
 	private: System::Void label3_Click(System::Object^  sender, System::EventArgs^  e) {
 	}
 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->Hide();
+	this->previous->Show();
 }
 private: System::Void btnFinish_Click(System::Object^  sender, System::EventArgs^  e) {
 	MessageBox::Show("Apointment has been set!", "Done",

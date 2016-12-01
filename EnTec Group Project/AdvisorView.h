@@ -263,9 +263,9 @@ namespace EnTec_Group_Project {
 			this->gb1lb1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->gb1lb1->Location = System::Drawing::Point(34, 16);
 			this->gb1lb1->Name = L"gb1lb1";
-			this->gb1lb1->Size = System::Drawing::Size(96, 13);
+			this->gb1lb1->Size = System::Drawing::Size(52, 13);
 			this->gb1lb1->TabIndex = 0;
-			this->gb1lb1->Text = L"Currently Attending";
+			this->gb1lb1->Text = L"Attending";
 			// 
 			// groupBox2
 			// 

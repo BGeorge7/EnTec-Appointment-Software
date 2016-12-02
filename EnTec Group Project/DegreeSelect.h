@@ -591,7 +591,7 @@ namespace EnTec_Group_Project {
 			// rdTechnology
 			// 
 			this->rdTechnology->AutoSize = true;
-			this->rdTechnology->Location = System::Drawing::Point(16, 14);
+			this->rdTechnology->Location = System::Drawing::Point(16, 13);
 			this->rdTechnology->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->rdTechnology->Name = L"rdTechnology";
 			this->rdTechnology->Size = System::Drawing::Size(103, 21);
@@ -604,20 +604,20 @@ namespace EnTec_Group_Project {
 			// rbEngineering
 			// 
 			this->rbEngineering->AutoSize = true;
-			this->rbEngineering->Location = System::Drawing::Point(344, 14);
+			this->rbEngineering->Location = System::Drawing::Point(344, 13);
 			this->rbEngineering->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->rbEngineering->Name = L"rbEngineering";
-			this->rbEngineering->Size = System::Drawing::Size(65, 21);
+			this->rbEngineering->Size = System::Drawing::Size(105, 21);
 			this->rbEngineering->TabIndex = 4;
 			this->rbEngineering->TabStop = true;
-			this->rbEngineering->Text = L"Engin";
+			this->rbEngineering->Text = L"Engineering";
 			this->rbEngineering->UseVisualStyleBackColor = true;
 			this->rbEngineering->CheckedChanged += gcnew System::EventHandler(this, &DegreeSelect::rbEngineering_CheckedChanged);
 			// 
 			// rbMAGIC
 			// 
 			this->rbMAGIC->AutoSize = true;
-			this->rbMAGIC->Location = System::Drawing::Point(687, 14);
+			this->rbMAGIC->Location = System::Drawing::Point(687, 13);
 			this->rbMAGIC->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->rbMAGIC->Name = L"rbMAGIC";
 			this->rbMAGIC->Size = System::Drawing::Size(72, 21);

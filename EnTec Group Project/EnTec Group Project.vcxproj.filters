@@ -67,6 +67,9 @@
     <Image Include="..\Art\EnTec.jpg">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="..\..\..\Pictures\MDC Shark.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainSplash.resx">
@@ -79,6 +82,12 @@
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="TimeSelect.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdvisorView.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinalizeScreen.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
   </ItemGroup>

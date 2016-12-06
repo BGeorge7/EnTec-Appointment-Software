@@ -1,5 +1,6 @@
 #pragma once
 #include "TimeSelect.h"
+#include "Student.h"
 #include <stdlib.h> 
 
 
@@ -17,11 +18,13 @@ namespace EnTec_Group_Project {
 	/// </summary>
 	public ref class DegreeSelect : public System::Windows::Forms::Form
 	{
+	private: Student^ student;
 	private: Form^ previous;
-	private: TimeSelect^ timeForm = gcnew TimeSelect(this);
+	private: TimeSelect^ timeForm = gcnew TimeSelect(this, student);
 	public:
-		DegreeSelect(Form^ previous)
+		DegreeSelect(Form^ previous, Student^ student)
 		{
+			this->student = student;
 			this->previous = previous;
 			InitializeComponent();
 		}
@@ -41,6 +44,22 @@ namespace EnTec_Group_Project {
 				delete components;
 			}
 		}
+
+	private: bool isSelected()
+	{
+		if (rbTechnology->Checked == true)
+		{
+
+		}
+		else if (rbEngineering->Checked == true)
+		{
+
+		}
+		else if (rbMAGIC->Checked == true)
+		{
+
+		}
+	}
 	private: System::Windows::Forms::GroupBox^  gbEngineering;
 	private: System::Windows::Forms::GroupBox^  gbTechnology;
 	protected:
@@ -49,7 +68,8 @@ namespace EnTec_Group_Project {
 	protected:
 
 	private: System::Windows::Forms::GroupBox^  gbMAGIC;
-	private: System::Windows::Forms::RadioButton^  rdTechnology;
+	private: System::Windows::Forms::RadioButton^  rbTechnology;
+
 	private: System::Windows::Forms::RadioButton^  rbEngineering;
 	private: System::Windows::Forms::RadioButton^  rbMAGIC;
 
@@ -161,7 +181,7 @@ namespace EnTec_Group_Project {
 			this->gbMAGIC = (gcnew System::Windows::Forms::GroupBox());
 			this->rbMAGIC2 = (gcnew System::Windows::Forms::RadioButton());
 			this->rbMAGIC1 = (gcnew System::Windows::Forms::RadioButton());
-			this->rdTechnology = (gcnew System::Windows::Forms::RadioButton());
+			this->rbTechnology = (gcnew System::Windows::Forms::RadioButton());
 			this->rbEngineering = (gcnew System::Windows::Forms::RadioButton());
 			this->rbMAGIC = (gcnew System::Windows::Forms::RadioButton());
 			this->btnNext = (gcnew System::Windows::Forms::Button());
@@ -552,17 +572,17 @@ namespace EnTec_Group_Project {
 			this->rbMAGIC1->Text = L"Animation and Game Art ";
 			this->rbMAGIC1->UseVisualStyleBackColor = true;
 			// 
-			// rdTechnology
+			// rbTechnology
 			// 
-			this->rdTechnology->AutoSize = true;
-			this->rdTechnology->Location = System::Drawing::Point(12, 11);
-			this->rdTechnology->Name = L"rdTechnology";
-			this->rdTechnology->Size = System::Drawing::Size(81, 17);
-			this->rdTechnology->TabIndex = 3;
-			this->rdTechnology->TabStop = true;
-			this->rdTechnology->Text = L"Technology";
-			this->rdTechnology->UseVisualStyleBackColor = true;
-			this->rdTechnology->CheckedChanged += gcnew System::EventHandler(this, &DegreeSelect::rdTechnology_CheckedChanged);
+			this->rbTechnology->AutoSize = true;
+			this->rbTechnology->Location = System::Drawing::Point(12, 11);
+			this->rbTechnology->Name = L"rbTechnology";
+			this->rbTechnology->Size = System::Drawing::Size(81, 17);
+			this->rbTechnology->TabIndex = 3;
+			this->rbTechnology->TabStop = true;
+			this->rbTechnology->Text = L"Technology";
+			this->rbTechnology->UseVisualStyleBackColor = true;
+			this->rbTechnology->CheckedChanged += gcnew System::EventHandler(this, &DegreeSelect::rdTechnology_CheckedChanged);
 			// 
 			// rbEngineering
 			// 
@@ -619,7 +639,7 @@ namespace EnTec_Group_Project {
 			this->Controls->Add(this->btnNext);
 			this->Controls->Add(this->rbMAGIC);
 			this->Controls->Add(this->rbEngineering);
-			this->Controls->Add(this->rdTechnology);
+			this->Controls->Add(this->rbTechnology);
 			this->Controls->Add(this->gbMAGIC);
 			this->Controls->Add(this->gbTechnology);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));

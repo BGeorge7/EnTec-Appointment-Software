@@ -1,5 +1,6 @@
 #pragma once
 #include "DegreeSelect.h"
+#include "Student.h"
 #include <stdlib.h>
 
 namespace EnTec_Group_Project {
@@ -16,7 +17,9 @@ namespace EnTec_Group_Project {
 	/// </summary>
 	public ref class StudentSplash : public System::Windows::Forms::Form
 	{
-	private: DegreeSelect^ degreeForm = gcnew DegreeSelect(this);
+	private: Student^ student = gcnew Student(); //Create and Instance of Student for storing the users data
+
+	private: DegreeSelect^ degreeForm = gcnew DegreeSelect(this, student);
 	private: Form^ previous;
 	public:
 		StudentSplash(Form^ previous)
@@ -48,8 +51,9 @@ namespace EnTec_Group_Project {
 	private: System::Windows::Forms::Label^  lblEmail;
 	private: System::Windows::Forms::TextBox^  txtbName;
 	private: System::Windows::Forms::TextBox^  txtbID;
+	private: System::Windows::Forms::TextBox^  txtbEmail;
 
-	private: System::Windows::Forms::TextBox^  textBox2;
+
 	private: System::Windows::Forms::Button^  btnNext;
 	private: System::Windows::Forms::Button^  btnBack;
 	private: System::Windows::Forms::Label^  label1;
@@ -78,7 +82,7 @@ namespace EnTec_Group_Project {
 			this->lblEmail = (gcnew System::Windows::Forms::Label());
 			this->txtbName = (gcnew System::Windows::Forms::TextBox());
 			this->txtbID = (gcnew System::Windows::Forms::TextBox());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->txtbEmail = (gcnew System::Windows::Forms::TextBox());
 			this->btnNext = (gcnew System::Windows::Forms::Button());
 			this->btnBack = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
@@ -155,12 +159,13 @@ namespace EnTec_Group_Project {
 			this->txtbID->Size = System::Drawing::Size(174, 20);
 			this->txtbID->TabIndex = 6;
 			// 
-			// textBox2
+			// txtbEmail
 			// 
-			this->textBox2->Location = System::Drawing::Point(270, 266);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(174, 20);
-			this->textBox2->TabIndex = 7;
+			this->txtbEmail->Location = System::Drawing::Point(270, 266);
+			this->txtbEmail->Name = L"txtbEmail";
+			this->txtbEmail->Size = System::Drawing::Size(174, 20);
+			this->txtbEmail->TabIndex = 7;
+			this->txtbEmail->TextChanged += gcnew System::EventHandler(this, &StudentSplash::txtbEmail_TextChanged);
 			// 
 			// btnNext
 			// 
@@ -214,7 +219,7 @@ namespace EnTec_Group_Project {
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->btnBack);
 			this->Controls->Add(this->btnNext);
-			this->Controls->Add(this->textBox2);
+			this->Controls->Add(this->txtbEmail);
 			this->Controls->Add(this->txtbID);
 			this->Controls->Add(this->txtbName);
 			this->Controls->Add(this->lblEmail);
@@ -235,10 +240,20 @@ namespace EnTec_Group_Project {
 
 
 private: System::Void btnNext_Click(System::Object^  sender, System::EventArgs^  e) {
-
-	this->Hide();
-	this->degreeForm->ShowDialog();
-
+	if (txtbName->Text->IsNullOrWhiteSpace(txtbName->Text)
+		|| txtbID->Text->IsNullOrWhiteSpace(txtbID->Text)
+		|| txtbEmail->Text->IsNullOrWhiteSpace(txtbEmail->Text))
+	{
+		MessageBox::Show("Looks like you left something Empty.\nPlease finish filling the form and try again.", "Error",
+		MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
+	}
+	else {
+		student->setName(txtbName->Text);
+		student->setID(txtbID->Text);
+		student->setEmailAddress(txtbEmail->Text);
+		this->Hide();
+		this->degreeForm->ShowDialog();
+	}
 }
 private: System::Void btnBack_Click(System::Object^  sender, System::EventArgs^  e) {
 	this->Hide();
@@ -251,6 +266,8 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 }
 private: System::Void StudentSplash_FormClosed(System::Object^  sender, System::Windows::Forms::FormClosedEventArgs^  e) {
 	exit(0);
+}
+private: System::Void txtbEmail_TextChanged(System::Object^  sender, System::EventArgs^  e) {
 }
 };
 }

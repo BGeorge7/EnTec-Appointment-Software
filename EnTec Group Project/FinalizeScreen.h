@@ -1,4 +1,5 @@
 #pragma once
+#include "Student.h"
 #include <stdlib.h> 
 
 namespace EnTec_Group_Project {
@@ -15,10 +16,12 @@ namespace EnTec_Group_Project {
 	/// </summary>
 	public ref class FinalizeScreen : public System::Windows::Forms::Form
 	{
+	private: Student^ student;
 	private: Form^ previous;
 	public:
-		FinalizeScreen(Form^ previous)
+		FinalizeScreen(Form^ previous, Student^ student)
 		{
+			this->student = student;
 			this->previous = previous;
 			InitializeComponent();
 		}

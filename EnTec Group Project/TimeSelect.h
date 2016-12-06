@@ -1,5 +1,6 @@
 #pragma once
 #include "FinalizeScreen.h"
+#include "Student.h"
 #include <stdlib.h> 
 //TODO Fill the empty space or redesign this
 namespace EnTec_Group_Project {
@@ -16,11 +17,13 @@ namespace EnTec_Group_Project {
 	/// </summary>
 	public ref class TimeSelect : public System::Windows::Forms::Form
 	{
+	private: Student^ student;
 	private: Form^ previous;
-	private: FinalizeScreen^ finalizeForm = gcnew FinalizeScreen(this);
+	private: FinalizeScreen^ finalizeForm = gcnew FinalizeScreen(this, student);
 	public:
-		TimeSelect(Form^ previous)
+		TimeSelect(Form^ previous, Student^ student)
 		{
+			this->student = student;
 			this->previous = previous;
 			InitializeComponent();
 		}

@@ -106,6 +106,8 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies />
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>Main</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -141,6 +143,7 @@
     <ClCompile Include="DegreeSelect.cpp" />
     <ClCompile Include="FinalizeScreen.cpp" />
     <ClCompile Include="MainSplash.cpp" />
+    <ClCompile Include="Student.cpp" />
     <ClCompile Include="StudentSplash.cpp" />
     <ClCompile Include="TimeSelect.cpp" />
   </ItemGroup>
@@ -157,6 +160,7 @@
     <ClInclude Include="MainSplash.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Student.h" />
     <ClInclude Include="StudentSplash.h">
       <FileType>CppForm</FileType>
     </ClInclude>

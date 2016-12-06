@@ -49,6 +49,11 @@ namespace EnTec_Group_Project {
 	{
 		if (rbTechnology->Checked == true)
 		{
+			student->setDegreeType(rbTechnology->Text);
+			if (rbTechnology1->Checked == true)
+			{
+				student->setDegree(rbTechnology1->Text);
+			}
 
 		}
 		else if (rbEngineering->Checked == true)
@@ -105,26 +110,37 @@ namespace EnTec_Group_Project {
 	private: System::Windows::Forms::TextBox^  tbEngineeringOther;
 	private: System::Windows::Forms::RadioButton^  rdEngineeringOther;
 	private: System::Windows::Forms::TextBox^  tbTechnologyOther;
-	private: System::Windows::Forms::RadioButton^  rdTechnologyOther;
-	private: System::Windows::Forms::RadioButton^  rdTechnology10;
+	private: System::Windows::Forms::RadioButton^  rbTechnologyOther;
 
-	private: System::Windows::Forms::RadioButton^  rdTechnology9;
+	private: System::Windows::Forms::RadioButton^  rbTechnology10;
 
-	private: System::Windows::Forms::RadioButton^  rdTechnology8;
+	private: System::Windows::Forms::RadioButton^  rbTechnology9;
 
-	private: System::Windows::Forms::RadioButton^  rdTechnology7;
 
-	private: System::Windows::Forms::RadioButton^  rdTechnology6;
+	private: System::Windows::Forms::RadioButton^  rbTechnology8;
 
-	private: System::Windows::Forms::RadioButton^  rdTechnology5;
 
-	private: System::Windows::Forms::RadioButton^  rdTechnology4;
+	private: System::Windows::Forms::RadioButton^  rbTechnology7;
 
-	private: System::Windows::Forms::RadioButton^  rdTechnology3;
 
-	private: System::Windows::Forms::RadioButton^  rdTechnology2;
+	private: System::Windows::Forms::RadioButton^  rbTechnology6;
 
-	private: System::Windows::Forms::RadioButton^  rdTechnology1;
+
+	private: System::Windows::Forms::RadioButton^  rbTechnology5;
+
+
+	private: System::Windows::Forms::RadioButton^  rbTechnology4;
+
+
+private: System::Windows::Forms::RadioButton^  rbTechnology3;
+
+
+private: System::Windows::Forms::RadioButton^  rbTechnology2;
+
+
+private: System::Windows::Forms::RadioButton^  rbTechnology1;
+
+
 	private: System::Windows::Forms::RadioButton^  rbMAGIC2;
 
 
@@ -167,17 +183,17 @@ namespace EnTec_Group_Project {
 			this->rbEngineering2 = (gcnew System::Windows::Forms::RadioButton());
 			this->gbTechnology = (gcnew System::Windows::Forms::GroupBox());
 			this->tbTechnologyOther = (gcnew System::Windows::Forms::TextBox());
-			this->rdTechnologyOther = (gcnew System::Windows::Forms::RadioButton());
-			this->rdTechnology10 = (gcnew System::Windows::Forms::RadioButton());
-			this->rdTechnology9 = (gcnew System::Windows::Forms::RadioButton());
-			this->rdTechnology8 = (gcnew System::Windows::Forms::RadioButton());
-			this->rdTechnology7 = (gcnew System::Windows::Forms::RadioButton());
-			this->rdTechnology6 = (gcnew System::Windows::Forms::RadioButton());
-			this->rdTechnology5 = (gcnew System::Windows::Forms::RadioButton());
-			this->rdTechnology4 = (gcnew System::Windows::Forms::RadioButton());
-			this->rdTechnology3 = (gcnew System::Windows::Forms::RadioButton());
-			this->rdTechnology2 = (gcnew System::Windows::Forms::RadioButton());
-			this->rdTechnology1 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbTechnologyOther = (gcnew System::Windows::Forms::RadioButton());
+			this->rbTechnology10 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbTechnology9 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbTechnology8 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbTechnology7 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbTechnology6 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbTechnology5 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbTechnology4 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbTechnology3 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbTechnology2 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbTechnology1 = (gcnew System::Windows::Forms::RadioButton());
 			this->gbMAGIC = (gcnew System::Windows::Forms::GroupBox());
 			this->rbMAGIC2 = (gcnew System::Windows::Forms::RadioButton());
 			this->rbMAGIC1 = (gcnew System::Windows::Forms::RadioButton());
@@ -393,17 +409,17 @@ namespace EnTec_Group_Project {
 			// gbTechnology
 			// 
 			this->gbTechnology->Controls->Add(this->tbTechnologyOther);
-			this->gbTechnology->Controls->Add(this->rdTechnologyOther);
-			this->gbTechnology->Controls->Add(this->rdTechnology10);
-			this->gbTechnology->Controls->Add(this->rdTechnology9);
-			this->gbTechnology->Controls->Add(this->rdTechnology8);
-			this->gbTechnology->Controls->Add(this->rdTechnology7);
-			this->gbTechnology->Controls->Add(this->rdTechnology6);
-			this->gbTechnology->Controls->Add(this->rdTechnology5);
-			this->gbTechnology->Controls->Add(this->rdTechnology4);
-			this->gbTechnology->Controls->Add(this->rdTechnology3);
-			this->gbTechnology->Controls->Add(this->rdTechnology2);
-			this->gbTechnology->Controls->Add(this->rdTechnology1);
+			this->gbTechnology->Controls->Add(this->rbTechnologyOther);
+			this->gbTechnology->Controls->Add(this->rbTechnology10);
+			this->gbTechnology->Controls->Add(this->rbTechnology9);
+			this->gbTechnology->Controls->Add(this->rbTechnology8);
+			this->gbTechnology->Controls->Add(this->rbTechnology7);
+			this->gbTechnology->Controls->Add(this->rbTechnology6);
+			this->gbTechnology->Controls->Add(this->rbTechnology5);
+			this->gbTechnology->Controls->Add(this->rbTechnology4);
+			this->gbTechnology->Controls->Add(this->rbTechnology3);
+			this->gbTechnology->Controls->Add(this->rbTechnology2);
+			this->gbTechnology->Controls->Add(this->rbTechnology1);
 			this->gbTechnology->Enabled = false;
 			this->gbTechnology->Location = System::Drawing::Point(12, 26);
 			this->gbTechnology->Name = L"gbTechnology";
@@ -419,125 +435,125 @@ namespace EnTec_Group_Project {
 			this->tbTechnologyOther->Size = System::Drawing::Size(191, 20);
 			this->tbTechnologyOther->TabIndex = 16;
 			// 
-			// rdTechnologyOther
+			// rbTechnologyOther
 			// 
-			this->rdTechnologyOther->AutoSize = true;
-			this->rdTechnologyOther->Location = System::Drawing::Point(7, 241);
-			this->rdTechnologyOther->Name = L"rdTechnologyOther";
-			this->rdTechnologyOther->Size = System::Drawing::Size(14, 13);
-			this->rdTechnologyOther->TabIndex = 16;
-			this->rdTechnologyOther->TabStop = true;
-			this->rdTechnologyOther->UseVisualStyleBackColor = true;
+			this->rbTechnologyOther->AutoSize = true;
+			this->rbTechnologyOther->Location = System::Drawing::Point(7, 241);
+			this->rbTechnologyOther->Name = L"rbTechnologyOther";
+			this->rbTechnologyOther->Size = System::Drawing::Size(14, 13);
+			this->rbTechnologyOther->TabIndex = 16;
+			this->rbTechnologyOther->TabStop = true;
+			this->rbTechnologyOther->UseVisualStyleBackColor = true;
 			// 
-			// rdTechnology10
+			// rbTechnology10
 			// 
-			this->rdTechnology10->AutoSize = true;
-			this->rdTechnology10->Location = System::Drawing::Point(7, 218);
-			this->rdTechnology10->Name = L"rdTechnology10";
-			this->rdTechnology10->Size = System::Drawing::Size(205, 17);
-			this->rdTechnology10->TabIndex = 13;
-			this->rdTechnology10->TabStop = true;
-			this->rdTechnology10->Text = L"A.S. Networking Services Technology";
-			this->rdTechnology10->UseVisualStyleBackColor = true;
+			this->rbTechnology10->AutoSize = true;
+			this->rbTechnology10->Location = System::Drawing::Point(7, 218);
+			this->rbTechnology10->Name = L"rbTechnology10";
+			this->rbTechnology10->Size = System::Drawing::Size(205, 17);
+			this->rbTechnology10->TabIndex = 13;
+			this->rbTechnology10->TabStop = true;
+			this->rbTechnology10->Text = L"A.S. Networking Services Technology";
+			this->rbTechnology10->UseVisualStyleBackColor = true;
 			// 
-			// rdTechnology9
+			// rbTechnology9
 			// 
-			this->rdTechnology9->AutoSize = true;
-			this->rdTechnology9->Location = System::Drawing::Point(7, 195);
-			this->rdTechnology9->Name = L"rdTechnology9";
-			this->rdTechnology9->Size = System::Drawing::Size(180, 17);
-			this->rdTechnology9->TabIndex = 12;
-			this->rdTechnology9->TabStop = true;
-			this->rdTechnology9->Text = L"A.S. Oracle Database Developer";
-			this->rdTechnology9->UseVisualStyleBackColor = true;
+			this->rbTechnology9->AutoSize = true;
+			this->rbTechnology9->Location = System::Drawing::Point(7, 195);
+			this->rbTechnology9->Name = L"rbTechnology9";
+			this->rbTechnology9->Size = System::Drawing::Size(180, 17);
+			this->rbTechnology9->TabIndex = 12;
+			this->rbTechnology9->TabStop = true;
+			this->rbTechnology9->Text = L"A.S. Oracle Database Developer";
+			this->rbTechnology9->UseVisualStyleBackColor = true;
 			// 
-			// rdTechnology8
+			// rbTechnology8
 			// 
-			this->rdTechnology8->AutoSize = true;
-			this->rdTechnology8->Location = System::Drawing::Point(7, 172);
-			this->rdTechnology8->Name = L"rdTechnology8";
-			this->rdTechnology8->Size = System::Drawing::Size(191, 17);
-			this->rdTechnology8->TabIndex = 11;
-			this->rdTechnology8->TabStop = true;
-			this->rdTechnology8->Text = L"A.S. Oracle Database Administrator";
-			this->rdTechnology8->UseVisualStyleBackColor = true;
+			this->rbTechnology8->AutoSize = true;
+			this->rbTechnology8->Location = System::Drawing::Point(7, 172);
+			this->rbTechnology8->Name = L"rbTechnology8";
+			this->rbTechnology8->Size = System::Drawing::Size(191, 17);
+			this->rbTechnology8->TabIndex = 11;
+			this->rbTechnology8->TabStop = true;
+			this->rbTechnology8->Text = L"A.S. Oracle Database Administrator";
+			this->rbTechnology8->UseVisualStyleBackColor = true;
 			// 
-			// rdTechnology7
+			// rbTechnology7
 			// 
-			this->rdTechnology7->AutoSize = true;
-			this->rdTechnology7->Location = System::Drawing::Point(7, 149);
-			this->rdTechnology7->Name = L"rdTechnology7";
-			this->rdTechnology7->Size = System::Drawing::Size(193, 17);
-			this->rdTechnology7->TabIndex = 10;
-			this->rdTechnology7->TabStop = true;
-			this->rdTechnology7->Text = L"A.S. Microsoft Business Intelligence";
-			this->rdTechnology7->UseVisualStyleBackColor = true;
+			this->rbTechnology7->AutoSize = true;
+			this->rbTechnology7->Location = System::Drawing::Point(7, 149);
+			this->rbTechnology7->Name = L"rbTechnology7";
+			this->rbTechnology7->Size = System::Drawing::Size(193, 17);
+			this->rbTechnology7->TabIndex = 10;
+			this->rbTechnology7->TabStop = true;
+			this->rbTechnology7->Text = L"A.S. Microsoft Business Intelligence";
+			this->rbTechnology7->UseVisualStyleBackColor = true;
 			// 
-			// rdTechnology6
+			// rbTechnology6
 			// 
-			this->rdTechnology6->AutoSize = true;
-			this->rdTechnology6->Location = System::Drawing::Point(7, 126);
-			this->rdTechnology6->Name = L"rdTechnology6";
-			this->rdTechnology6->Size = System::Drawing::Size(203, 17);
-			this->rdTechnology6->TabIndex = 9;
-			this->rdTechnology6->TabStop = true;
-			this->rdTechnology6->Text = L"A.S. Microsoft Database Administrator";
-			this->rdTechnology6->UseVisualStyleBackColor = true;
+			this->rbTechnology6->AutoSize = true;
+			this->rbTechnology6->Location = System::Drawing::Point(7, 126);
+			this->rbTechnology6->Name = L"rbTechnology6";
+			this->rbTechnology6->Size = System::Drawing::Size(203, 17);
+			this->rbTechnology6->TabIndex = 9;
+			this->rbTechnology6->TabStop = true;
+			this->rbTechnology6->Text = L"A.S. Microsoft Database Administrator";
+			this->rbTechnology6->UseVisualStyleBackColor = true;
 			// 
-			// rdTechnology5
+			// rbTechnology5
 			// 
-			this->rdTechnology5->AutoSize = true;
-			this->rdTechnology5->Location = System::Drawing::Point(6, 101);
-			this->rdTechnology5->Name = L"rdTechnology5";
-			this->rdTechnology5->Size = System::Drawing::Size(205, 17);
-			this->rdTechnology5->TabIndex = 8;
-			this->rdTechnology5->TabStop = true;
-			this->rdTechnology5->Text = L"A.S. Mobile Applications Development";
-			this->rdTechnology5->UseVisualStyleBackColor = true;
+			this->rbTechnology5->AutoSize = true;
+			this->rbTechnology5->Location = System::Drawing::Point(6, 101);
+			this->rbTechnology5->Name = L"rbTechnology5";
+			this->rbTechnology5->Size = System::Drawing::Size(205, 17);
+			this->rbTechnology5->TabIndex = 8;
+			this->rbTechnology5->TabStop = true;
+			this->rbTechnology5->Text = L"A.S. Mobile Applications Development";
+			this->rbTechnology5->UseVisualStyleBackColor = true;
 			// 
-			// rdTechnology4
+			// rbTechnology4
 			// 
-			this->rdTechnology4->AutoSize = true;
-			this->rdTechnology4->Location = System::Drawing::Point(7, 78);
-			this->rdTechnology4->Name = L"rdTechnology4";
-			this->rdTechnology4->Size = System::Drawing::Size(185, 17);
-			this->rdTechnology4->TabIndex = 7;
-			this->rdTechnology4->TabStop = true;
-			this->rdTechnology4->Text = L"A.S. Bus Application Programming";
-			this->rdTechnology4->UseVisualStyleBackColor = true;
+			this->rbTechnology4->AutoSize = true;
+			this->rbTechnology4->Location = System::Drawing::Point(7, 78);
+			this->rbTechnology4->Name = L"rbTechnology4";
+			this->rbTechnology4->Size = System::Drawing::Size(185, 17);
+			this->rbTechnology4->TabIndex = 7;
+			this->rbTechnology4->TabStop = true;
+			this->rbTechnology4->Text = L"A.S. Bus Application Programming";
+			this->rbTechnology4->UseVisualStyleBackColor = true;
 			// 
-			// rdTechnology3
+			// rbTechnology3
 			// 
-			this->rdTechnology3->AutoSize = true;
-			this->rdTechnology3->Location = System::Drawing::Point(7, 55);
-			this->rdTechnology3->Name = L"rdTechnology3";
-			this->rdTechnology3->Size = System::Drawing::Size(138, 17);
-			this->rdTechnology3->TabIndex = 2;
-			this->rdTechnology3->TabStop = true;
-			this->rdTechnology3->Text = L"A.A. Computer Science ";
-			this->rdTechnology3->UseVisualStyleBackColor = true;
+			this->rbTechnology3->AutoSize = true;
+			this->rbTechnology3->Location = System::Drawing::Point(7, 55);
+			this->rbTechnology3->Name = L"rbTechnology3";
+			this->rbTechnology3->Size = System::Drawing::Size(138, 17);
+			this->rbTechnology3->TabIndex = 2;
+			this->rbTechnology3->TabStop = true;
+			this->rbTechnology3->Text = L"A.A. Computer Science ";
+			this->rbTechnology3->UseVisualStyleBackColor = true;
 			// 
-			// rdTechnology2
+			// rbTechnology2
 			// 
-			this->rdTechnology2->AutoSize = true;
-			this->rdTechnology2->Location = System::Drawing::Point(7, 32);
-			this->rdTechnology2->Name = L"rdTechnology2";
-			this->rdTechnology2->Size = System::Drawing::Size(204, 17);
-			this->rdTechnology2->TabIndex = 1;
-			this->rdTechnology2->TabStop = true;
-			this->rdTechnology2->Text = L"A.S. Information Systems Technology ";
-			this->rdTechnology2->UseVisualStyleBackColor = true;
+			this->rbTechnology2->AutoSize = true;
+			this->rbTechnology2->Location = System::Drawing::Point(7, 32);
+			this->rbTechnology2->Name = L"rbTechnology2";
+			this->rbTechnology2->Size = System::Drawing::Size(204, 17);
+			this->rbTechnology2->TabIndex = 1;
+			this->rbTechnology2->TabStop = true;
+			this->rbTechnology2->Text = L"A.S. Information Systems Technology ";
+			this->rbTechnology2->UseVisualStyleBackColor = true;
 			// 
-			// rdTechnology1
+			// rbTechnology1
 			// 
-			this->rdTechnology1->AutoSize = true;
-			this->rdTechnology1->Location = System::Drawing::Point(7, 9);
-			this->rdTechnology1->Name = L"rdTechnology1";
-			this->rdTechnology1->Size = System::Drawing::Size(204, 17);
-			this->rdTechnology1->TabIndex = 0;
-			this->rdTechnology1->TabStop = true;
-			this->rdTechnology1->Text = L"A.A. Information Systems Technology ";
-			this->rdTechnology1->UseVisualStyleBackColor = true;
+			this->rbTechnology1->AutoSize = true;
+			this->rbTechnology1->Location = System::Drawing::Point(7, 9);
+			this->rbTechnology1->Name = L"rbTechnology1";
+			this->rbTechnology1->Size = System::Drawing::Size(204, 17);
+			this->rbTechnology1->TabIndex = 0;
+			this->rbTechnology1->TabStop = true;
+			this->rbTechnology1->Text = L"A.A. Information Systems Technology ";
+			this->rbTechnology1->UseVisualStyleBackColor = true;
 			// 
 			// gbMAGIC
 			// 

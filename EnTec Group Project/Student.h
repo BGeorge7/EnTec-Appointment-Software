@@ -2,21 +2,24 @@
 #include <iostream>
 #include <string>
 
+#include <msclr\marshal_cppstd.h>
+
 using namespace System;
-ref class Student
+class Student
 {
 private:
-	String^ name;
-	String^ emailAddress;
-	String^ iD;
+	std::string name;
+	std::string emailAddress;
+	std::string iD;
 
-	String^ degree;
-	String^ degreeType;
+	std::string degree;
+	std::string degreeType;
 
-	String^ advisor;
-	String^ appReason;
-	String^ appDate;
-	String^ appTime;
+	std::string advisor;
+	std::string appReason;
+	std::string appDate;
+	std::string appTime;
+
 
 public:
 	//TODO: Determine if in need another Constructor for this class

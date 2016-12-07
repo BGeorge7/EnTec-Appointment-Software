@@ -7,80 +7,89 @@ Student::Student()
 //setters
 void Student::setName(String^ name)
 {
-	this->name = name;
+	msclr::interop::marshal_context context;
+	this->name = context.marshal_as<std::string>(name);
 }
 void Student::setEmailAddress(String^ emailAddress)
 {
-	this->emailAddress = emailAddress;
+	msclr::interop::marshal_context context;
+	this->emailAddress = context.marshal_as<std::string>(emailAddress);
 }
 void Student::setID(String^ iD)
 {
-	this->iD = iD;
+	msclr::interop::marshal_context context;
+	this->iD = context.marshal_as<std::string>(iD);
 }
 
 void Student::setDegree(String^ degree)
 {
-	this->degree = degree;
+	msclr::interop::marshal_context context;
+	this->degree = context.marshal_as<std::string>(degree);
 }
 void Student::setDegreeType(String^ degreeType)
 {
-	this->degreeType = degreeType;
+	msclr::interop::marshal_context context;
+	this->degreeType = context.marshal_as<std::string>(degreeType);
 }
 
 void Student::setAdvisor(String^ advisor)
 {
-	this->advisor = advisor;
+	msclr::interop::marshal_context context;
+	this->advisor = context.marshal_as<std::string>(advisor);
 }
 void Student::setAppReason(String^ appReason)
 {
-	this->appReason = appReason;
+	msclr::interop::marshal_context context;
+	this->appReason = context.marshal_as<std::string>(appReason);
 }
 void Student::setAppDate(String^ appDate)
 {
-	this->appDate = appDate;
+	msclr::interop::marshal_context context;
+	this->appDate = context.marshal_as<std::string>(appDate);
 }
 void Student::setAppTime(String^ appTime)
 {
-	this->appTime = appTime;
+	msclr::interop::marshal_context context;
+	this->appTime = context.marshal_as<std::string>(appTime);
 }
 
 
 //getters
 String^ Student::getName()
 {
-	return this->name;
+	return  msclr::interop::marshal_as<String^>(this->name);
 }
 String^ Student::getEmailAddress()
 {
-	return this->emailAddress;
+	return msclr::interop::marshal_as<String^>(this->emailAddress);
 }
 String^ Student::getID()
 {
-	return this->iD;
+	return msclr::interop::marshal_as<String^>(this->iD);
 }
 
 String^ Student::getDegree()
 {
-	return this->degree;
+	return msclr::interop::marshal_as<String^>(this->degree);
 }
 String^ Student::getDegreeType()
 {
-	return this->degreeType;
+	return msclr::interop::marshal_as<String^>(this->degreeType);
 }
 
 String^ Student::getAdvisor()
 {
-	return this->advisor;
+	return msclr::interop::marshal_as<String^>(this->advisor);
 }
 String^ Student::getAppReason()
 {
-	return this->appReason;
+	return msclr::interop::marshal_as<String^>(this->appReason);
 }
 String^ Student::getAppDate()
 {
-	return this->appDate;
+	return msclr::interop::marshal_as<String^>(this->appDate);
 }
 String^ Student::getAppTime()
 {
-	return this->appTime;
+	return msclr::interop::marshal_as<String^>(this->appTime);
 }

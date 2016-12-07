@@ -17,22 +17,20 @@ namespace EnTec_Group_Project {
 	/// </summary>
 	public ref class TimeSelect : public System::Windows::Forms::Form
 	{
-	private: Student^ student;
+	private: Student *student;
 	private: Form^ previous;
-	private: FinalizeScreen^ finalizeForm = gcnew FinalizeScreen(this, student);
+	private: FinalizeScreen^ finalizeForm;
 	public:
-		TimeSelect(Form^ previous, Student^ student)
+		TimeSelect(Form^ previous, Student *student)
 		{
 			this->student = student;
 			this->previous = previous;
+
 			InitializeComponent();
 		}
 		TimeSelect(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: Add the constructor code here
-			//
 		}
 
 	protected:
@@ -86,10 +84,6 @@ namespace EnTec_Group_Project {
 			// lbAdvisorList
 			// 
 			this->lbAdvisorList->FormattingEnabled = true;
-			this->lbAdvisorList->Items->AddRange(gcnew cli::array< System::Object^  >(3) {
-				L"Advisor 1 -(305) - 555 - 5555", L"Advisor 2 -(305) - 555 - 5555",
-					L"Advisor 2 -(305) - 555 - 5555"
-			});
 			this->lbAdvisorList->Location = System::Drawing::Point(12, 119);
 			this->lbAdvisorList->Name = L"lbAdvisorList";
 			this->lbAdvisorList->Size = System::Drawing::Size(191, 225);
@@ -156,6 +150,7 @@ namespace EnTec_Group_Project {
 			this->cbReason->Size = System::Drawing::Size(212, 21);
 			this->cbReason->TabIndex = 6;
 			this->cbReason->SelectedIndexChanged += gcnew System::EventHandler(this, &TimeSelect::comboBox1_SelectedIndexChanged);
+			this->cbReason->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &TimeSelect::cbReason_KeyPress);
 			// 
 			// TimeSelect
 			// 
@@ -176,6 +171,7 @@ namespace EnTec_Group_Project {
 			this->Text = L"EnTec Advisor Apointments";
 			this->FormClosed += gcnew System::Windows::Forms::FormClosedEventHandler(this, &TimeSelect::TimeSelect_FormClosed);
 			this->Load += gcnew System::EventHandler(this, &TimeSelect::TimeSelect_Load);
+			this->VisibleChanged += gcnew System::EventHandler(this, &TimeSelect::TimeSelect_VisibleChanged);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -193,15 +189,48 @@ private: System::Void btnBack_Click(System::Object^  sender, System::EventArgs^ 
 
 }
 private: System::Void btnNext_Click(System::Object^  sender, System::EventArgs^  e) {
-
-	this->Hide();
-	this->finalizeForm->ShowDialog();
+	if (lbAdvisorList->Text->IsNullOrWhiteSpace(lbAdvisorList->Text) || cbReason->Text->IsNullOrWhiteSpace(cbReason->Text))
+	{
+		MessageBox::Show("Whoops Looks like You left something empty!", "Error",
+			MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
+	}
+	else
+	{
+		student->setAdvisor(lbAdvisorList->Text);
+		student->setAppReason(cbReason->Text);
+		student->setAppDate(dateTimePicker->Text);
+		//TODO: Time Selector
+		//student->setAppTime(Something);
+		this->Hide();
+		this->finalizeForm->ShowDialog();
+	}
 
 }
 private: System::Void TimeSelect_Load(System::Object^  sender, System::EventArgs^  e) {
+	finalizeForm = gcnew FinalizeScreen(this, student);
 }
 private: System::Void TimeSelect_FormClosed(System::Object^  sender, System::Windows::Forms::FormClosedEventArgs^  e) {
 	exit(0);
+}
+private: System::Void TimeSelect_VisibleChanged(System::Object^  sender, System::EventArgs^  e) {
+	lbAdvisorList->Items->Clear();
+	if (student->getDegreeType() == "Technology")
+	{
+		lbAdvisorList->Items->Add("Barake, Maria, mrodrig4@mdc.edu");
+		lbAdvisorList->Items->Add("Telfort, Roseline, rtelfort@mdc.edu");
+	}
+	else if (student->getDegreeType() == "Engineering")
+	{
+		lbAdvisorList->Items->Add("Moscoso, Federico, fmoscoso@mdc.edu");
+		lbAdvisorList->Items->Add("Ramirez, Janet, jramir1@mdc.edu");
+	}
+	else if (student->getDegreeType() == "MAGIC")
+	{
+		lbAdvisorList->Items->Add("Auguste, Mylinda, mauguste@mdc.edu");
+	}
+}
+private: System::Void cbReason_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
+	e->KeyChar = (char)0;
 }
 };
 }

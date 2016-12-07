@@ -16,13 +16,14 @@ namespace EnTec_Group_Project {
 	/// </summary>
 	public ref class FinalizeScreen : public System::Windows::Forms::Form
 	{
-	private: Student^ student;
+	private: Student *student;
 	private: Form^ previous;
 	public:
-		FinalizeScreen(Form^ previous, Student^ student)
+		FinalizeScreen(Form^ previous, Student *student)
 		{
 			this->student = student;
 			this->previous = previous;
+
 			InitializeComponent();
 		}
 		FinalizeScreen(void)

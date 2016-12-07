@@ -18,14 +18,15 @@ namespace EnTec_Group_Project {
 	/// </summary>
 	public ref class DegreeSelect : public System::Windows::Forms::Form
 	{
-	private: Student^ student;
+	private: Student *student;
 	private: Form^ previous;
-	private: TimeSelect^ timeForm = gcnew TimeSelect(this, student);
+	private: TimeSelect^ timeForm;
 	public:
-		DegreeSelect(Form^ previous, Student^ student)
+		DegreeSelect(Form^ previous, Student *student)
 		{
 			this->student = student;
 			this->previous = previous;
+
 			InitializeComponent();
 		}
 		DegreeSelect(void)
@@ -47,23 +48,168 @@ namespace EnTec_Group_Project {
 
 	private: bool isSelected()
 	{
-		if (rbTechnology->Checked == true)
+		if (rbTechnology->Checked)
 		{
 			student->setDegreeType(rbTechnology->Text);
-			if (rbTechnology1->Checked == true)
+			if (rbTechnology1->Checked)//1
 			{
 				student->setDegree(rbTechnology1->Text);
+				return true;
+			}
+			else if (rbTechnology2->Checked)//2
+			{
+				student->setDegree(rbTechnology2->Text);
+				return true;
+			}
+			else if (rbTechnology3->Checked)//3
+			{
+				student->setDegree(rbTechnology3->Text);
+				return true;
+			}
+			else if (rbTechnology4->Checked)//4
+			{
+				student->setDegree(rbTechnology4->Text);
+				return true;
+			}
+			else if (rbTechnology5->Checked)//5
+			{
+				student->setDegree(rbTechnology5->Text);
+				return true;
+			}
+			else if (rbTechnology6->Checked)//6
+			{
+				student->setDegree(rbTechnology6->Text);
+				return true;
+			}
+			else if (rbTechnology7->Checked)//7
+			{
+				student->setDegree(rbTechnology7->Text);
+				return true;
+			}
+			else if (rbTechnology8->Checked)//8
+			{
+				student->setDegree(rbTechnology8->Text);
+				return true;
+			}
+			else if (rbTechnology9->Checked)//9
+			{
+				student->setDegree(rbTechnology9->Text);
+				return true;
+			}
+			else if (rbTechnology10->Checked)//10
+			{
+				student->setDegree(rbTechnology10->Text);
+				return true;
+			}
+			else if (rbTechnologyOther->Checked)//other
+			{
+				if (!(tbTechnologyOther->Text->IsNullOrWhiteSpace(tbTechnologyOther->Text)))
+				{
+					student->setDegree(tbTechnologyOther->Text);
+					return true;
+				}
 			}
 
 		}
-		else if (rbEngineering->Checked == true)
+		else if (rbEngineering->Checked)
 		{
+			student->setDegreeType(rbEngineering->Text);
+			if (rbEngineering1->Checked)//1
+			{
+				student->setDegree(rbEngineering1->Text);
+				return true;
+			}
+			else if (rbEngineering2->Checked)//2
+			{
+				student->setDegree(rbEngineering2->Text);
+				return true;
+			}
+			else if (rbEngineering3->Checked)//3
+			{
+				student->setDegree(rbEngineering3->Text);
+				return true;
+			}
+			else if (rbEngineering4->Checked)//4
+			{
+				student->setDegree(rbEngineering4->Text);
+				return true;
+			}
+			else if (rbEngineering5->Checked)//5
+			{
+				student->setDegree(rbEngineering5->Text);
+				return true;
+			}
+			else if (rbEngineering6->Checked)//6
+			{
+				student->setDegree(rbEngineering6->Text);
+				return true;
+			}
+			else if (rbEngineering7->Checked)//7
+			{
+				student->setDegree(rbEngineering7->Text);
+				return true;
+			}
+			else if (rbEngineering8->Checked)//8
+			{
+				student->setDegree(rbEngineering8->Text);
+				return true;
+			}
+			else if (rbEngineering9->Checked)//9
+			{
+				student->setDegree(rbEngineering9->Text);
+				return true;
+			}
+			else if (rbEngineering10->Checked)//10
+			{
+				student->setDegree(rbEngineering10->Text);
+				return true;
+			}
+			else if (rbEngineering11->Checked)//11
+			{
+				student->setDegree(rbEngineering11->Text);
+				return true;
+			}
+			else if (rbEngineering12->Checked)//2
+			{
+				student->setDegree(rbEngineering12->Text);
+				return true;
+			}
+			else if (rbEngineering13->Checked)//13
+			{
+				student->setDegree(rbEngineering13->Text);
+				return true;
+			}
+			else if (rbEngineering14->Checked)//14
+			{
+				student->setDegree(rbEngineering2->Text);
+				return true;
+			}
+			else if (rbEngineeringOther->Checked)//other
+			{
+				if (!(tbEngineeringOther->Text->IsNullOrWhiteSpace(tbEngineeringOther->Text)))
+				{
+					student->setDegree(tbEngineeringOther->Text);
+					return true;
+				}
+			}
 
 		}
-		else if (rbMAGIC->Checked == true)
+		else if (rbMAGIC->Checked)
 		{
-
+			student->setDegreeType(rbMAGIC->Text);
+			if (rbMAGIC1->Checked)//1
+			{
+				student->setDegree(rbMAGIC1->Text);
+				return true;
+			}
+			else if (rbMAGIC2->Checked)//2
+			{
+				student->setDegree(rbMAGIC2->Text);
+				return true;
+			}
 		}
+
+		return false;
 	}
 	private: System::Windows::Forms::GroupBox^  gbEngineering;
 	private: System::Windows::Forms::GroupBox^  gbTechnology;
@@ -101,14 +247,13 @@ namespace EnTec_Group_Project {
 	private: System::Windows::Forms::RadioButton^  rbEngineering14;
 
 
-
-
 	private: System::Windows::Forms::RadioButton^  rbEngineering13;
 
 	private: System::Windows::Forms::RadioButton^  rbEngineering12;
 
 	private: System::Windows::Forms::TextBox^  tbEngineeringOther;
-	private: System::Windows::Forms::RadioButton^  rdEngineeringOther;
+	private: System::Windows::Forms::RadioButton^  rbEngineeringOther;
+
 	private: System::Windows::Forms::TextBox^  tbTechnologyOther;
 	private: System::Windows::Forms::RadioButton^  rbTechnologyOther;
 
@@ -166,7 +311,7 @@ private: System::Windows::Forms::RadioButton^  rbTechnology1;
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(DegreeSelect::typeid));
 			this->gbEngineering = (gcnew System::Windows::Forms::GroupBox());
 			this->tbEngineeringOther = (gcnew System::Windows::Forms::TextBox());
-			this->rdEngineeringOther = (gcnew System::Windows::Forms::RadioButton());
+			this->rbEngineeringOther = (gcnew System::Windows::Forms::RadioButton());
 			this->rbEngineering1 = (gcnew System::Windows::Forms::RadioButton());
 			this->rbEngineering14 = (gcnew System::Windows::Forms::RadioButton());
 			this->rbEngineering13 = (gcnew System::Windows::Forms::RadioButton());
@@ -210,7 +355,7 @@ private: System::Windows::Forms::RadioButton^  rbTechnology1;
 			// gbEngineering
 			// 
 			this->gbEngineering->Controls->Add(this->tbEngineeringOther);
-			this->gbEngineering->Controls->Add(this->rdEngineeringOther);
+			this->gbEngineering->Controls->Add(this->rbEngineeringOther);
 			this->gbEngineering->Controls->Add(this->rbEngineering1);
 			this->gbEngineering->Controls->Add(this->rbEngineering14);
 			this->gbEngineering->Controls->Add(this->rbEngineering13);
@@ -241,15 +386,15 @@ private: System::Windows::Forms::RadioButton^  rbTechnology1;
 			this->tbEngineeringOther->Size = System::Drawing::Size(191, 20);
 			this->tbEngineeringOther->TabIndex = 15;
 			// 
-			// rdEngineeringOther
+			// rbEngineeringOther
 			// 
-			this->rdEngineeringOther->AutoSize = true;
-			this->rdEngineeringOther->Location = System::Drawing::Point(7, 333);
-			this->rdEngineeringOther->Name = L"rdEngineeringOther";
-			this->rdEngineeringOther->Size = System::Drawing::Size(14, 13);
-			this->rdEngineeringOther->TabIndex = 14;
-			this->rdEngineeringOther->TabStop = true;
-			this->rdEngineeringOther->UseVisualStyleBackColor = true;
+			this->rbEngineeringOther->AutoSize = true;
+			this->rbEngineeringOther->Location = System::Drawing::Point(7, 333);
+			this->rbEngineeringOther->Name = L"rbEngineeringOther";
+			this->rbEngineeringOther->Size = System::Drawing::Size(14, 13);
+			this->rbEngineeringOther->TabIndex = 14;
+			this->rbEngineeringOther->TabStop = true;
+			this->rbEngineeringOther->UseVisualStyleBackColor = true;
 			// 
 			// rbEngineering1
 			// 
@@ -662,6 +807,7 @@ private: System::Windows::Forms::RadioButton^  rbTechnology1;
 			this->Name = L"DegreeSelect";
 			this->Text = L"EnTec Advisor Apointments";
 			this->FormClosed += gcnew System::Windows::Forms::FormClosedEventHandler(this, &DegreeSelect::DegreeSelect_FormClosed);
+			this->Load += gcnew System::EventHandler(this, &DegreeSelect::DegreeSelect_Load);
 			this->gbEngineering->ResumeLayout(false);
 			this->gbEngineering->PerformLayout();
 			this->gbTechnology->ResumeLayout(false);
@@ -700,9 +846,15 @@ private: System::Void rbMAGIC_CheckedChanged(System::Object^  sender, System::Ev
 
 //Back and Next buttons
 private: System::Void btnNext_Click(System::Object^  sender, System::EventArgs^  e) {
-	
-	this->Hide();
-	this->timeForm->ShowDialog();
+	if (isSelected())
+	{
+		this->Hide();
+		this->timeForm->ShowDialog();
+	}
+	else {
+		MessageBox::Show("Looks like you left something Empty.\nPlease Select of a degree and try again", "Error",
+			MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
+	}
 }
 private: System::Void btnBack_Click(System::Object^  sender, System::EventArgs^  e) {
 	
@@ -711,6 +863,9 @@ private: System::Void btnBack_Click(System::Object^  sender, System::EventArgs^ 
 }
 private: System::Void DegreeSelect_FormClosed(System::Object^  sender, System::Windows::Forms::FormClosedEventArgs^  e) {
 	exit(0);
+}
+private: System::Void DegreeSelect_Load(System::Object^  sender, System::EventArgs^  e) {
+	timeForm = gcnew TimeSelect(this, student);
 }
 };
 }

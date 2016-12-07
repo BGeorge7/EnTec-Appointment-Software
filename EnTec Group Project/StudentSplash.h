@@ -17,7 +17,7 @@ namespace EnTec_Group_Project {
 	/// </summary>
 	public ref class StudentSplash : public System::Windows::Forms::Form
 	{
-	private: Student^ student = gcnew Student(); //Create and Instance of Student for storing the users data
+	private: Student *student = new Student(); //Create and Instance of Student for storing the users data
 
 	private: DegreeSelect^ degreeForm = gcnew DegreeSelect(this, student);
 	private: Form^ previous;
@@ -251,11 +251,14 @@ private: System::Void btnNext_Click(System::Object^  sender, System::EventArgs^ 
 		student->setName(txtbName->Text);
 		student->setID(txtbID->Text);
 		student->setEmailAddress(txtbEmail->Text);
+
+
 		this->Hide();
 		this->degreeForm->ShowDialog();
 	}
 }
 private: System::Void btnBack_Click(System::Object^  sender, System::EventArgs^  e) {
+
 	this->Hide();
 	this->previous->Show();
 }

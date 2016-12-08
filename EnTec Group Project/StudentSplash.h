@@ -90,9 +90,10 @@ namespace EnTec_Group_Project {
 			this->pictureBox1->BackColor = System::Drawing::Color::White;
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
 			this->pictureBox1->Location = System::Drawing::Point(204, 13);
-			this->pictureBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->pictureBox1->Margin = System::Windows::Forms::Padding(4);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(598, 75);
+			this->pictureBox1->Size = System::Drawing::Size(598, 82);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
 			this->pictureBox1->TabIndex = 0;
 			this->pictureBox1->TabStop = false;
 			// 
@@ -155,7 +156,7 @@ namespace EnTec_Group_Project {
 			// txtbName
 			// 
 			this->txtbName->Location = System::Drawing::Point(354, 209);
-			this->txtbName->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->txtbName->Margin = System::Windows::Forms::Padding(4);
 			this->txtbName->MaxLength = 35;
 			this->txtbName->Name = L"txtbName";
 			this->txtbName->Size = System::Drawing::Size(231, 22);
@@ -164,7 +165,7 @@ namespace EnTec_Group_Project {
 			// txtbID
 			// 
 			this->txtbID->Location = System::Drawing::Point(354, 257);
-			this->txtbID->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->txtbID->Margin = System::Windows::Forms::Padding(4);
 			this->txtbID->Name = L"txtbID";
 			this->txtbID->Size = System::Drawing::Size(231, 22);
 			this->txtbID->TabIndex = 6;
@@ -172,7 +173,7 @@ namespace EnTec_Group_Project {
 			// textBox2
 			// 
 			this->textBox2->Location = System::Drawing::Point(354, 305);
-			this->textBox2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBox2->Margin = System::Windows::Forms::Padding(4);
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(231, 22);
 			this->textBox2->TabIndex = 7;
@@ -180,7 +181,7 @@ namespace EnTec_Group_Project {
 			// btnNext
 			// 
 			this->btnNext->Location = System::Drawing::Point(879, 443);
-			this->btnNext->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btnNext->Margin = System::Windows::Forms::Padding(4);
 			this->btnNext->Name = L"btnNext";
 			this->btnNext->Size = System::Drawing::Size(111, 28);
 			this->btnNext->TabIndex = 8;
@@ -192,7 +193,7 @@ namespace EnTec_Group_Project {
 			// 
 			this->btnBack->Enabled = false;
 			this->btnBack->Location = System::Drawing::Point(13, 443);
-			this->btnBack->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btnBack->Margin = System::Windows::Forms::Padding(4);
 			this->btnBack->Name = L"btnBack";
 			this->btnBack->Size = System::Drawing::Size(111, 28);
 			this->btnBack->TabIndex = 9;
@@ -203,7 +204,7 @@ namespace EnTec_Group_Project {
 			// button1
 			// 
 			this->button1->Location = System::Drawing::Point(13, 347);
-			this->button1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button1->Margin = System::Windows::Forms::Padding(4);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(157, 73);
 			this->button1->TabIndex = 11;
@@ -231,7 +232,7 @@ namespace EnTec_Group_Project {
 			this->Controls->Add(this->pictureBox1);
 			this->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
-			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"StudentSplash";
 			this->Text = L"EnTec Advisor Apointments";
 			this->FormClosed += gcnew System::Windows::Forms::FormClosedEventHandler(this, &StudentSplash::StudentSplash_FormClosed);

@@ -90,8 +90,8 @@ namespace EnTec_Group_Project {
 				L"Advisor 1 -(305) - 555 - 5555", L"Advisor 2 -(305) - 555 - 5555",
 					L"Advisor 3 -(305) - 555 - 5555"
 			});
-			this->lbAdvisorList->Location = System::Drawing::Point(221, 141);
-			this->lbAdvisorList->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->lbAdvisorList->Location = System::Drawing::Point(86, 141);
+			this->lbAdvisorList->Margin = System::Windows::Forms::Padding(4);
 			this->lbAdvisorList->Name = L"lbAdvisorList";
 			this->lbAdvisorList->Size = System::Drawing::Size(253, 276);
 			this->lbAdvisorList->TabIndex = 0;
@@ -100,16 +100,17 @@ namespace EnTec_Group_Project {
 			// 
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
 			this->pictureBox1->Location = System::Drawing::Point(16, 13);
-			this->pictureBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->pictureBox1->Margin = System::Windows::Forms::Padding(4);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(599, 81);
+			this->pictureBox1->Size = System::Drawing::Size(598, 82);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
 			this->pictureBox1->TabIndex = 1;
 			this->pictureBox1->TabStop = false;
 			// 
 			// dateTimePicker
 			// 
-			this->dateTimePicker->Location = System::Drawing::Point(482, 254);
-			this->dateTimePicker->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->dateTimePicker->Location = System::Drawing::Point(636, 143);
+			this->dateTimePicker->Margin = System::Windows::Forms::Padding(4);
 			this->dateTimePicker->Name = L"dateTimePicker";
 			this->dateTimePicker->Size = System::Drawing::Size(281, 22);
 			this->dateTimePicker->TabIndex = 2;
@@ -133,7 +134,7 @@ namespace EnTec_Group_Project {
 			// btnNext
 			// 
 			this->btnNext->Location = System::Drawing::Point(879, 443);
-			this->btnNext->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btnNext->Margin = System::Windows::Forms::Padding(4);
 			this->btnNext->Name = L"btnNext";
 			this->btnNext->Size = System::Drawing::Size(111, 28);
 			this->btnNext->TabIndex = 4;
@@ -144,7 +145,7 @@ namespace EnTec_Group_Project {
 			// btnBack
 			// 
 			this->btnBack->Location = System::Drawing::Point(13, 443);
-			this->btnBack->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btnBack->Margin = System::Windows::Forms::Padding(4);
 			this->btnBack->Name = L"btnBack";
 			this->btnBack->Size = System::Drawing::Size(111, 28);
 			this->btnBack->TabIndex = 5;
@@ -159,8 +160,8 @@ namespace EnTec_Group_Project {
 				L"Registration", L"MAP", L"IEP", L"Career Planning",
 					L"SAP"
 			});
-			this->cbReason->Location = System::Drawing::Point(482, 141);
-			this->cbReason->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->cbReason->Location = System::Drawing::Point(347, 141);
+			this->cbReason->Margin = System::Windows::Forms::Padding(4);
 			this->cbReason->Name = L"cbReason";
 			this->cbReason->Size = System::Drawing::Size(281, 24);
 			this->cbReason->TabIndex = 6;
@@ -182,7 +183,7 @@ namespace EnTec_Group_Project {
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->lbAdvisorList);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
-			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"TimeSelect";
 			this->Text = L"EnTec Advisor Apointments";
 			this->FormClosed += gcnew System::Windows::Forms::FormClosedEventHandler(this, &TimeSelect::TimeSelect_FormClosed);

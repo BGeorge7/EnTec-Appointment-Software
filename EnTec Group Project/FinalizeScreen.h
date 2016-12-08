@@ -1,4 +1,5 @@
 #pragma once
+#include "Student.h"
 #include <stdlib.h> 
 
 namespace EnTec_Group_Project {
@@ -15,11 +16,14 @@ namespace EnTec_Group_Project {
 	/// </summary>
 	public ref class FinalizeScreen : public System::Windows::Forms::Form
 	{
+	private: Student *student;
 	private: Form^ previous;
 	public:
-		FinalizeScreen(Form^ previous)
+		FinalizeScreen(Form^ previous, Student *student)
 		{
+			this->student = student;
 			this->previous = previous;
+
 			InitializeComponent();
 		}
 		FinalizeScreen(void)
@@ -523,6 +527,7 @@ namespace EnTec_Group_Project {
 			this->Name = L"FinalizeScreen";
 			this->Text = L"EnTec Advisor Apointments";
 			this->FormClosed += gcnew System::Windows::Forms::FormClosedEventHandler(this, &FinalizeScreen::FinalizeScreen_FormClosed);
+			this->VisibleChanged += gcnew System::EventHandler(this, &FinalizeScreen::FinalizeScreen_VisibleChanged);
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
 			this->groupBox2->ResumeLayout(false);
@@ -560,10 +565,26 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 private: System::Void btnFinish_Click(System::Object^  sender, System::EventArgs^  e) {
 	MessageBox::Show("Apointment has been set!", "Done",
 	MessageBoxButtons::OK, MessageBoxIcon::Information);
+	//TODO: Send appointment to database
+	student->clearStudent(); //  clears the student class of any pervious data that was stored
 	this->Hide();
+	
 }
 private: System::Void FinalizeScreen_FormClosed(System::Object^  sender, System::Windows::Forms::FormClosedEventArgs^  e) {
+	delete student;
+	student = nullptr;
 	exit(0);
+}
+private: System::Void FinalizeScreen_VisibleChanged(System::Object^  sender, System::EventArgs^  e) {
+	lbNameText->Text = student->getName();
+	lbEmailText->Text = student->getEmailAddress();
+	lbIDText->Text = student->getID();
+	lbDegreeFText->Text = student->getDegreeType();
+	lbDegreeText->Text = student->getDegree();
+	lbAdvisorText->Text = student->getAdvisor();
+	lbAppDText->Text = student->getAppDate();
+	lbAppTText->Text = "TODO: Appointment Time";
+	lbAppRText->Text = student->getAppReason();
 }
 };
 }

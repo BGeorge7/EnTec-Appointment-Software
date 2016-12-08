@@ -1,5 +1,6 @@
 #pragma once
 #include "TimeSelect.h"
+#include "Student.h"
 #include <stdlib.h> 
 
 
@@ -17,12 +18,15 @@ namespace EnTec_Group_Project {
 	/// </summary>
 	public ref class DegreeSelect : public System::Windows::Forms::Form
 	{
+	private: Student *student;
 	private: Form^ previous;
-	private: TimeSelect^ timeForm = gcnew TimeSelect(this);
+	private: TimeSelect^ timeForm;
 	public:
-		DegreeSelect(Form^ previous)
+		DegreeSelect(Form^ previous, Student *student)
 		{
+			this->student = student;
 			this->previous = previous;
+
 			InitializeComponent();
 		}
 		DegreeSelect(void)
@@ -41,6 +45,172 @@ namespace EnTec_Group_Project {
 				delete components;
 			}
 		}
+
+	private: bool isSelected()
+	{
+		if (rbTechnology->Checked)
+		{
+			student->setDegreeType(rbTechnology->Text);
+			if (rbTechnology1->Checked)//1
+			{
+				student->setDegree(rbTechnology1->Text);
+				return true;
+			}
+			else if (rbTechnology2->Checked)//2
+			{
+				student->setDegree(rbTechnology2->Text);
+				return true;
+			}
+			else if (rbTechnology3->Checked)//3
+			{
+				student->setDegree(rbTechnology3->Text);
+				return true;
+			}
+			else if (rbTechnology4->Checked)//4
+			{
+				student->setDegree(rbTechnology4->Text);
+				return true;
+			}
+			else if (rbTechnology5->Checked)//5
+			{
+				student->setDegree(rbTechnology5->Text);
+				return true;
+			}
+			else if (rbTechnology6->Checked)//6
+			{
+				student->setDegree(rbTechnology6->Text);
+				return true;
+			}
+			else if (rbTechnology7->Checked)//7
+			{
+				student->setDegree(rbTechnology7->Text);
+				return true;
+			}
+			else if (rbTechnology8->Checked)//8
+			{
+				student->setDegree(rbTechnology8->Text);
+				return true;
+			}
+			else if (rbTechnology9->Checked)//9
+			{
+				student->setDegree(rbTechnology9->Text);
+				return true;
+			}
+			else if (rbTechnology10->Checked)//10
+			{
+				student->setDegree(rbTechnology10->Text);
+				return true;
+			}
+			else if (rbTechnologyOther->Checked)//other
+			{
+				if (!(tbTechnologyOther->Text->IsNullOrWhiteSpace(tbTechnologyOther->Text)))
+				{
+					student->setDegree(tbTechnologyOther->Text);
+					return true;
+				}
+			}
+
+		}
+		else if (rbEngineering->Checked)
+		{
+			student->setDegreeType(rbEngineering->Text);
+			if (rbEngineering1->Checked)//1
+			{
+				student->setDegree(rbEngineering1->Text);
+				return true;
+			}
+			else if (rbEngineering2->Checked)//2
+			{
+				student->setDegree(rbEngineering2->Text);
+				return true;
+			}
+			else if (rbEngineering3->Checked)//3
+			{
+				student->setDegree(rbEngineering3->Text);
+				return true;
+			}
+			else if (rbEngineering4->Checked)//4
+			{
+				student->setDegree(rbEngineering4->Text);
+				return true;
+			}
+			else if (rbEngineering5->Checked)//5
+			{
+				student->setDegree(rbEngineering5->Text);
+				return true;
+			}
+			else if (rbEngineering6->Checked)//6
+			{
+				student->setDegree(rbEngineering6->Text);
+				return true;
+			}
+			else if (rbEngineering7->Checked)//7
+			{
+				student->setDegree(rbEngineering7->Text);
+				return true;
+			}
+			else if (rbEngineering8->Checked)//8
+			{
+				student->setDegree(rbEngineering8->Text);
+				return true;
+			}
+			else if (rbEngineering9->Checked)//9
+			{
+				student->setDegree(rbEngineering9->Text);
+				return true;
+			}
+			else if (rbEngineering10->Checked)//10
+			{
+				student->setDegree(rbEngineering10->Text);
+				return true;
+			}
+			else if (rbEngineering11->Checked)//11
+			{
+				student->setDegree(rbEngineering11->Text);
+				return true;
+			}
+			else if (rbEngineering12->Checked)//2
+			{
+				student->setDegree(rbEngineering12->Text);
+				return true;
+			}
+			else if (rbEngineering13->Checked)//13
+			{
+				student->setDegree(rbEngineering13->Text);
+				return true;
+			}
+			else if (rbEngineering14->Checked)//14
+			{
+				student->setDegree(rbEngineering2->Text);
+				return true;
+			}
+			else if (rbEngineeringOther->Checked)//other
+			{
+				if (!(tbEngineeringOther->Text->IsNullOrWhiteSpace(tbEngineeringOther->Text)))
+				{
+					student->setDegree(tbEngineeringOther->Text);
+					return true;
+				}
+			}
+
+		}
+		else if (rbMAGIC->Checked)
+		{
+			student->setDegreeType(rbMAGIC->Text);
+			if (rbMAGIC1->Checked)//1
+			{
+				student->setDegree(rbMAGIC1->Text);
+				return true;
+			}
+			else if (rbMAGIC2->Checked)//2
+			{
+				student->setDegree(rbMAGIC2->Text);
+				return true;
+			}
+		}
+
+		return false;
+	}
 	private: System::Windows::Forms::GroupBox^  gbEngineering;
 	private: System::Windows::Forms::GroupBox^  gbTechnology;
 	protected:
@@ -49,7 +219,8 @@ namespace EnTec_Group_Project {
 	protected:
 
 	private: System::Windows::Forms::GroupBox^  gbMAGIC;
-	private: System::Windows::Forms::RadioButton^  rdTechnology;
+	private: System::Windows::Forms::RadioButton^  rbTechnology;
+
 	private: System::Windows::Forms::RadioButton^  rbEngineering;
 	private: System::Windows::Forms::RadioButton^  rbMAGIC;
 
@@ -76,35 +247,45 @@ namespace EnTec_Group_Project {
 	private: System::Windows::Forms::RadioButton^  rbEngineering14;
 
 
-
-
 	private: System::Windows::Forms::RadioButton^  rbEngineering13;
 
 	private: System::Windows::Forms::RadioButton^  rbEngineering12;
 
 	private: System::Windows::Forms::TextBox^  tbEngineeringOther;
-	private: System::Windows::Forms::RadioButton^  rdEngineeringOther;
+	private: System::Windows::Forms::RadioButton^  rbEngineeringOther;
+
 	private: System::Windows::Forms::TextBox^  tbTechnologyOther;
-	private: System::Windows::Forms::RadioButton^  rdTechnologyOther;
-	private: System::Windows::Forms::RadioButton^  rdTechnology10;
+	private: System::Windows::Forms::RadioButton^  rbTechnologyOther;
 
-	private: System::Windows::Forms::RadioButton^  rdTechnology9;
+	private: System::Windows::Forms::RadioButton^  rbTechnology10;
 
-	private: System::Windows::Forms::RadioButton^  rdTechnology8;
+	private: System::Windows::Forms::RadioButton^  rbTechnology9;
 
-	private: System::Windows::Forms::RadioButton^  rdTechnology7;
 
-	private: System::Windows::Forms::RadioButton^  rdTechnology6;
+	private: System::Windows::Forms::RadioButton^  rbTechnology8;
 
-	private: System::Windows::Forms::RadioButton^  rdTechnology5;
 
-	private: System::Windows::Forms::RadioButton^  rdTechnology4;
+	private: System::Windows::Forms::RadioButton^  rbTechnology7;
 
-	private: System::Windows::Forms::RadioButton^  rdTechnology3;
 
-	private: System::Windows::Forms::RadioButton^  rdTechnology2;
+	private: System::Windows::Forms::RadioButton^  rbTechnology6;
 
-	private: System::Windows::Forms::RadioButton^  rdTechnology1;
+
+	private: System::Windows::Forms::RadioButton^  rbTechnology5;
+
+
+	private: System::Windows::Forms::RadioButton^  rbTechnology4;
+
+
+private: System::Windows::Forms::RadioButton^  rbTechnology3;
+
+
+private: System::Windows::Forms::RadioButton^  rbTechnology2;
+
+
+private: System::Windows::Forms::RadioButton^  rbTechnology1;
+
+
 	private: System::Windows::Forms::RadioButton^  rbMAGIC2;
 
 
@@ -130,7 +311,7 @@ namespace EnTec_Group_Project {
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(DegreeSelect::typeid));
 			this->gbEngineering = (gcnew System::Windows::Forms::GroupBox());
 			this->tbEngineeringOther = (gcnew System::Windows::Forms::TextBox());
-			this->rdEngineeringOther = (gcnew System::Windows::Forms::RadioButton());
+			this->rbEngineeringOther = (gcnew System::Windows::Forms::RadioButton());
 			this->rbEngineering1 = (gcnew System::Windows::Forms::RadioButton());
 			this->rbEngineering14 = (gcnew System::Windows::Forms::RadioButton());
 			this->rbEngineering13 = (gcnew System::Windows::Forms::RadioButton());
@@ -147,21 +328,21 @@ namespace EnTec_Group_Project {
 			this->rbEngineering2 = (gcnew System::Windows::Forms::RadioButton());
 			this->gbTechnology = (gcnew System::Windows::Forms::GroupBox());
 			this->tbTechnologyOther = (gcnew System::Windows::Forms::TextBox());
-			this->rdTechnologyOther = (gcnew System::Windows::Forms::RadioButton());
-			this->rdTechnology10 = (gcnew System::Windows::Forms::RadioButton());
-			this->rdTechnology9 = (gcnew System::Windows::Forms::RadioButton());
-			this->rdTechnology8 = (gcnew System::Windows::Forms::RadioButton());
-			this->rdTechnology7 = (gcnew System::Windows::Forms::RadioButton());
-			this->rdTechnology6 = (gcnew System::Windows::Forms::RadioButton());
-			this->rdTechnology5 = (gcnew System::Windows::Forms::RadioButton());
-			this->rdTechnology4 = (gcnew System::Windows::Forms::RadioButton());
-			this->rdTechnology3 = (gcnew System::Windows::Forms::RadioButton());
-			this->rdTechnology2 = (gcnew System::Windows::Forms::RadioButton());
-			this->rdTechnology1 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbTechnologyOther = (gcnew System::Windows::Forms::RadioButton());
+			this->rbTechnology10 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbTechnology9 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbTechnology8 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbTechnology7 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbTechnology6 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbTechnology5 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbTechnology4 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbTechnology3 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbTechnology2 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbTechnology1 = (gcnew System::Windows::Forms::RadioButton());
 			this->gbMAGIC = (gcnew System::Windows::Forms::GroupBox());
 			this->rbMAGIC2 = (gcnew System::Windows::Forms::RadioButton());
 			this->rbMAGIC1 = (gcnew System::Windows::Forms::RadioButton());
-			this->rdTechnology = (gcnew System::Windows::Forms::RadioButton());
+			this->rbTechnology = (gcnew System::Windows::Forms::RadioButton());
 			this->rbEngineering = (gcnew System::Windows::Forms::RadioButton());
 			this->rbMAGIC = (gcnew System::Windows::Forms::RadioButton());
 			this->btnNext = (gcnew System::Windows::Forms::Button());
@@ -176,7 +357,7 @@ namespace EnTec_Group_Project {
 			this->gbEngineering->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(236)), static_cast<System::Int32>(static_cast<System::Byte>(236)),
 				static_cast<System::Int32>(static_cast<System::Byte>(234)));
 			this->gbEngineering->Controls->Add(this->tbEngineeringOther);
-			this->gbEngineering->Controls->Add(this->rdEngineeringOther);
+			this->gbEngineering->Controls->Add(this->rbEngineeringOther);
 			this->gbEngineering->Controls->Add(this->rbEngineering1);
 			this->gbEngineering->Controls->Add(this->rbEngineering14);
 			this->gbEngineering->Controls->Add(this->rbEngineering13);
@@ -210,7 +391,7 @@ namespace EnTec_Group_Project {
 			this->tbEngineeringOther->Size = System::Drawing::Size(253, 22);
 			this->tbEngineeringOther->TabIndex = 15;
 			// 
-			// rdEngineeringOther
+			// rbEngineeringOther
 			// 
 			this->rdEngineeringOther->AutoSize = true;
 			this->rdEngineeringOther->Location = System::Drawing::Point(8, 417);
@@ -395,17 +576,17 @@ namespace EnTec_Group_Project {
 			this->gbTechnology->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(236)), static_cast<System::Int32>(static_cast<System::Byte>(236)),
 				static_cast<System::Int32>(static_cast<System::Byte>(234)));
 			this->gbTechnology->Controls->Add(this->tbTechnologyOther);
-			this->gbTechnology->Controls->Add(this->rdTechnologyOther);
-			this->gbTechnology->Controls->Add(this->rdTechnology10);
-			this->gbTechnology->Controls->Add(this->rdTechnology9);
-			this->gbTechnology->Controls->Add(this->rdTechnology8);
-			this->gbTechnology->Controls->Add(this->rdTechnology7);
-			this->gbTechnology->Controls->Add(this->rdTechnology6);
-			this->gbTechnology->Controls->Add(this->rdTechnology5);
-			this->gbTechnology->Controls->Add(this->rdTechnology4);
-			this->gbTechnology->Controls->Add(this->rdTechnology3);
-			this->gbTechnology->Controls->Add(this->rdTechnology2);
-			this->gbTechnology->Controls->Add(this->rdTechnology1);
+			this->gbTechnology->Controls->Add(this->rbTechnologyOther);
+			this->gbTechnology->Controls->Add(this->rbTechnology10);
+			this->gbTechnology->Controls->Add(this->rbTechnology9);
+			this->gbTechnology->Controls->Add(this->rbTechnology8);
+			this->gbTechnology->Controls->Add(this->rbTechnology7);
+			this->gbTechnology->Controls->Add(this->rbTechnology6);
+			this->gbTechnology->Controls->Add(this->rbTechnology5);
+			this->gbTechnology->Controls->Add(this->rbTechnology4);
+			this->gbTechnology->Controls->Add(this->rbTechnology3);
+			this->gbTechnology->Controls->Add(this->rbTechnology2);
+			this->gbTechnology->Controls->Add(this->rbTechnology1);
 			this->gbTechnology->Enabled = false;
 			this->gbTechnology->Location = System::Drawing::Point(17, 32);
 			this->gbTechnology->Margin = System::Windows::Forms::Padding(4);
@@ -424,7 +605,7 @@ namespace EnTec_Group_Project {
 			this->tbTechnologyOther->Size = System::Drawing::Size(253, 22);
 			this->tbTechnologyOther->TabIndex = 16;
 			// 
-			// rdTechnologyOther
+			// rbTechnologyOther
 			// 
 			this->rdTechnologyOther->AutoSize = true;
 			this->rdTechnologyOther->Location = System::Drawing::Point(9, 301);
@@ -435,7 +616,7 @@ namespace EnTec_Group_Project {
 			this->rdTechnologyOther->TabStop = true;
 			this->rdTechnologyOther->UseVisualStyleBackColor = true;
 			// 
-			// rdTechnology10
+			// rbTechnology10
 			// 
 			this->rdTechnology10->AutoSize = true;
 			this->rdTechnology10->Location = System::Drawing::Point(9, 272);
@@ -447,7 +628,7 @@ namespace EnTec_Group_Project {
 			this->rdTechnology10->Text = L"A.S. Networking Services Technology";
 			this->rdTechnology10->UseVisualStyleBackColor = true;
 			// 
-			// rdTechnology9
+			// rbTechnology9
 			// 
 			this->rdTechnology9->AutoSize = true;
 			this->rdTechnology9->Location = System::Drawing::Point(9, 243);
@@ -459,7 +640,7 @@ namespace EnTec_Group_Project {
 			this->rdTechnology9->Text = L"A.S. Oracle Database Developer";
 			this->rdTechnology9->UseVisualStyleBackColor = true;
 			// 
-			// rdTechnology8
+			// rbTechnology8
 			// 
 			this->rdTechnology8->AutoSize = true;
 			this->rdTechnology8->Location = System::Drawing::Point(9, 214);
@@ -471,7 +652,7 @@ namespace EnTec_Group_Project {
 			this->rdTechnology8->Text = L"A.S. Oracle Database Administrator";
 			this->rdTechnology8->UseVisualStyleBackColor = true;
 			// 
-			// rdTechnology7
+			// rbTechnology7
 			// 
 			this->rdTechnology7->AutoSize = true;
 			this->rdTechnology7->Location = System::Drawing::Point(9, 185);
@@ -483,7 +664,7 @@ namespace EnTec_Group_Project {
 			this->rdTechnology7->Text = L"A.S. Microsoft Business Intelligence";
 			this->rdTechnology7->UseVisualStyleBackColor = true;
 			// 
-			// rdTechnology6
+			// rbTechnology6
 			// 
 			this->rdTechnology6->AutoSize = true;
 			this->rdTechnology6->Location = System::Drawing::Point(9, 156);
@@ -495,7 +676,7 @@ namespace EnTec_Group_Project {
 			this->rdTechnology6->Text = L"A.S. Microsoft Database Administrator";
 			this->rdTechnology6->UseVisualStyleBackColor = true;
 			// 
-			// rdTechnology5
+			// rbTechnology5
 			// 
 			this->rdTechnology5->AutoSize = true;
 			this->rdTechnology5->Location = System::Drawing::Point(9, 127);
@@ -507,7 +688,7 @@ namespace EnTec_Group_Project {
 			this->rdTechnology5->Text = L"A.S. Mobile Applications Development";
 			this->rdTechnology5->UseVisualStyleBackColor = true;
 			// 
-			// rdTechnology4
+			// rbTechnology4
 			// 
 			this->rdTechnology4->AutoSize = true;
 			this->rdTechnology4->Location = System::Drawing::Point(9, 98);
@@ -519,7 +700,7 @@ namespace EnTec_Group_Project {
 			this->rdTechnology4->Text = L"A.S. Bus Application Programming";
 			this->rdTechnology4->UseVisualStyleBackColor = true;
 			// 
-			// rdTechnology3
+			// rbTechnology3
 			// 
 			this->rdTechnology3->AutoSize = true;
 			this->rdTechnology3->Location = System::Drawing::Point(9, 69);
@@ -531,7 +712,7 @@ namespace EnTec_Group_Project {
 			this->rdTechnology3->Text = L"A.A. Computer Science ";
 			this->rdTechnology3->UseVisualStyleBackColor = true;
 			// 
-			// rdTechnology2
+			// rbTechnology2
 			// 
 			this->rdTechnology2->AutoSize = true;
 			this->rdTechnology2->Location = System::Drawing::Point(9, 40);
@@ -543,7 +724,7 @@ namespace EnTec_Group_Project {
 			this->rdTechnology2->Text = L"A.S. Information Systems Technology ";
 			this->rdTechnology2->UseVisualStyleBackColor = true;
 			// 
-			// rdTechnology1
+			// rbTechnology1
 			// 
 			this->rdTechnology1->AutoSize = true;
 			this->rdTechnology1->Location = System::Drawing::Point(9, 11);
@@ -594,7 +775,7 @@ namespace EnTec_Group_Project {
 			this->rbMAGIC1->Text = L"Animation and Game Art ";
 			this->rbMAGIC1->UseVisualStyleBackColor = true;
 			// 
-			// rdTechnology
+			// rbTechnology
 			// 
 			this->rdTechnology->AutoSize = true;
 			this->rdTechnology->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(116)), static_cast<System::Int32>(static_cast<System::Byte>(175)),
@@ -673,7 +854,7 @@ namespace EnTec_Group_Project {
 			this->Controls->Add(this->btnNext);
 			this->Controls->Add(this->rbMAGIC);
 			this->Controls->Add(this->rbEngineering);
-			this->Controls->Add(this->rdTechnology);
+			this->Controls->Add(this->rbTechnology);
 			this->Controls->Add(this->gbMAGIC);
 			this->Controls->Add(this->gbTechnology);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
@@ -681,6 +862,7 @@ namespace EnTec_Group_Project {
 			this->Name = L"DegreeSelect";
 			this->Text = L"EnTec Advisor Apointments";
 			this->FormClosed += gcnew System::Windows::Forms::FormClosedEventHandler(this, &DegreeSelect::DegreeSelect_FormClosed);
+			this->Load += gcnew System::EventHandler(this, &DegreeSelect::DegreeSelect_Load);
 			this->gbEngineering->ResumeLayout(false);
 			this->gbEngineering->PerformLayout();
 			this->gbTechnology->ResumeLayout(false);
@@ -719,9 +901,15 @@ private: System::Void rbMAGIC_CheckedChanged(System::Object^  sender, System::Ev
 
 //Back and Next buttons
 private: System::Void btnNext_Click(System::Object^  sender, System::EventArgs^  e) {
-	
-	this->Hide();
-	this->timeForm->ShowDialog();
+	if (isSelected())
+	{
+		this->Hide();
+		this->timeForm->ShowDialog();
+	}
+	else {
+		MessageBox::Show("Looks like you left something Empty.\nPlease Select of a degree and try again", "Error",
+			MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
+	}
 }
 private: System::Void btnBack_Click(System::Object^  sender, System::EventArgs^  e) {
 	
@@ -729,7 +917,12 @@ private: System::Void btnBack_Click(System::Object^  sender, System::EventArgs^ 
 	this->previous->Show();
 }
 private: System::Void DegreeSelect_FormClosed(System::Object^  sender, System::Windows::Forms::FormClosedEventArgs^  e) {
+	delete student;
+	student = nullptr;
 	exit(0);
+}
+private: System::Void DegreeSelect_Load(System::Object^  sender, System::EventArgs^  e) {
+	timeForm = gcnew TimeSelect(this, student);
 }
 };
 }

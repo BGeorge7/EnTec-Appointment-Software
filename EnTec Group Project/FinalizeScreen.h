@@ -489,10 +489,14 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 private: System::Void btnFinish_Click(System::Object^  sender, System::EventArgs^  e) {
 	MessageBox::Show("Apointment has been set!", "Done",
 	MessageBoxButtons::OK, MessageBoxIcon::Information);
-	this->Hide();
 	//TODO: Send appointment to database
+	student->clearStudent(); //  clears the student class of any pervious data that was stored
+	this->Hide();
+	
 }
 private: System::Void FinalizeScreen_FormClosed(System::Object^  sender, System::Windows::Forms::FormClosedEventArgs^  e) {
+	delete student;
+	student = nullptr;
 	exit(0);
 }
 private: System::Void FinalizeScreen_VisibleChanged(System::Object^  sender, System::EventArgs^  e) {

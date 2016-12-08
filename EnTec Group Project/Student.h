@@ -51,5 +51,7 @@ public:
 	String^ getAppDate();
 	String^ getAppTime();
 
+	void clearStudent();
+
 };
 

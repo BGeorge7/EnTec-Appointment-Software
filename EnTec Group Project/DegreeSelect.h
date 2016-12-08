@@ -862,6 +862,8 @@ private: System::Void btnBack_Click(System::Object^  sender, System::EventArgs^ 
 	this->previous->Show();
 }
 private: System::Void DegreeSelect_FormClosed(System::Object^  sender, System::Windows::Forms::FormClosedEventArgs^  e) {
+	delete student;
+	student = nullptr;
 	exit(0);
 }
 private: System::Void DegreeSelect_Load(System::Object^  sender, System::EventArgs^  e) {

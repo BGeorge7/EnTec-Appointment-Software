@@ -210,6 +210,8 @@ private: System::Void TimeSelect_Load(System::Object^  sender, System::EventArgs
 	finalizeForm = gcnew FinalizeScreen(this, student);
 }
 private: System::Void TimeSelect_FormClosed(System::Object^  sender, System::Windows::Forms::FormClosedEventArgs^  e) {
+	delete student;
+	student = nullptr;
 	exit(0);
 }
 private: System::Void TimeSelect_VisibleChanged(System::Object^  sender, System::EventArgs^  e) {

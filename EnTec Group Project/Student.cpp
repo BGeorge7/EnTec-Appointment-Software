@@ -3,7 +3,20 @@
 Student::Student()
 {
 }
+void Student::clearStudent()
+{
+	this->name = "";
+	this->emailAddress = "";
+	this->iD = "";
 
+	this->degree = "";
+	this->degreeType = "";
+
+	this->advisor = "";
+	this->appReason = "";
+	this->appDate = "";
+	this->appTime = "";
+}
 //setters
 void Student::setName(String^ name)
 {

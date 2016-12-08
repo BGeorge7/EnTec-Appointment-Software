@@ -270,6 +270,8 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 	//TODO: Make this button look better it's existance kills me
 }
 private: System::Void StudentSplash_FormClosed(System::Object^  sender, System::Windows::Forms::FormClosedEventArgs^  e) {
+	delete student;
+	student = nullptr;
 	exit(0);
 }
 private: System::Void txtbEmail_TextChanged(System::Object^  sender, System::EventArgs^  e) {

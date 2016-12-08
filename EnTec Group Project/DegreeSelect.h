@@ -173,6 +173,8 @@ namespace EnTec_Group_Project {
 			// 
 			// gbEngineering
 			// 
+			this->gbEngineering->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(236)), static_cast<System::Int32>(static_cast<System::Byte>(236)),
+				static_cast<System::Int32>(static_cast<System::Byte>(234)));
 			this->gbEngineering->Controls->Add(this->tbEngineeringOther);
 			this->gbEngineering->Controls->Add(this->rdEngineeringOther);
 			this->gbEngineering->Controls->Add(this->rbEngineering1);
@@ -190,27 +192,31 @@ namespace EnTec_Group_Project {
 			this->gbEngineering->Controls->Add(this->rbEngineering3);
 			this->gbEngineering->Controls->Add(this->rbEngineering2);
 			this->gbEngineering->Enabled = false;
-			this->gbEngineering->Location = System::Drawing::Point(258, 26);
+			this->gbEngineering->Location = System::Drawing::Point(345, 32);
+			this->gbEngineering->Margin = System::Windows::Forms::Padding(4);
 			this->gbEngineering->Name = L"gbEngineering";
+			this->gbEngineering->Padding = System::Windows::Forms::Padding(4);
 			this->gbEngineering->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->gbEngineering->Size = System::Drawing::Size(225, 355);
+			this->gbEngineering->Size = System::Drawing::Size(295, 442);
 			this->gbEngineering->TabIndex = 0;
 			this->gbEngineering->TabStop = false;
 			// 
 			// tbEngineeringOther
 			// 
-			this->tbEngineeringOther->Location = System::Drawing::Point(28, 329);
+			this->tbEngineeringOther->Location = System::Drawing::Point(30, 414);
+			this->tbEngineeringOther->Margin = System::Windows::Forms::Padding(4);
 			this->tbEngineeringOther->MaxLength = 34;
 			this->tbEngineeringOther->Name = L"tbEngineeringOther";
-			this->tbEngineeringOther->Size = System::Drawing::Size(191, 20);
+			this->tbEngineeringOther->Size = System::Drawing::Size(253, 22);
 			this->tbEngineeringOther->TabIndex = 15;
 			// 
 			// rdEngineeringOther
 			// 
 			this->rdEngineeringOther->AutoSize = true;
-			this->rdEngineeringOther->Location = System::Drawing::Point(7, 333);
+			this->rdEngineeringOther->Location = System::Drawing::Point(8, 417);
+			this->rdEngineeringOther->Margin = System::Windows::Forms::Padding(4);
 			this->rdEngineeringOther->Name = L"rdEngineeringOther";
-			this->rdEngineeringOther->Size = System::Drawing::Size(14, 13);
+			this->rdEngineeringOther->Size = System::Drawing::Size(17, 16);
 			this->rdEngineeringOther->TabIndex = 14;
 			this->rdEngineeringOther->TabStop = true;
 			this->rdEngineeringOther->UseVisualStyleBackColor = true;
@@ -218,9 +224,10 @@ namespace EnTec_Group_Project {
 			// rbEngineering1
 			// 
 			this->rbEngineering1->AutoSize = true;
-			this->rbEngineering1->Location = System::Drawing::Point(7, 11);
+			this->rbEngineering1->Location = System::Drawing::Point(8, 11);
+			this->rbEngineering1->Margin = System::Windows::Forms::Padding(4);
 			this->rbEngineering1->Name = L"rbEngineering1";
-			this->rbEngineering1->Size = System::Drawing::Size(138, 17);
+			this->rbEngineering1->Size = System::Drawing::Size(179, 21);
 			this->rbEngineering1->TabIndex = 0;
 			this->rbEngineering1->TabStop = true;
 			this->rbEngineering1->Text = L"A.A. Architecture 10905";
@@ -229,9 +236,10 @@ namespace EnTec_Group_Project {
 			// rbEngineering14
 			// 
 			this->rbEngineering14->AutoSize = true;
-			this->rbEngineering14->Location = System::Drawing::Point(7, 311);
+			this->rbEngineering14->Location = System::Drawing::Point(8, 388);
+			this->rbEngineering14->Margin = System::Windows::Forms::Padding(4);
 			this->rbEngineering14->Name = L"rbEngineering14";
-			this->rbEngineering14->Size = System::Drawing::Size(159, 17);
+			this->rbEngineering14->Size = System::Drawing::Size(208, 21);
 			this->rbEngineering14->TabIndex = 13;
 			this->rbEngineering14->TabStop = true;
 			this->rbEngineering14->Text = L"A.S. Electronics Engineering";
@@ -240,9 +248,10 @@ namespace EnTec_Group_Project {
 			// rbEngineering13
 			// 
 			this->rbEngineering13->AutoSize = true;
-			this->rbEngineering13->Location = System::Drawing::Point(7, 288);
+			this->rbEngineering13->Location = System::Drawing::Point(8, 359);
+			this->rbEngineering13->Margin = System::Windows::Forms::Padding(4);
 			this->rbEngineering13->Name = L"rbEngineering13";
-			this->rbEngineering13->Size = System::Drawing::Size(152, 17);
+			this->rbEngineering13->Size = System::Drawing::Size(200, 21);
 			this->rbEngineering13->TabIndex = 12;
 			this->rbEngineering13->TabStop = true;
 			this->rbEngineering13->Text = L"A.S. Computer Engineering";
@@ -251,9 +260,10 @@ namespace EnTec_Group_Project {
 			// rbEngineering12
 			// 
 			this->rbEngineering12->AutoSize = true;
-			this->rbEngineering12->Location = System::Drawing::Point(7, 265);
+			this->rbEngineering12->Location = System::Drawing::Point(8, 330);
+			this->rbEngineering12->Margin = System::Windows::Forms::Padding(4);
 			this->rbEngineering12->Name = L"rbEngineering12";
-			this->rbEngineering12->Size = System::Drawing::Size(168, 17);
+			this->rbEngineering12->Size = System::Drawing::Size(216, 21);
 			this->rbEngineering12->TabIndex = 11;
 			this->rbEngineering12->TabStop = true;
 			this->rbEngineering12->Text = L"A.S. Advanced Manufacturing";
@@ -262,9 +272,10 @@ namespace EnTec_Group_Project {
 			// rbEngineering11
 			// 
 			this->rbEngineering11->AutoSize = true;
-			this->rbEngineering11->Location = System::Drawing::Point(7, 241);
+			this->rbEngineering11->Location = System::Drawing::Point(8, 301);
+			this->rbEngineering11->Margin = System::Windows::Forms::Padding(4);
 			this->rbEngineering11->Name = L"rbEngineering11";
-			this->rbEngineering11->Size = System::Drawing::Size(159, 17);
+			this->rbEngineering11->Size = System::Drawing::Size(208, 21);
 			this->rbEngineering11->TabIndex = 10;
 			this->rbEngineering11->TabStop = true;
 			this->rbEngineering11->Text = L"B.S. Electronics Engineering";
@@ -273,9 +284,10 @@ namespace EnTec_Group_Project {
 			// rbEngineering10
 			// 
 			this->rbEngineering10->AutoSize = true;
-			this->rbEngineering10->Location = System::Drawing::Point(7, 218);
+			this->rbEngineering10->Location = System::Drawing::Point(8, 272);
+			this->rbEngineering10->Margin = System::Windows::Forms::Padding(4);
 			this->rbEngineering10->Name = L"rbEngineering10";
-			this->rbEngineering10->Size = System::Drawing::Size(120, 17);
+			this->rbEngineering10->Size = System::Drawing::Size(153, 21);
 			this->rbEngineering10->TabIndex = 9;
 			this->rbEngineering10->TabStop = true;
 			this->rbEngineering10->Text = L"A.A. Science 10904";
@@ -284,9 +296,10 @@ namespace EnTec_Group_Project {
 			// rbEngineering9
 			// 
 			this->rbEngineering9->AutoSize = true;
-			this->rbEngineering9->Location = System::Drawing::Point(7, 195);
+			this->rbEngineering9->Location = System::Drawing::Point(8, 243);
+			this->rbEngineering9->Margin = System::Windows::Forms::Padding(4);
 			this->rbEngineering9->Name = L"rbEngineering9";
-			this->rbEngineering9->Size = System::Drawing::Size(113, 17);
+			this->rbEngineering9->Size = System::Drawing::Size(145, 21);
 			this->rbEngineering9->TabIndex = 8;
 			this->rbEngineering9->TabStop = true;
 			this->rbEngineering9->Text = L"A.A. Ocean 10913";
@@ -295,9 +308,10 @@ namespace EnTec_Group_Project {
 			// rbEngineering8
 			// 
 			this->rbEngineering8->AutoSize = true;
-			this->rbEngineering8->Location = System::Drawing::Point(7, 172);
+			this->rbEngineering8->Location = System::Drawing::Point(8, 214);
+			this->rbEngineering8->Margin = System::Windows::Forms::Padding(4);
 			this->rbEngineering8->Name = L"rbEngineering8";
-			this->rbEngineering8->Size = System::Drawing::Size(136, 17);
+			this->rbEngineering8->Size = System::Drawing::Size(174, 21);
 			this->rbEngineering8->TabIndex = 7;
 			this->rbEngineering8->TabStop = true;
 			this->rbEngineering8->Text = L"A.A. Mechanical 10911";
@@ -306,9 +320,10 @@ namespace EnTec_Group_Project {
 			// rbEngineering7
 			// 
 			this->rbEngineering7->AutoSize = true;
-			this->rbEngineering7->Location = System::Drawing::Point(7, 149);
+			this->rbEngineering7->Location = System::Drawing::Point(8, 185);
+			this->rbEngineering7->Margin = System::Windows::Forms::Padding(4);
 			this->rbEngineering7->Name = L"rbEngineering7";
-			this->rbEngineering7->Size = System::Drawing::Size(123, 17);
+			this->rbEngineering7->Size = System::Drawing::Size(160, 21);
 			this->rbEngineering7->TabIndex = 6;
 			this->rbEngineering7->TabStop = true;
 			this->rbEngineering7->Text = L"A.A. Industrial 10912";
@@ -318,9 +333,10 @@ namespace EnTec_Group_Project {
 			// rbEngineering6
 			// 
 			this->rbEngineering6->AutoSize = true;
-			this->rbEngineering6->Location = System::Drawing::Point(7, 126);
+			this->rbEngineering6->Location = System::Drawing::Point(8, 156);
+			this->rbEngineering6->Margin = System::Windows::Forms::Padding(4);
 			this->rbEngineering6->Name = L"rbEngineering6";
-			this->rbEngineering6->Size = System::Drawing::Size(131, 17);
+			this->rbEngineering6->Size = System::Drawing::Size(170, 21);
 			this->rbEngineering6->TabIndex = 5;
 			this->rbEngineering6->TabStop = true;
 			this->rbEngineering6->Text = L"A.A. Geomatics 10909";
@@ -329,9 +345,10 @@ namespace EnTec_Group_Project {
 			// rbEngineering5
 			// 
 			this->rbEngineering5->AutoSize = true;
-			this->rbEngineering5->Location = System::Drawing::Point(7, 103);
+			this->rbEngineering5->Location = System::Drawing::Point(8, 127);
+			this->rbEngineering5->Margin = System::Windows::Forms::Padding(4);
 			this->rbEngineering5->Name = L"rbEngineering5";
-			this->rbEngineering5->Size = System::Drawing::Size(124, 17);
+			this->rbEngineering5->Size = System::Drawing::Size(160, 21);
 			this->rbEngineering5->TabIndex = 4;
 			this->rbEngineering5->TabStop = true;
 			this->rbEngineering5->Text = L"A.A. Electrical 10910";
@@ -340,9 +357,10 @@ namespace EnTec_Group_Project {
 			// rbEngineering4
 			// 
 			this->rbEngineering4->AutoSize = true;
-			this->rbEngineering4->Location = System::Drawing::Point(7, 80);
+			this->rbEngineering4->Location = System::Drawing::Point(8, 98);
+			this->rbEngineering4->Margin = System::Windows::Forms::Padding(4);
 			this->rbEngineering4->Name = L"rbEngineering4";
-			this->rbEngineering4->Size = System::Drawing::Size(126, 17);
+			this->rbEngineering4->Size = System::Drawing::Size(164, 21);
 			this->rbEngineering4->TabIndex = 3;
 			this->rbEngineering4->TabStop = true;
 			this->rbEngineering4->Text = L"A.A. Computer 10705";
@@ -351,9 +369,10 @@ namespace EnTec_Group_Project {
 			// rbEngineering3
 			// 
 			this->rbEngineering3->AutoSize = true;
-			this->rbEngineering3->Location = System::Drawing::Point(7, 57);
+			this->rbEngineering3->Location = System::Drawing::Point(8, 69);
+			this->rbEngineering3->Margin = System::Windows::Forms::Padding(4);
 			this->rbEngineering3->Name = L"rbEngineering3";
-			this->rbEngineering3->Size = System::Drawing::Size(100, 17);
+			this->rbEngineering3->Size = System::Drawing::Size(128, 21);
 			this->rbEngineering3->TabIndex = 2;
 			this->rbEngineering3->TabStop = true;
 			this->rbEngineering3->Text = L"A.A. Civil 10908";
@@ -362,9 +381,10 @@ namespace EnTec_Group_Project {
 			// rbEngineering2
 			// 
 			this->rbEngineering2->AutoSize = true;
-			this->rbEngineering2->Location = System::Drawing::Point(7, 34);
+			this->rbEngineering2->Location = System::Drawing::Point(8, 40);
+			this->rbEngineering2->Margin = System::Windows::Forms::Padding(4);
 			this->rbEngineering2->Name = L"rbEngineering2";
-			this->rbEngineering2->Size = System::Drawing::Size(124, 17);
+			this->rbEngineering2->Size = System::Drawing::Size(160, 21);
 			this->rbEngineering2->TabIndex = 1;
 			this->rbEngineering2->TabStop = true;
 			this->rbEngineering2->Text = L"A.A. Chemical 10906";
@@ -372,6 +392,8 @@ namespace EnTec_Group_Project {
 			// 
 			// gbTechnology
 			// 
+			this->gbTechnology->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(236)), static_cast<System::Int32>(static_cast<System::Byte>(236)),
+				static_cast<System::Int32>(static_cast<System::Byte>(234)));
 			this->gbTechnology->Controls->Add(this->tbTechnologyOther);
 			this->gbTechnology->Controls->Add(this->rdTechnologyOther);
 			this->gbTechnology->Controls->Add(this->rdTechnology10);
@@ -385,26 +407,30 @@ namespace EnTec_Group_Project {
 			this->gbTechnology->Controls->Add(this->rdTechnology2);
 			this->gbTechnology->Controls->Add(this->rdTechnology1);
 			this->gbTechnology->Enabled = false;
-			this->gbTechnology->Location = System::Drawing::Point(12, 26);
+			this->gbTechnology->Location = System::Drawing::Point(17, 32);
+			this->gbTechnology->Margin = System::Windows::Forms::Padding(4);
 			this->gbTechnology->Name = L"gbTechnology";
-			this->gbTechnology->Size = System::Drawing::Size(225, 321);
+			this->gbTechnology->Padding = System::Windows::Forms::Padding(4);
+			this->gbTechnology->Size = System::Drawing::Size(295, 327);
 			this->gbTechnology->TabIndex = 1;
 			this->gbTechnology->TabStop = false;
 			// 
 			// tbTechnologyOther
 			// 
-			this->tbTechnologyOther->Location = System::Drawing::Point(27, 238);
+			this->tbTechnologyOther->Location = System::Drawing::Point(31, 298);
+			this->tbTechnologyOther->Margin = System::Windows::Forms::Padding(4);
 			this->tbTechnologyOther->MaxLength = 34;
 			this->tbTechnologyOther->Name = L"tbTechnologyOther";
-			this->tbTechnologyOther->Size = System::Drawing::Size(191, 20);
+			this->tbTechnologyOther->Size = System::Drawing::Size(253, 22);
 			this->tbTechnologyOther->TabIndex = 16;
 			// 
 			// rdTechnologyOther
 			// 
 			this->rdTechnologyOther->AutoSize = true;
-			this->rdTechnologyOther->Location = System::Drawing::Point(7, 241);
+			this->rdTechnologyOther->Location = System::Drawing::Point(9, 301);
+			this->rdTechnologyOther->Margin = System::Windows::Forms::Padding(4);
 			this->rdTechnologyOther->Name = L"rdTechnologyOther";
-			this->rdTechnologyOther->Size = System::Drawing::Size(14, 13);
+			this->rdTechnologyOther->Size = System::Drawing::Size(17, 16);
 			this->rdTechnologyOther->TabIndex = 16;
 			this->rdTechnologyOther->TabStop = true;
 			this->rdTechnologyOther->UseVisualStyleBackColor = true;
@@ -412,9 +438,10 @@ namespace EnTec_Group_Project {
 			// rdTechnology10
 			// 
 			this->rdTechnology10->AutoSize = true;
-			this->rdTechnology10->Location = System::Drawing::Point(7, 218);
+			this->rdTechnology10->Location = System::Drawing::Point(9, 272);
+			this->rdTechnology10->Margin = System::Windows::Forms::Padding(4);
 			this->rdTechnology10->Name = L"rdTechnology10";
-			this->rdTechnology10->Size = System::Drawing::Size(205, 17);
+			this->rdTechnology10->Size = System::Drawing::Size(265, 21);
 			this->rdTechnology10->TabIndex = 13;
 			this->rdTechnology10->TabStop = true;
 			this->rdTechnology10->Text = L"A.S. Networking Services Technology";
@@ -423,9 +450,10 @@ namespace EnTec_Group_Project {
 			// rdTechnology9
 			// 
 			this->rdTechnology9->AutoSize = true;
-			this->rdTechnology9->Location = System::Drawing::Point(7, 195);
+			this->rdTechnology9->Location = System::Drawing::Point(9, 243);
+			this->rdTechnology9->Margin = System::Windows::Forms::Padding(4);
 			this->rdTechnology9->Name = L"rdTechnology9";
-			this->rdTechnology9->Size = System::Drawing::Size(180, 17);
+			this->rdTechnology9->Size = System::Drawing::Size(235, 21);
 			this->rdTechnology9->TabIndex = 12;
 			this->rdTechnology9->TabStop = true;
 			this->rdTechnology9->Text = L"A.S. Oracle Database Developer";
@@ -434,9 +462,10 @@ namespace EnTec_Group_Project {
 			// rdTechnology8
 			// 
 			this->rdTechnology8->AutoSize = true;
-			this->rdTechnology8->Location = System::Drawing::Point(7, 172);
+			this->rdTechnology8->Location = System::Drawing::Point(9, 214);
+			this->rdTechnology8->Margin = System::Windows::Forms::Padding(4);
 			this->rdTechnology8->Name = L"rdTechnology8";
-			this->rdTechnology8->Size = System::Drawing::Size(191, 17);
+			this->rdTechnology8->Size = System::Drawing::Size(253, 21);
 			this->rdTechnology8->TabIndex = 11;
 			this->rdTechnology8->TabStop = true;
 			this->rdTechnology8->Text = L"A.S. Oracle Database Administrator";
@@ -445,9 +474,10 @@ namespace EnTec_Group_Project {
 			// rdTechnology7
 			// 
 			this->rdTechnology7->AutoSize = true;
-			this->rdTechnology7->Location = System::Drawing::Point(7, 149);
+			this->rdTechnology7->Location = System::Drawing::Point(9, 185);
+			this->rdTechnology7->Margin = System::Windows::Forms::Padding(4);
 			this->rdTechnology7->Name = L"rdTechnology7";
-			this->rdTechnology7->Size = System::Drawing::Size(193, 17);
+			this->rdTechnology7->Size = System::Drawing::Size(252, 21);
 			this->rdTechnology7->TabIndex = 10;
 			this->rdTechnology7->TabStop = true;
 			this->rdTechnology7->Text = L"A.S. Microsoft Business Intelligence";
@@ -456,9 +486,10 @@ namespace EnTec_Group_Project {
 			// rdTechnology6
 			// 
 			this->rdTechnology6->AutoSize = true;
-			this->rdTechnology6->Location = System::Drawing::Point(7, 126);
+			this->rdTechnology6->Location = System::Drawing::Point(9, 156);
+			this->rdTechnology6->Margin = System::Windows::Forms::Padding(4);
 			this->rdTechnology6->Name = L"rdTechnology6";
-			this->rdTechnology6->Size = System::Drawing::Size(203, 17);
+			this->rdTechnology6->Size = System::Drawing::Size(268, 21);
 			this->rdTechnology6->TabIndex = 9;
 			this->rdTechnology6->TabStop = true;
 			this->rdTechnology6->Text = L"A.S. Microsoft Database Administrator";
@@ -467,9 +498,10 @@ namespace EnTec_Group_Project {
 			// rdTechnology5
 			// 
 			this->rdTechnology5->AutoSize = true;
-			this->rdTechnology5->Location = System::Drawing::Point(6, 101);
+			this->rdTechnology5->Location = System::Drawing::Point(9, 127);
+			this->rdTechnology5->Margin = System::Windows::Forms::Padding(4);
 			this->rdTechnology5->Name = L"rdTechnology5";
-			this->rdTechnology5->Size = System::Drawing::Size(205, 17);
+			this->rdTechnology5->Size = System::Drawing::Size(267, 21);
 			this->rdTechnology5->TabIndex = 8;
 			this->rdTechnology5->TabStop = true;
 			this->rdTechnology5->Text = L"A.S. Mobile Applications Development";
@@ -478,9 +510,10 @@ namespace EnTec_Group_Project {
 			// rdTechnology4
 			// 
 			this->rdTechnology4->AutoSize = true;
-			this->rdTechnology4->Location = System::Drawing::Point(7, 78);
+			this->rdTechnology4->Location = System::Drawing::Point(9, 98);
+			this->rdTechnology4->Margin = System::Windows::Forms::Padding(4);
 			this->rdTechnology4->Name = L"rdTechnology4";
-			this->rdTechnology4->Size = System::Drawing::Size(185, 17);
+			this->rdTechnology4->Size = System::Drawing::Size(244, 21);
 			this->rdTechnology4->TabIndex = 7;
 			this->rdTechnology4->TabStop = true;
 			this->rdTechnology4->Text = L"A.S. Bus Application Programming";
@@ -489,9 +522,10 @@ namespace EnTec_Group_Project {
 			// rdTechnology3
 			// 
 			this->rdTechnology3->AutoSize = true;
-			this->rdTechnology3->Location = System::Drawing::Point(7, 55);
+			this->rdTechnology3->Location = System::Drawing::Point(9, 69);
+			this->rdTechnology3->Margin = System::Windows::Forms::Padding(4);
 			this->rdTechnology3->Name = L"rdTechnology3";
-			this->rdTechnology3->Size = System::Drawing::Size(138, 17);
+			this->rdTechnology3->Size = System::Drawing::Size(178, 21);
 			this->rdTechnology3->TabIndex = 2;
 			this->rdTechnology3->TabStop = true;
 			this->rdTechnology3->Text = L"A.A. Computer Science ";
@@ -500,9 +534,10 @@ namespace EnTec_Group_Project {
 			// rdTechnology2
 			// 
 			this->rdTechnology2->AutoSize = true;
-			this->rdTechnology2->Location = System::Drawing::Point(7, 32);
+			this->rdTechnology2->Location = System::Drawing::Point(9, 40);
+			this->rdTechnology2->Margin = System::Windows::Forms::Padding(4);
 			this->rdTechnology2->Name = L"rdTechnology2";
-			this->rdTechnology2->Size = System::Drawing::Size(204, 17);
+			this->rdTechnology2->Size = System::Drawing::Size(268, 21);
 			this->rdTechnology2->TabIndex = 1;
 			this->rdTechnology2->TabStop = true;
 			this->rdTechnology2->Text = L"A.S. Information Systems Technology ";
@@ -511,9 +546,10 @@ namespace EnTec_Group_Project {
 			// rdTechnology1
 			// 
 			this->rdTechnology1->AutoSize = true;
-			this->rdTechnology1->Location = System::Drawing::Point(7, 9);
+			this->rdTechnology1->Location = System::Drawing::Point(9, 11);
+			this->rdTechnology1->Margin = System::Windows::Forms::Padding(4);
 			this->rdTechnology1->Name = L"rdTechnology1";
-			this->rdTechnology1->Size = System::Drawing::Size(204, 17);
+			this->rdTechnology1->Size = System::Drawing::Size(268, 21);
 			this->rdTechnology1->TabIndex = 0;
 			this->rdTechnology1->TabStop = true;
 			this->rdTechnology1->Text = L"A.A. Information Systems Technology ";
@@ -521,21 +557,26 @@ namespace EnTec_Group_Project {
 			// 
 			// gbMAGIC
 			// 
+			this->gbMAGIC->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(236)), static_cast<System::Int32>(static_cast<System::Byte>(236)),
+				static_cast<System::Int32>(static_cast<System::Byte>(234)));
 			this->gbMAGIC->Controls->Add(this->rbMAGIC2);
 			this->gbMAGIC->Controls->Add(this->rbMAGIC1);
 			this->gbMAGIC->Enabled = false;
-			this->gbMAGIC->Location = System::Drawing::Point(515, 26);
+			this->gbMAGIC->Location = System::Drawing::Point(688, 32);
+			this->gbMAGIC->Margin = System::Windows::Forms::Padding(4);
 			this->gbMAGIC->Name = L"gbMAGIC";
-			this->gbMAGIC->Size = System::Drawing::Size(225, 321);
+			this->gbMAGIC->Padding = System::Windows::Forms::Padding(4);
+			this->gbMAGIC->Size = System::Drawing::Size(295, 68);
 			this->gbMAGIC->TabIndex = 2;
 			this->gbMAGIC->TabStop = false;
 			// 
 			// rbMAGIC2
 			// 
 			this->rbMAGIC2->AutoSize = true;
-			this->rbMAGIC2->Location = System::Drawing::Point(7, 34);
+			this->rbMAGIC2->Location = System::Drawing::Point(8, 40);
+			this->rbMAGIC2->Margin = System::Windows::Forms::Padding(4);
 			this->rbMAGIC2->Name = L"rbMAGIC2";
-			this->rbMAGIC2->Size = System::Drawing::Size(119, 17);
+			this->rbMAGIC2->Size = System::Drawing::Size(154, 21);
 			this->rbMAGIC2->TabIndex = 1;
 			this->rbMAGIC2->TabStop = true;
 			this->rbMAGIC2->Text = L"Game Development";
@@ -544,9 +585,10 @@ namespace EnTec_Group_Project {
 			// rbMAGIC1
 			// 
 			this->rbMAGIC1->AutoSize = true;
-			this->rbMAGIC1->Location = System::Drawing::Point(7, 11);
+			this->rbMAGIC1->Location = System::Drawing::Point(8, 11);
+			this->rbMAGIC1->Margin = System::Windows::Forms::Padding(4);
 			this->rbMAGIC1->Name = L"rbMAGIC1";
-			this->rbMAGIC1->Size = System::Drawing::Size(142, 17);
+			this->rbMAGIC1->Size = System::Drawing::Size(187, 21);
 			this->rbMAGIC1->TabIndex = 0;
 			this->rbMAGIC1->TabStop = true;
 			this->rbMAGIC1->Text = L"Animation and Game Art ";
@@ -555,44 +597,54 @@ namespace EnTec_Group_Project {
 			// rdTechnology
 			// 
 			this->rdTechnology->AutoSize = true;
-			this->rdTechnology->Location = System::Drawing::Point(12, 11);
+			this->rdTechnology->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(116)), static_cast<System::Int32>(static_cast<System::Byte>(175)),
+				static_cast<System::Int32>(static_cast<System::Byte>(173)));
+			this->rdTechnology->Location = System::Drawing::Point(17, 11);
+			this->rdTechnology->Margin = System::Windows::Forms::Padding(4);
 			this->rdTechnology->Name = L"rdTechnology";
-			this->rdTechnology->Size = System::Drawing::Size(81, 17);
+			this->rdTechnology->Size = System::Drawing::Size(103, 21);
 			this->rdTechnology->TabIndex = 3;
 			this->rdTechnology->TabStop = true;
 			this->rdTechnology->Text = L"Technology";
-			this->rdTechnology->UseVisualStyleBackColor = true;
+			this->rdTechnology->UseVisualStyleBackColor = false;
 			this->rdTechnology->CheckedChanged += gcnew System::EventHandler(this, &DegreeSelect::rdTechnology_CheckedChanged);
 			// 
 			// rbEngineering
 			// 
 			this->rbEngineering->AutoSize = true;
-			this->rbEngineering->Location = System::Drawing::Point(258, 11);
+			this->rbEngineering->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(116)), static_cast<System::Int32>(static_cast<System::Byte>(175)),
+				static_cast<System::Int32>(static_cast<System::Byte>(173)));
+			this->rbEngineering->Location = System::Drawing::Point(345, 11);
+			this->rbEngineering->Margin = System::Windows::Forms::Padding(4);
 			this->rbEngineering->Name = L"rbEngineering";
-			this->rbEngineering->Size = System::Drawing::Size(81, 17);
+			this->rbEngineering->Size = System::Drawing::Size(105, 21);
 			this->rbEngineering->TabIndex = 4;
 			this->rbEngineering->TabStop = true;
 			this->rbEngineering->Text = L"Engineering";
-			this->rbEngineering->UseVisualStyleBackColor = true;
+			this->rbEngineering->UseVisualStyleBackColor = false;
 			this->rbEngineering->CheckedChanged += gcnew System::EventHandler(this, &DegreeSelect::rbEngineering_CheckedChanged);
 			// 
 			// rbMAGIC
 			// 
 			this->rbMAGIC->AutoSize = true;
-			this->rbMAGIC->Location = System::Drawing::Point(515, 11);
+			this->rbMAGIC->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(116)), static_cast<System::Int32>(static_cast<System::Byte>(175)),
+				static_cast<System::Int32>(static_cast<System::Byte>(173)));
+			this->rbMAGIC->Location = System::Drawing::Point(688, 11);
+			this->rbMAGIC->Margin = System::Windows::Forms::Padding(4);
 			this->rbMAGIC->Name = L"rbMAGIC";
-			this->rbMAGIC->Size = System::Drawing::Size(59, 17);
+			this->rbMAGIC->Size = System::Drawing::Size(72, 21);
 			this->rbMAGIC->TabIndex = 5;
 			this->rbMAGIC->TabStop = true;
 			this->rbMAGIC->Text = L"MAGIC";
-			this->rbMAGIC->UseVisualStyleBackColor = true;
+			this->rbMAGIC->UseVisualStyleBackColor = false;
 			this->rbMAGIC->CheckedChanged += gcnew System::EventHandler(this, &DegreeSelect::rbMAGIC_CheckedChanged);
 			// 
 			// btnNext
 			// 
-			this->btnNext->Location = System::Drawing::Point(657, 358);
+			this->btnNext->Location = System::Drawing::Point(879, 443);
+			this->btnNext->Margin = System::Windows::Forms::Padding(4);
 			this->btnNext->Name = L"btnNext";
-			this->btnNext->Size = System::Drawing::Size(83, 23);
+			this->btnNext->Size = System::Drawing::Size(111, 28);
 			this->btnNext->TabIndex = 6;
 			this->btnNext->Text = L"Next";
 			this->btnNext->UseVisualStyleBackColor = true;
@@ -600,9 +652,10 @@ namespace EnTec_Group_Project {
 			// 
 			// btnBack
 			// 
-			this->btnBack->Location = System::Drawing::Point(10, 359);
+			this->btnBack->Location = System::Drawing::Point(13, 443);
+			this->btnBack->Margin = System::Windows::Forms::Padding(4);
 			this->btnBack->Name = L"btnBack";
-			this->btnBack->Size = System::Drawing::Size(83, 23);
+			this->btnBack->Size = System::Drawing::Size(111, 28);
 			this->btnBack->TabIndex = 7;
 			this->btnBack->Text = L"Back";
 			this->btnBack->UseVisualStyleBackColor = true;
@@ -610,10 +663,11 @@ namespace EnTec_Group_Project {
 			// 
 			// DegreeSelect
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::Color::White;
-			this->ClientSize = System::Drawing::Size(752, 393);
+			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(85)), static_cast<System::Int32>(static_cast<System::Byte>(140)),
+				static_cast<System::Int32>(static_cast<System::Byte>(137)));
+			this->ClientSize = System::Drawing::Size(1003, 484);
 			this->Controls->Add(this->btnBack);
 			this->Controls->Add(this->gbEngineering);
 			this->Controls->Add(this->btnNext);
@@ -623,6 +677,7 @@ namespace EnTec_Group_Project {
 			this->Controls->Add(this->gbMAGIC);
 			this->Controls->Add(this->gbTechnology);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"DegreeSelect";
 			this->Text = L"EnTec Advisor Apointments";
 			this->FormClosed += gcnew System::Windows::Forms::FormClosedEventHandler(this, &DegreeSelect::DegreeSelect_FormClosed);

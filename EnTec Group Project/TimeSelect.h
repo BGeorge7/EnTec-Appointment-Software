@@ -82,50 +82,61 @@ namespace EnTec_Group_Project {
 			// 
 			// lbAdvisorList
 			// 
+			this->lbAdvisorList->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(236)), static_cast<System::Int32>(static_cast<System::Byte>(236)),
+				static_cast<System::Int32>(static_cast<System::Byte>(234)));
 			this->lbAdvisorList->FormattingEnabled = true;
+			this->lbAdvisorList->ItemHeight = 16;
 			this->lbAdvisorList->Items->AddRange(gcnew cli::array< System::Object^  >(3) {
 				L"Advisor 1 -(305) - 555 - 5555", L"Advisor 2 -(305) - 555 - 5555",
-					L"Advisor 2 -(305) - 555 - 5555"
+					L"Advisor 3 -(305) - 555 - 5555"
 			});
-			this->lbAdvisorList->Location = System::Drawing::Point(12, 119);
+			this->lbAdvisorList->Location = System::Drawing::Point(86, 141);
+			this->lbAdvisorList->Margin = System::Windows::Forms::Padding(4);
 			this->lbAdvisorList->Name = L"lbAdvisorList";
-			this->lbAdvisorList->Size = System::Drawing::Size(191, 225);
+			this->lbAdvisorList->Size = System::Drawing::Size(253, 276);
 			this->lbAdvisorList->TabIndex = 0;
 			// 
 			// pictureBox1
 			// 
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(12, 12);
+			this->pictureBox1->Location = System::Drawing::Point(16, 13);
+			this->pictureBox1->Margin = System::Windows::Forms::Padding(4);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(604, 75);
+			this->pictureBox1->Size = System::Drawing::Size(598, 82);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
 			this->pictureBox1->TabIndex = 1;
 			this->pictureBox1->TabStop = false;
 			// 
 			// dateTimePicker
 			// 
-			this->dateTimePicker->Location = System::Drawing::Point(471, 119);
+			this->dateTimePicker->Location = System::Drawing::Point(636, 143);
+			this->dateTimePicker->Margin = System::Windows::Forms::Padding(4);
 			this->dateTimePicker->Name = L"dateTimePicker";
-			this->dateTimePicker->Size = System::Drawing::Size(269, 20);
+			this->dateTimePicker->Size = System::Drawing::Size(281, 22);
 			this->dateTimePicker->TabIndex = 2;
 			this->dateTimePicker->ValueChanged += gcnew System::EventHandler(this, &TimeSelect::dateTimePicker1_ValueChanged);
 			// 
 			// lbTitle
 			// 
 			this->lbTitle->AutoSize = true;
+			this->lbTitle->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(116)), static_cast<System::Int32>(static_cast<System::Byte>(175)),
+				static_cast<System::Int32>(static_cast<System::Byte>(173)));
 			this->lbTitle->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbTitle->Location = System::Drawing::Point(103, 95);
+			this->lbTitle->Location = System::Drawing::Point(146, 108);
+			this->lbTitle->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lbTitle->Name = L"lbTitle";
-			this->lbTitle->Size = System::Drawing::Size(536, 16);
+			this->lbTitle->Size = System::Drawing::Size(672, 20);
 			this->lbTitle->TabIndex = 3;
 			this->lbTitle->Text = L"Please Select an Advisor, Then Select a Date and Time. When You Are Done Press Ne"
 				L"xt";
 			// 
 			// btnNext
 			// 
-			this->btnNext->Location = System::Drawing::Point(657, 358);
+			this->btnNext->Location = System::Drawing::Point(879, 443);
+			this->btnNext->Margin = System::Windows::Forms::Padding(4);
 			this->btnNext->Name = L"btnNext";
-			this->btnNext->Size = System::Drawing::Size(83, 23);
+			this->btnNext->Size = System::Drawing::Size(111, 28);
 			this->btnNext->TabIndex = 4;
 			this->btnNext->Text = L"Next";
 			this->btnNext->UseVisualStyleBackColor = true;
@@ -133,9 +144,10 @@ namespace EnTec_Group_Project {
 			// 
 			// btnBack
 			// 
-			this->btnBack->Location = System::Drawing::Point(12, 358);
+			this->btnBack->Location = System::Drawing::Point(13, 443);
+			this->btnBack->Margin = System::Windows::Forms::Padding(4);
 			this->btnBack->Name = L"btnBack";
-			this->btnBack->Size = System::Drawing::Size(83, 23);
+			this->btnBack->Size = System::Drawing::Size(111, 28);
 			this->btnBack->TabIndex = 5;
 			this->btnBack->Text = L"Back";
 			this->btnBack->UseVisualStyleBackColor = true;
@@ -148,19 +160,21 @@ namespace EnTec_Group_Project {
 				L"Registration", L"MAP", L"IEP", L"Career Planning",
 					L"SAP"
 			});
-			this->cbReason->Location = System::Drawing::Point(227, 119);
+			this->cbReason->Location = System::Drawing::Point(347, 141);
+			this->cbReason->Margin = System::Windows::Forms::Padding(4);
 			this->cbReason->Name = L"cbReason";
-			this->cbReason->Size = System::Drawing::Size(212, 21);
+			this->cbReason->Size = System::Drawing::Size(281, 24);
 			this->cbReason->TabIndex = 6;
 			this->cbReason->SelectedIndexChanged += gcnew System::EventHandler(this, &TimeSelect::comboBox1_SelectedIndexChanged);
 			// 
 			// TimeSelect
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::Color::White;
+			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(85)), static_cast<System::Int32>(static_cast<System::Byte>(140)),
+				static_cast<System::Int32>(static_cast<System::Byte>(137)));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
-			this->ClientSize = System::Drawing::Size(752, 393);
+			this->ClientSize = System::Drawing::Size(1003, 484);
 			this->Controls->Add(this->cbReason);
 			this->Controls->Add(this->btnBack);
 			this->Controls->Add(this->btnNext);
@@ -169,6 +183,7 @@ namespace EnTec_Group_Project {
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->lbAdvisorList);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"TimeSelect";
 			this->Text = L"EnTec Advisor Apointments";
 			this->FormClosed += gcnew System::Windows::Forms::FormClosedEventHandler(this, &TimeSelect::TimeSelect_FormClosed);

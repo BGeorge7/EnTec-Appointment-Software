@@ -155,9 +155,11 @@ namespace EnTec_Group_Project {
 			// txtbID
 			// 
 			this->txtbID->Location = System::Drawing::Point(270, 193);
+			this->txtbID->MaxLength = 10;
 			this->txtbID->Name = L"txtbID";
 			this->txtbID->Size = System::Drawing::Size(174, 20);
 			this->txtbID->TabIndex = 6;
+			this->txtbID->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &StudentSplash::txtbID_KeyPress);
 			// 
 			// txtbEmail
 			// 
@@ -271,6 +273,10 @@ private: System::Void StudentSplash_FormClosed(System::Object^  sender, System::
 	exit(0);
 }
 private: System::Void txtbEmail_TextChanged(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void txtbID_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
+	if (!((e->KeyChar >= '0' && e->KeyChar <= '9') || e->KeyChar == 8))
+		e->KeyChar = (char)0;
 }
 };
 }

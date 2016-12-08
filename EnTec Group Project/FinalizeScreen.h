@@ -452,6 +452,7 @@ namespace EnTec_Group_Project {
 			this->Name = L"FinalizeScreen";
 			this->Text = L"EnTec Advisor Apointments";
 			this->FormClosed += gcnew System::Windows::Forms::FormClosedEventHandler(this, &FinalizeScreen::FinalizeScreen_FormClosed);
+			this->VisibleChanged += gcnew System::EventHandler(this, &FinalizeScreen::FinalizeScreen_VisibleChanged);
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
 			this->groupBox2->ResumeLayout(false);
@@ -489,9 +490,21 @@ private: System::Void btnFinish_Click(System::Object^  sender, System::EventArgs
 	MessageBox::Show("Apointment has been set!", "Done",
 	MessageBoxButtons::OK, MessageBoxIcon::Information);
 	this->Hide();
+	//TODO: Send appointment to database
 }
 private: System::Void FinalizeScreen_FormClosed(System::Object^  sender, System::Windows::Forms::FormClosedEventArgs^  e) {
 	exit(0);
+}
+private: System::Void FinalizeScreen_VisibleChanged(System::Object^  sender, System::EventArgs^  e) {
+	lbNameText->Text = student->getName();
+	lbEmailText->Text = student->getEmailAddress();
+	lbIDText->Text = student->getID();
+	lbDegreeFText->Text = student->getDegreeType();
+	lbDegreeText->Text = student->getDegree();
+	lbAdvisorText->Text = student->getAdvisor();
+	lbAppDText->Text = student->getAppDate();
+	lbAppTText->Text = "TODO: Appointment Time";
+	lbAppRText->Text = student->getAppReason();
 }
 };
 }

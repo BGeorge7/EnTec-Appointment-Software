@@ -109,7 +109,7 @@ namespace EnTec_Group_Project {
 			// 
 			this->dateTimePicker->Location = System::Drawing::Point(477, 116);
 			this->dateTimePicker->MaxDate = System::DateTime(2050, 12, 31, 0, 0, 0, 0);
-			this->dateTimePicker->MinDate = System::DateTime::Today;
+			this->dateTimePicker->MinDate = System::DateTime(1970, 1, 1, 0, 0, 0, 0);
 			this->dateTimePicker->Name = L"dateTimePicker";
 			this->dateTimePicker->Size = System::Drawing::Size(212, 20);
 			this->dateTimePicker->TabIndex = 2;

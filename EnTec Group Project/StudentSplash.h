@@ -93,8 +93,7 @@ namespace EnTec_Group_Project {
 			// 
 			this->pictureBox1->BackColor = System::Drawing::Color::White;
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(204, 13);
-			this->pictureBox1->Margin = System::Windows::Forms::Padding(4);
+			this->pictureBox1->Location = System::Drawing::Point(80, 11);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(598, 82);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
@@ -108,10 +107,9 @@ namespace EnTec_Group_Project {
 				static_cast<System::Int32>(static_cast<System::Byte>(173)));
 			this->lblStudent1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lblStudent1->Location = System::Drawing::Point(287, 129);
-			this->lblStudent1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lblStudent1->Location = System::Drawing::Point(215, 105);
 			this->lblStudent1->Name = L"lblStudent1";
-			this->lblStudent1->Size = System::Drawing::Size(368, 24);
+			this->lblStudent1->Size = System::Drawing::Size(290, 18);
 			this->lblStudent1->TabIndex = 1;
 			this->lblStudent1->Text = L"Please Enter Your Information To Continue";
 			// 
@@ -122,10 +120,9 @@ namespace EnTec_Group_Project {
 				static_cast<System::Int32>(static_cast<System::Byte>(173)));
 			this->lblName->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lblName->Location = System::Drawing::Point(355, 191);
-			this->lblName->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lblName->Location = System::Drawing::Point(266, 155);
 			this->lblName->Name = L"lblName";
-			this->lblName->Size = System::Drawing::Size(48, 18);
+			this->lblName->Size = System::Drawing::Size(41, 15);
 			this->lblName->TabIndex = 2;
 			this->lblName->Text = L"Name";
 			// 
@@ -136,10 +133,9 @@ namespace EnTec_Group_Project {
 				static_cast<System::Int32>(static_cast<System::Byte>(173)));
 			this->lblID->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lblID->Location = System::Drawing::Point(355, 239);
-			this->lblID->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lblID->Location = System::Drawing::Point(266, 194);
 			this->lblID->Name = L"lblID";
-			this->lblID->Size = System::Drawing::Size(76, 18);
+			this->lblID->Size = System::Drawing::Size(64, 15);
 			this->lblID->TabIndex = 3;
 			this->lblID->Text = L"Student ID";
 			// 
@@ -150,45 +146,42 @@ namespace EnTec_Group_Project {
 				static_cast<System::Int32>(static_cast<System::Byte>(173)));
 			this->lblEmail->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lblEmail->Location = System::Drawing::Point(355, 287);
-			this->lblEmail->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lblEmail->Location = System::Drawing::Point(266, 233);
 			this->lblEmail->Name = L"lblEmail";
-			this->lblEmail->Size = System::Drawing::Size(103, 18);
+			this->lblEmail->Size = System::Drawing::Size(86, 15);
 			this->lblEmail->TabIndex = 4;
 			this->lblEmail->Text = L"Email Address";
 			// 
 			// txtbName
 			// 
-			this->txtbName->Location = System::Drawing::Point(354, 209);
-			this->txtbName->Margin = System::Windows::Forms::Padding(4);
+			this->txtbName->Location = System::Drawing::Point(266, 170);
 			this->txtbName->MaxLength = 35;
 			this->txtbName->Name = L"txtbName";
-			this->txtbName->Size = System::Drawing::Size(231, 22);
+			this->txtbName->Size = System::Drawing::Size(174, 20);
 			this->txtbName->TabIndex = 5;
+			this->txtbName->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &StudentSplash::txtbName_KeyPress);
 			// 
 			// txtbID
 			// 
-			this->txtbID->Location = System::Drawing::Point(354, 257);
-			this->txtbID->Margin = System::Windows::Forms::Padding(4);
+			this->txtbID->Location = System::Drawing::Point(266, 209);
+			this->txtbID->MaxLength = 10;
 			this->txtbID->Name = L"txtbID";
-			this->txtbID->Size = System::Drawing::Size(231, 22);
+			this->txtbID->Size = System::Drawing::Size(174, 20);
 			this->txtbID->TabIndex = 6;
 			this->txtbID->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &StudentSplash::txtbID_KeyPress);
 			// 
 			// txtbEmail
 			// 
-			this->textBox2->Location = System::Drawing::Point(354, 305);
-			this->textBox2->Margin = System::Windows::Forms::Padding(4);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(231, 22);
-			this->textBox2->TabIndex = 7;
+			this->txtbEmail->Location = System::Drawing::Point(266, 248);
+			this->txtbEmail->Name = L"txtbEmail";
+			this->txtbEmail->Size = System::Drawing::Size(174, 20);
+			this->txtbEmail->TabIndex = 7;
 			// 
 			// btnNext
 			// 
-			this->btnNext->Location = System::Drawing::Point(879, 443);
-			this->btnNext->Margin = System::Windows::Forms::Padding(4);
+			this->btnNext->Location = System::Drawing::Point(659, 360);
 			this->btnNext->Name = L"btnNext";
-			this->btnNext->Size = System::Drawing::Size(111, 28);
+			this->btnNext->Size = System::Drawing::Size(83, 23);
 			this->btnNext->TabIndex = 8;
 			this->btnNext->Text = L"Next";
 			this->btnNext->UseVisualStyleBackColor = true;
@@ -197,10 +190,9 @@ namespace EnTec_Group_Project {
 			// btnBack
 			// 
 			this->btnBack->Enabled = false;
-			this->btnBack->Location = System::Drawing::Point(13, 443);
-			this->btnBack->Margin = System::Windows::Forms::Padding(4);
+			this->btnBack->Location = System::Drawing::Point(10, 360);
 			this->btnBack->Name = L"btnBack";
-			this->btnBack->Size = System::Drawing::Size(111, 28);
+			this->btnBack->Size = System::Drawing::Size(83, 23);
 			this->btnBack->TabIndex = 9;
 			this->btnBack->Text = L"Back";
 			this->btnBack->UseVisualStyleBackColor = true;
@@ -208,10 +200,9 @@ namespace EnTec_Group_Project {
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(13, 347);
-			this->button1->Margin = System::Windows::Forms::Padding(4);
+			this->button1->Location = System::Drawing::Point(10, 282);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(157, 73);
+			this->button1->Size = System::Drawing::Size(118, 59);
 			this->button1->TabIndex = 11;
 			this->button1->Text = L"Edit Or Cancel Previous Appointment";
 			this->button1->UseVisualStyleBackColor = true;
@@ -219,11 +210,11 @@ namespace EnTec_Group_Project {
 			// 
 			// StudentSplash
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(85)), static_cast<System::Int32>(static_cast<System::Byte>(140)),
 				static_cast<System::Int32>(static_cast<System::Byte>(137)));
-			this->ClientSize = System::Drawing::Size(1003, 484);
+			this->ClientSize = System::Drawing::Size(752, 393);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->btnBack);
 			this->Controls->Add(this->btnNext);
@@ -237,7 +228,6 @@ namespace EnTec_Group_Project {
 			this->Controls->Add(this->pictureBox1);
 			this->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
-			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"StudentSplash";
 			this->Text = L"EnTec Advisor Apointments";
 			this->FormClosed += gcnew System::Windows::Forms::FormClosedEventHandler(this, &StudentSplash::StudentSplash_FormClosed);
@@ -286,6 +276,10 @@ private: System::Void txtbEmail_TextChanged(System::Object^  sender, System::Eve
 }
 private: System::Void txtbID_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
 	if (!((e->KeyChar >= '0' && e->KeyChar <= '9') || e->KeyChar == 8))
+		e->KeyChar = (char)0;
+}
+private: System::Void txtbName_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
+	if (!((e->KeyChar >= 'A' && e->KeyChar <= 'Z') || (e->KeyChar >= 'a' && e->KeyChar <= 'z')||e->KeyChar == 32 || e->KeyChar == 8 || e->KeyChar == '-'))
 		e->KeyChar = (char)0;
 }
 };

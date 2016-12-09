@@ -393,14 +393,14 @@ private: System::Windows::Forms::RadioButton^  rbTechnology1;
 			// 
 			// rbEngineeringOther
 			// 
-			this->rdEngineeringOther->AutoSize = true;
-			this->rdEngineeringOther->Location = System::Drawing::Point(8, 417);
-			this->rdEngineeringOther->Margin = System::Windows::Forms::Padding(4);
-			this->rdEngineeringOther->Name = L"rdEngineeringOther";
-			this->rdEngineeringOther->Size = System::Drawing::Size(17, 16);
-			this->rdEngineeringOther->TabIndex = 14;
-			this->rdEngineeringOther->TabStop = true;
-			this->rdEngineeringOther->UseVisualStyleBackColor = true;
+			this->rbEngineeringOther->AutoSize = true;
+			this->rbEngineeringOther->Location = System::Drawing::Point(8, 417);
+			this->rbEngineeringOther->Margin = System::Windows::Forms::Padding(4);
+			this->rbEngineeringOther->Name = L"rbEngineeringOther";
+			this->rbEngineeringOther->Size = System::Drawing::Size(17, 16);
+			this->rbEngineeringOther->TabIndex = 14;
+			this->rbEngineeringOther->TabStop = true;
+			this->rbEngineeringOther->UseVisualStyleBackColor = true;
 			// 
 			// rbEngineering1
 			// 
@@ -607,134 +607,134 @@ private: System::Windows::Forms::RadioButton^  rbTechnology1;
 			// 
 			// rbTechnologyOther
 			// 
-			this->rdTechnologyOther->AutoSize = true;
-			this->rdTechnologyOther->Location = System::Drawing::Point(9, 301);
-			this->rdTechnologyOther->Margin = System::Windows::Forms::Padding(4);
-			this->rdTechnologyOther->Name = L"rdTechnologyOther";
-			this->rdTechnologyOther->Size = System::Drawing::Size(17, 16);
-			this->rdTechnologyOther->TabIndex = 16;
-			this->rdTechnologyOther->TabStop = true;
-			this->rdTechnologyOther->UseVisualStyleBackColor = true;
+			this->rbTechnologyOther->AutoSize = true;
+			this->rbTechnologyOther->Location = System::Drawing::Point(9, 301);
+			this->rbTechnologyOther->Margin = System::Windows::Forms::Padding(4);
+			this->rbTechnologyOther->Name = L"rbTechnologyOther";
+			this->rbTechnologyOther->Size = System::Drawing::Size(17, 16);
+			this->rbTechnologyOther->TabIndex = 16;
+			this->rbTechnologyOther->TabStop = true;
+			this->rbTechnologyOther->UseVisualStyleBackColor = true;
 			// 
 			// rbTechnology10
 			// 
-			this->rdTechnology10->AutoSize = true;
-			this->rdTechnology10->Location = System::Drawing::Point(9, 272);
-			this->rdTechnology10->Margin = System::Windows::Forms::Padding(4);
-			this->rdTechnology10->Name = L"rdTechnology10";
-			this->rdTechnology10->Size = System::Drawing::Size(265, 21);
-			this->rdTechnology10->TabIndex = 13;
-			this->rdTechnology10->TabStop = true;
-			this->rdTechnology10->Text = L"A.S. Networking Services Technology";
-			this->rdTechnology10->UseVisualStyleBackColor = true;
+			this->rbTechnology10->AutoSize = true;
+			this->rbTechnology10->Location = System::Drawing::Point(9, 272);
+			this->rbTechnology10->Margin = System::Windows::Forms::Padding(4);
+			this->rbTechnology10->Name = L"rbTechnology10";
+			this->rbTechnology10->Size = System::Drawing::Size(265, 21);
+			this->rbTechnology10->TabIndex = 13;
+			this->rbTechnology10->TabStop = true;
+			this->rbTechnology10->Text = L"A.S. Networking Services Technology";
+			this->rbTechnology10->UseVisualStyleBackColor = true;
 			// 
 			// rbTechnology9
 			// 
-			this->rdTechnology9->AutoSize = true;
-			this->rdTechnology9->Location = System::Drawing::Point(9, 243);
-			this->rdTechnology9->Margin = System::Windows::Forms::Padding(4);
-			this->rdTechnology9->Name = L"rdTechnology9";
-			this->rdTechnology9->Size = System::Drawing::Size(235, 21);
-			this->rdTechnology9->TabIndex = 12;
-			this->rdTechnology9->TabStop = true;
-			this->rdTechnology9->Text = L"A.S. Oracle Database Developer";
-			this->rdTechnology9->UseVisualStyleBackColor = true;
+			this->rbTechnology9->AutoSize = true;
+			this->rbTechnology9->Location = System::Drawing::Point(9, 243);
+			this->rbTechnology9->Margin = System::Windows::Forms::Padding(4);
+			this->rbTechnology9->Name = L"rbTechnology9";
+			this->rbTechnology9->Size = System::Drawing::Size(235, 21);
+			this->rbTechnology9->TabIndex = 12;
+			this->rbTechnology9->TabStop = true;
+			this->rbTechnology9->Text = L"A.S. Oracle Database Developer";
+			this->rbTechnology9->UseVisualStyleBackColor = true;
 			// 
 			// rbTechnology8
 			// 
-			this->rdTechnology8->AutoSize = true;
-			this->rdTechnology8->Location = System::Drawing::Point(9, 214);
-			this->rdTechnology8->Margin = System::Windows::Forms::Padding(4);
-			this->rdTechnology8->Name = L"rdTechnology8";
-			this->rdTechnology8->Size = System::Drawing::Size(253, 21);
-			this->rdTechnology8->TabIndex = 11;
-			this->rdTechnology8->TabStop = true;
-			this->rdTechnology8->Text = L"A.S. Oracle Database Administrator";
-			this->rdTechnology8->UseVisualStyleBackColor = true;
+			this->rbTechnology8->AutoSize = true;
+			this->rbTechnology8->Location = System::Drawing::Point(9, 214);
+			this->rbTechnology8->Margin = System::Windows::Forms::Padding(4);
+			this->rbTechnology8->Name = L"rbTechnology8";
+			this->rbTechnology8->Size = System::Drawing::Size(253, 21);
+			this->rbTechnology8->TabIndex = 11;
+			this->rbTechnology8->TabStop = true;
+			this->rbTechnology8->Text = L"A.S. Oracle Database Administrator";
+			this->rbTechnology8->UseVisualStyleBackColor = true;
 			// 
 			// rbTechnology7
 			// 
-			this->rdTechnology7->AutoSize = true;
-			this->rdTechnology7->Location = System::Drawing::Point(9, 185);
-			this->rdTechnology7->Margin = System::Windows::Forms::Padding(4);
-			this->rdTechnology7->Name = L"rdTechnology7";
-			this->rdTechnology7->Size = System::Drawing::Size(252, 21);
-			this->rdTechnology7->TabIndex = 10;
-			this->rdTechnology7->TabStop = true;
-			this->rdTechnology7->Text = L"A.S. Microsoft Business Intelligence";
-			this->rdTechnology7->UseVisualStyleBackColor = true;
+			this->rbTechnology7->AutoSize = true;
+			this->rbTechnology7->Location = System::Drawing::Point(9, 185);
+			this->rbTechnology7->Margin = System::Windows::Forms::Padding(4);
+			this->rbTechnology7->Name = L"rbTechnology7";
+			this->rbTechnology7->Size = System::Drawing::Size(252, 21);
+			this->rbTechnology7->TabIndex = 10;
+			this->rbTechnology7->TabStop = true;
+			this->rbTechnology7->Text = L"A.S. Microsoft Business Intelligence";
+			this->rbTechnology7->UseVisualStyleBackColor = true;
 			// 
 			// rbTechnology6
 			// 
-			this->rdTechnology6->AutoSize = true;
-			this->rdTechnology6->Location = System::Drawing::Point(9, 156);
-			this->rdTechnology6->Margin = System::Windows::Forms::Padding(4);
-			this->rdTechnology6->Name = L"rdTechnology6";
-			this->rdTechnology6->Size = System::Drawing::Size(268, 21);
-			this->rdTechnology6->TabIndex = 9;
-			this->rdTechnology6->TabStop = true;
-			this->rdTechnology6->Text = L"A.S. Microsoft Database Administrator";
-			this->rdTechnology6->UseVisualStyleBackColor = true;
+			this->rbTechnology6->AutoSize = true;
+			this->rbTechnology6->Location = System::Drawing::Point(9, 156);
+			this->rbTechnology6->Margin = System::Windows::Forms::Padding(4);
+			this->rbTechnology6->Name = L"rbTechnology6";
+			this->rbTechnology6->Size = System::Drawing::Size(268, 21);
+			this->rbTechnology6->TabIndex = 9;
+			this->rbTechnology6->TabStop = true;
+			this->rbTechnology6->Text = L"A.S. Microsoft Database Administrator";
+			this->rbTechnology6->UseVisualStyleBackColor = true;
 			// 
 			// rbTechnology5
 			// 
-			this->rdTechnology5->AutoSize = true;
-			this->rdTechnology5->Location = System::Drawing::Point(9, 127);
-			this->rdTechnology5->Margin = System::Windows::Forms::Padding(4);
-			this->rdTechnology5->Name = L"rdTechnology5";
-			this->rdTechnology5->Size = System::Drawing::Size(267, 21);
-			this->rdTechnology5->TabIndex = 8;
-			this->rdTechnology5->TabStop = true;
-			this->rdTechnology5->Text = L"A.S. Mobile Applications Development";
-			this->rdTechnology5->UseVisualStyleBackColor = true;
+			this->rbTechnology5->AutoSize = true;
+			this->rbTechnology5->Location = System::Drawing::Point(9, 127);
+			this->rbTechnology5->Margin = System::Windows::Forms::Padding(4);
+			this->rbTechnology5->Name = L"rbTechnology5";
+			this->rbTechnology5->Size = System::Drawing::Size(267, 21);
+			this->rbTechnology5->TabIndex = 8;
+			this->rbTechnology5->TabStop = true;
+			this->rbTechnology5->Text = L"A.S. Mobile Applications Development";
+			this->rbTechnology5->UseVisualStyleBackColor = true;
 			// 
 			// rbTechnology4
 			// 
-			this->rdTechnology4->AutoSize = true;
-			this->rdTechnology4->Location = System::Drawing::Point(9, 98);
-			this->rdTechnology4->Margin = System::Windows::Forms::Padding(4);
-			this->rdTechnology4->Name = L"rdTechnology4";
-			this->rdTechnology4->Size = System::Drawing::Size(244, 21);
-			this->rdTechnology4->TabIndex = 7;
-			this->rdTechnology4->TabStop = true;
-			this->rdTechnology4->Text = L"A.S. Bus Application Programming";
-			this->rdTechnology4->UseVisualStyleBackColor = true;
+			this->rbTechnology4->AutoSize = true;
+			this->rbTechnology4->Location = System::Drawing::Point(9, 98);
+			this->rbTechnology4->Margin = System::Windows::Forms::Padding(4);
+			this->rbTechnology4->Name = L"rbTechnology4";
+			this->rbTechnology4->Size = System::Drawing::Size(244, 21);
+			this->rbTechnology4->TabIndex = 7;
+			this->rbTechnology4->TabStop = true;
+			this->rbTechnology4->Text = L"A.S. Bus Application Programming";
+			this->rbTechnology4->UseVisualStyleBackColor = true;
 			// 
 			// rbTechnology3
 			// 
-			this->rdTechnology3->AutoSize = true;
-			this->rdTechnology3->Location = System::Drawing::Point(9, 69);
-			this->rdTechnology3->Margin = System::Windows::Forms::Padding(4);
-			this->rdTechnology3->Name = L"rdTechnology3";
-			this->rdTechnology3->Size = System::Drawing::Size(178, 21);
-			this->rdTechnology3->TabIndex = 2;
-			this->rdTechnology3->TabStop = true;
-			this->rdTechnology3->Text = L"A.A. Computer Science ";
-			this->rdTechnology3->UseVisualStyleBackColor = true;
+			this->rbTechnology3->AutoSize = true;
+			this->rbTechnology3->Location = System::Drawing::Point(9, 69);
+			this->rbTechnology3->Margin = System::Windows::Forms::Padding(4);
+			this->rbTechnology3->Name = L"rbTechnology3";
+			this->rbTechnology3->Size = System::Drawing::Size(178, 21);
+			this->rbTechnology3->TabIndex = 2;
+			this->rbTechnology3->TabStop = true;
+			this->rbTechnology3->Text = L"A.A. Computer Science ";
+			this->rbTechnology3->UseVisualStyleBackColor = true;
 			// 
 			// rbTechnology2
 			// 
-			this->rdTechnology2->AutoSize = true;
-			this->rdTechnology2->Location = System::Drawing::Point(9, 40);
-			this->rdTechnology2->Margin = System::Windows::Forms::Padding(4);
-			this->rdTechnology2->Name = L"rdTechnology2";
-			this->rdTechnology2->Size = System::Drawing::Size(268, 21);
-			this->rdTechnology2->TabIndex = 1;
-			this->rdTechnology2->TabStop = true;
-			this->rdTechnology2->Text = L"A.S. Information Systems Technology ";
-			this->rdTechnology2->UseVisualStyleBackColor = true;
+			this->rbTechnology2->AutoSize = true;
+			this->rbTechnology2->Location = System::Drawing::Point(9, 40);
+			this->rbTechnology2->Margin = System::Windows::Forms::Padding(4);
+			this->rbTechnology2->Name = L"rbTechnology2";
+			this->rbTechnology2->Size = System::Drawing::Size(268, 21);
+			this->rbTechnology2->TabIndex = 1;
+			this->rbTechnology2->TabStop = true;
+			this->rbTechnology2->Text = L"A.S. Information Systems Technology ";
+			this->rbTechnology2->UseVisualStyleBackColor = true;
 			// 
 			// rbTechnology1
 			// 
-			this->rdTechnology1->AutoSize = true;
-			this->rdTechnology1->Location = System::Drawing::Point(9, 11);
-			this->rdTechnology1->Margin = System::Windows::Forms::Padding(4);
-			this->rdTechnology1->Name = L"rdTechnology1";
-			this->rdTechnology1->Size = System::Drawing::Size(268, 21);
-			this->rdTechnology1->TabIndex = 0;
-			this->rdTechnology1->TabStop = true;
-			this->rdTechnology1->Text = L"A.A. Information Systems Technology ";
-			this->rdTechnology1->UseVisualStyleBackColor = true;
+			this->rbTechnology1->AutoSize = true;
+			this->rbTechnology1->Location = System::Drawing::Point(9, 11);
+			this->rbTechnology1->Margin = System::Windows::Forms::Padding(4);
+			this->rbTechnology1->Name = L"rbTechnology1";
+			this->rbTechnology1->Size = System::Drawing::Size(268, 21);
+			this->rbTechnology1->TabIndex = 0;
+			this->rbTechnology1->TabStop = true;
+			this->rbTechnology1->Text = L"A.A. Information Systems Technology ";
+			this->rbTechnology1->UseVisualStyleBackColor = true;
 			// 
 			// gbMAGIC
 			// 
@@ -777,18 +777,18 @@ private: System::Windows::Forms::RadioButton^  rbTechnology1;
 			// 
 			// rbTechnology
 			// 
-			this->rdTechnology->AutoSize = true;
-			this->rdTechnology->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(116)), static_cast<System::Int32>(static_cast<System::Byte>(175)),
+			this->rbTechnology->AutoSize = true;
+			this->rbTechnology->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(116)), static_cast<System::Int32>(static_cast<System::Byte>(175)),
 				static_cast<System::Int32>(static_cast<System::Byte>(173)));
-			this->rdTechnology->Location = System::Drawing::Point(17, 11);
-			this->rdTechnology->Margin = System::Windows::Forms::Padding(4);
-			this->rdTechnology->Name = L"rdTechnology";
-			this->rdTechnology->Size = System::Drawing::Size(103, 21);
-			this->rdTechnology->TabIndex = 3;
-			this->rdTechnology->TabStop = true;
-			this->rdTechnology->Text = L"Technology";
-			this->rdTechnology->UseVisualStyleBackColor = false;
-			this->rdTechnology->CheckedChanged += gcnew System::EventHandler(this, &DegreeSelect::rdTechnology_CheckedChanged);
+			this->rbTechnology->Location = System::Drawing::Point(17, 11);
+			this->rbTechnology->Margin = System::Windows::Forms::Padding(4);
+			this->rbTechnology->Name = L"rbTechnology";
+			this->rbTechnology->Size = System::Drawing::Size(103, 21);
+			this->rbTechnology->TabIndex = 3;
+			this->rbTechnology->TabStop = true;
+			this->rbTechnology->Text = L"Technology";
+			this->rbTechnology->UseVisualStyleBackColor = false;
+			this->rbTechnology->CheckedChanged += gcnew System::EventHandler(this, &DegreeSelect::rbTechnology_CheckedChanged);
 			// 
 			// rbEngineering
 			// 
@@ -886,7 +886,7 @@ private: System::Void rbEngineering_CheckedChanged(System::Object^  sender, Syst
 	else
 		this->gbEngineering->Enabled = true;
 }
-private: System::Void rdTechnology_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
+private: System::Void rbTechnology_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 	if (this->gbTechnology->Enabled)
 		this->gbTechnology->Enabled = false;
 	else

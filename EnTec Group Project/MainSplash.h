@@ -2,7 +2,6 @@
 #include "StudentSplash.h"
 #include "AdvisorView.h"
 #include <stdlib.h> 
-//TODO Create New Way to Login
 namespace EnTec_Group_Project {
 
 	using namespace System;

@@ -92,7 +92,7 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies />
+      <AdditionalDependencies>sqlite3.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
       <EntryPointSymbol>Main</EntryPointSymbol>
     </Link>
@@ -160,6 +160,7 @@
     <ClInclude Include="MainSplash.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="sqlite3.h" />
     <ClInclude Include="Student.h" />
     <ClInclude Include="StudentSplash.h">
       <FileType>CppForm</FileType>

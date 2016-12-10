@@ -39,6 +39,9 @@
     <ClInclude Include="Student.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="sqlite3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MainSplash.cpp">
@@ -71,9 +74,6 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="..\Art\EnTec.jpg">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="..\..\..\Pictures\MDC Shark.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

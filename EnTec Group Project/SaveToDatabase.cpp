@@ -1,7 +1,5 @@
 #include "SaveToDatabase.h"
 
-
-
 SaveToDatabase::SaveToDatabase()
 {
 	openStatus = -1;
@@ -42,7 +40,8 @@ bool SaveToDatabase::write(Student *student)
 	char sqlStr[4096];
 	if (openStatus == SQLITE_OK)
 	{
-		sprintf(sqlStr, "INSERT INTO Students (name, id, email, degree, degree_type, advisor, Reason, Date, Time) VALUES(\"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\");",
+		sprintf(sqlStr, "INSERT INTO Students (name, id, email, degree, degree_type, advisor, Reason, Date, Time, Status)" 
+			"VALUES(\"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"SET\");",
 			name, iD, emailAddress, degree, degreeType, advisor, appReason, appDate, appTime);
 
 		rc = sqlite3_exec(db, sqlStr, 0, 0, &err_msg);

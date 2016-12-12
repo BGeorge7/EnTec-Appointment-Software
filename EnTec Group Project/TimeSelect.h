@@ -1099,73 +1099,73 @@ namespace EnTec_Group_Project {
 	}
 	private: System::Void comboBox1_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
 	}
-private: System::Void btnBack_Click(System::Object^  sender, System::EventArgs^  e) {
+	private: System::Void btnBack_Click(System::Object^  sender, System::EventArgs^  e) {
 
-	this->Hide();
-	this->previous->Show();
-
-}
-private: System::Void btnNext_Click(System::Object^  sender, System::EventArgs^  e) {
-	if (lbAdvisorList->Text->IsNullOrWhiteSpace(lbAdvisorList->Text) || cbReason->Text->IsNullOrWhiteSpace(cbReason->Text)
-		|| (gb15->Enabled == false && gb30->Enabled == false) || isTimeSelected() == false)
-	{
-		MessageBox::Show("Whoops looks like you left something empty!", "Error",
-			MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
-	}
-	else
-	{
-		student->setAdvisor(lbAdvisorList->Text);
-		student->setAppReason(cbReason->Text);
-		student->setAppDate(dateTimePicker->Text);
 		this->Hide();
-		this->finalizeForm->ShowDialog();
-	}
+		this->previous->Show();
 
-}
-private: System::Void TimeSelect_Load(System::Object^  sender, System::EventArgs^  e) {
-	finalizeForm = gcnew FinalizeScreen(this, student);
-}
-private: System::Void TimeSelect_FormClosed(System::Object^  sender, System::Windows::Forms::FormClosedEventArgs^  e) {
-	delete student;
-	student = nullptr;
-	exit(0);
-}
-private: System::Void TimeSelect_VisibleChanged(System::Object^  sender, System::EventArgs^  e) {
-	lbAdvisorList->Items->Clear();
-	if (student->getDegreeType() == "Technology")
-	{
-		lbAdvisorList->Items->Add("Barake, Maria, mrodrig4@mdc.edu");
-		lbAdvisorList->Items->Add("Telfort, Roseline, rtelfort@mdc.edu");
 	}
-	else if (student->getDegreeType() == "Engineering")
-	{
-		lbAdvisorList->Items->Add("Moscoso, Federico, fmoscoso@mdc.edu");
-		lbAdvisorList->Items->Add("Ramirez, Janet, jramir1@mdc.edu");
-	}
-	else if (student->getDegreeType() == "MAGIC")
-	{
-		lbAdvisorList->Items->Add("Auguste, Mylinda, mauguste@mdc.edu");
-	}
-}
-private: System::Void cbReason_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
-	e->KeyChar = (char)0;
-}
-private: System::Void cbReason_TextChanged(System::Object^  sender, System::EventArgs^  e) {
-	if (cbReason->Text == "IEP" || cbReason->Text == "Registration" || cbReason->Text == "Career Planning")
-	{
-		gb15->Enabled = false;
-		gb15->Visible = false;
-		gb30->Enabled = true;
-		gb30->Visible = true;
-	}
-	else
-	{
-		gb30->Enabled = false;
-		gb30->Visible = false;
-		gb15->Enabled = true;
-		gb15->Visible = true;
-	}
+	private: System::Void btnNext_Click(System::Object^  sender, System::EventArgs^  e) {
+		if (lbAdvisorList->Text->IsNullOrWhiteSpace(lbAdvisorList->Text) || cbReason->Text->IsNullOrWhiteSpace(cbReason->Text)
+			|| (gb15->Enabled == false && gb30->Enabled == false) || isTimeSelected() == false)
+		{
+			MessageBox::Show("Whoops looks like you left something empty!", "Error",
+				MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
+		}
+		else
+		{
+			student->setAdvisor(lbAdvisorList->Text);
+			student->setAppReason(cbReason->Text);
+			student->setAppDate(dateTimePicker->Text);
+			this->Hide();
+			this->finalizeForm->ShowDialog();
+		}
 
-}
-};
+	}
+	private: System::Void TimeSelect_Load(System::Object^  sender, System::EventArgs^  e) {
+		finalizeForm = gcnew FinalizeScreen(this, student);
+	}
+	private: System::Void TimeSelect_FormClosed(System::Object^  sender, System::Windows::Forms::FormClosedEventArgs^  e) {
+		delete student;
+		student = nullptr;
+		exit(0);
+	}
+	private: System::Void TimeSelect_VisibleChanged(System::Object^  sender, System::EventArgs^  e) {
+		lbAdvisorList->Items->Clear();
+		if (student->getDegreeType() == "Technology")
+		{
+			lbAdvisorList->Items->Add("Barake, Maria, mrodrig4@mdc.edu");
+			lbAdvisorList->Items->Add("Telfort, Roseline, rtelfort@mdc.edu");
+		}
+		else if (student->getDegreeType() == "Engineering")
+		{
+			lbAdvisorList->Items->Add("Moscoso, Federico, fmoscoso@mdc.edu");
+			lbAdvisorList->Items->Add("Ramirez, Janet, jramir1@mdc.edu");
+		}
+		else if (student->getDegreeType() == "MAGIC")
+		{
+			lbAdvisorList->Items->Add("Auguste, Mylinda, mauguste@mdc.edu");
+		}
+	}
+	private: System::Void cbReason_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
+		e->KeyChar = (char)0;
+	}
+	private: System::Void cbReason_TextChanged(System::Object^  sender, System::EventArgs^  e) {
+		if (cbReason->Text == "IEP" || cbReason->Text == "Registration" || cbReason->Text == "Career Planning")
+		{
+			gb15->Enabled = false;
+			gb15->Visible = false;
+			gb30->Enabled = true;
+			gb30->Visible = true;
+		}
+		else
+		{
+			gb30->Enabled = false;
+			gb30->Visible = false;
+			gb15->Enabled = true;
+			gb15->Visible = true;
+		}
+
+	}
+	};
 }

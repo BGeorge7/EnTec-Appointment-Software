@@ -560,7 +560,7 @@ private: System::Void FinalizeScreen_VisibleChanged(System::Object^  sender, Sys
 	lbDegreeText->Text = student->getDegree();
 	lbAdvisorText->Text = student->getAdvisor();
 	lbAppDText->Text = student->getAppDate();
-	lbAppTText->Text = student->getAppTime();
+	lbAppTText->Text = "TODO: Appointment Time";
 	lbAppRText->Text = student->getAppReason();
 }
 };

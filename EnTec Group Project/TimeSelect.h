@@ -19,65 +19,191 @@ namespace EnTec_Group_Project {
 	{
 	private: Student *student;
 	private: Form^ previous;
+
 	private: System::Windows::Forms::GroupBox^  gb30;
-	private: System::Windows::Forms::RadioButton^  radioButton18;
-	private: System::Windows::Forms::RadioButton^  radioButton17;
-	private: System::Windows::Forms::RadioButton^  radioButton16;
-	private: System::Windows::Forms::RadioButton^  radioButton15;
-	private: System::Windows::Forms::RadioButton^  radioButton14;
-	private: System::Windows::Forms::RadioButton^  radioButton13;
-	private: System::Windows::Forms::RadioButton^  radioButton12;
-	private: System::Windows::Forms::RadioButton^  radioButton11;
-	private: System::Windows::Forms::RadioButton^  radioButton10;
-	private: System::Windows::Forms::RadioButton^  radioButton9;
-	private: System::Windows::Forms::RadioButton^  radioButton8;
-	private: System::Windows::Forms::RadioButton^  radioButton7;
-	private: System::Windows::Forms::RadioButton^  radioButton6;
-	private: System::Windows::Forms::RadioButton^  radioButton5;
-	private: System::Windows::Forms::RadioButton^  radioButton4;
-	private: System::Windows::Forms::RadioButton^  radioButton3;
-	private: System::Windows::Forms::RadioButton^  radioButton2;
-	private: System::Windows::Forms::RadioButton^  radioButton1;
+	private: System::Windows::Forms::RadioButton^  rb3018;
+	private: System::Windows::Forms::RadioButton^  rb3017;
+	private: System::Windows::Forms::RadioButton^  rb3016;
+	private: System::Windows::Forms::RadioButton^  rb3015;
+	private: System::Windows::Forms::RadioButton^  rb3014;
+	private: System::Windows::Forms::RadioButton^  rb3013;
+	private: System::Windows::Forms::RadioButton^  rb3012;
+	private: System::Windows::Forms::RadioButton^  rb3011;
+	private: System::Windows::Forms::RadioButton^  rb3010;
+	private: System::Windows::Forms::RadioButton^  rb309;
+	private: System::Windows::Forms::RadioButton^  rb308;
+	private: System::Windows::Forms::RadioButton^  rb304;
+	private: System::Windows::Forms::RadioButton^  rb306;
+	private: System::Windows::Forms::RadioButton^  rb307;
+	private: System::Windows::Forms::RadioButton^  rb303;
+	private: System::Windows::Forms::RadioButton^  rb305;
+	private: System::Windows::Forms::RadioButton^  rb302;
+	private: System::Windows::Forms::RadioButton^  rb301;
+
 	private: System::Windows::Forms::GroupBox^  gb15;
-	private: System::Windows::Forms::RadioButton^  radioButton53;
-	private: System::Windows::Forms::RadioButton^  radioButton52;
-	private: System::Windows::Forms::RadioButton^  radioButton51;
-	private: System::Windows::Forms::RadioButton^  radioButton50;
-	private: System::Windows::Forms::RadioButton^  radioButton49;
-	private: System::Windows::Forms::RadioButton^  radioButton48;
-	private: System::Windows::Forms::RadioButton^  radioButton47;
-	private: System::Windows::Forms::RadioButton^  radioButton46;
-	private: System::Windows::Forms::RadioButton^  radioButton45;
-	private: System::Windows::Forms::RadioButton^  radioButton44;
-	private: System::Windows::Forms::RadioButton^  radioButton43;
-	private: System::Windows::Forms::RadioButton^  radioButton42;
-	private: System::Windows::Forms::RadioButton^  radioButton41;
-	private: System::Windows::Forms::RadioButton^  radioButton40;
-	private: System::Windows::Forms::RadioButton^  radioButton39;
-	private: System::Windows::Forms::RadioButton^  radioButton38;
-	private: System::Windows::Forms::RadioButton^  radioButton37;
-	private: System::Windows::Forms::RadioButton^  radioButton19;
-	private: System::Windows::Forms::RadioButton^  radioButton20;
-	private: System::Windows::Forms::RadioButton^  radioButton21;
-	private: System::Windows::Forms::RadioButton^  radioButton22;
-	private: System::Windows::Forms::RadioButton^  radioButton23;
-	private: System::Windows::Forms::RadioButton^  radioButton24;
-	private: System::Windows::Forms::RadioButton^  radioButton25;
-	private: System::Windows::Forms::RadioButton^  radioButton26;
-	private: System::Windows::Forms::RadioButton^  radioButton27;
-	private: System::Windows::Forms::RadioButton^  radioButton28;
-	private: System::Windows::Forms::RadioButton^  radioButton29;
-	private: System::Windows::Forms::RadioButton^  radioButton30;
-	private: System::Windows::Forms::RadioButton^  radioButton31;
-	private: System::Windows::Forms::RadioButton^  radioButton32;
-	private: System::Windows::Forms::RadioButton^  radioButton33;
-	private: System::Windows::Forms::RadioButton^  radioButton34;
-	private: System::Windows::Forms::RadioButton^  radioButton35;
-	private: System::Windows::Forms::RadioButton^  radioButton36;
-
-
+	private: System::Windows::Forms::RadioButton^  rb1535;
+	private: System::Windows::Forms::RadioButton^  rb1534;
+	private: System::Windows::Forms::RadioButton^  rb1533;
+	private: System::Windows::Forms::RadioButton^  rb1532;
+	private: System::Windows::Forms::RadioButton^  rb1531;
+	private: System::Windows::Forms::RadioButton^  rb1530;
+	private: System::Windows::Forms::RadioButton^  rb1529;
+	private: System::Windows::Forms::RadioButton^  rb1528;
+	private: System::Windows::Forms::RadioButton^  rb1527;
+	private: System::Windows::Forms::RadioButton^  rb1526;
+	private: System::Windows::Forms::RadioButton^  rb1525;
+	private: System::Windows::Forms::RadioButton^  rb1524;
+	private: System::Windows::Forms::RadioButton^  rb1523;
+	private: System::Windows::Forms::RadioButton^  rb1522;
+	private: System::Windows::Forms::RadioButton^  rb1521;
+	private: System::Windows::Forms::RadioButton^  rb1520;
+	private: System::Windows::Forms::RadioButton^  rb1519;
+	private: System::Windows::Forms::RadioButton^  rb1518;
+	private: System::Windows::Forms::RadioButton^  rb1517;
+	private: System::Windows::Forms::RadioButton^  rb1516;
+	private: System::Windows::Forms::RadioButton^  rb1515;
+	private: System::Windows::Forms::RadioButton^  rb1514;
+	private: System::Windows::Forms::RadioButton^  rb1513;
+	private: System::Windows::Forms::RadioButton^  rb1512;
+	private: System::Windows::Forms::RadioButton^  rb1511;
+	private: System::Windows::Forms::RadioButton^  rb1510;
+	private: System::Windows::Forms::RadioButton^  rb159;
+	private: System::Windows::Forms::RadioButton^  rb158;
+	private: System::Windows::Forms::RadioButton^  rb154;
+	private: System::Windows::Forms::RadioButton^  rb156;
+	private: System::Windows::Forms::RadioButton^  rb157;
+	private: System::Windows::Forms::RadioButton^  rb153;
+	private: System::Windows::Forms::RadioButton^  rb155;
+	private: System::Windows::Forms::RadioButton^  rb152;
+	private: System::Windows::Forms::RadioButton^  rb151;
 
 	private: FinalizeScreen^ finalizeForm;
+
+	private: bool isTimeSelected()
+	{
+		if (gb15->Enabled == false && gb30->Enabled == false)
+			return false;
+		else
+		{
+			if (gb15->Enabled)
+			{
+				if (rb151->Checked)
+					student->setAppTime(rb151->Text);
+				else if (rb152->Checked)
+					student->setAppTime(rb152->Text);
+				else if (rb153->Checked)
+					student->setAppTime(rb153->Text);
+				else if (rb154->Checked)
+					student->setAppTime(rb154->Text);
+				else if (rb155->Checked)
+					student->setAppTime(rb155->Text);
+				else if (rb156->Checked)
+					student->setAppTime(rb156->Text);
+				else if (rb157->Checked)
+					student->setAppTime(rb157->Text);
+				else if (rb158->Checked)
+					student->setAppTime(rb158->Text);
+				else if (rb159->Checked)
+					student->setAppTime(rb159->Text);
+				else if (rb1510->Checked)
+					student->setAppTime(rb1510->Text);
+				else if (rb1511->Checked)
+					student->setAppTime(rb1511->Text);
+				else if (rb1512->Checked)
+					student->setAppTime(rb1512->Text);
+				else if (rb1513->Checked)
+					student->setAppTime(rb1513->Text);
+				else if (rb1514->Checked)
+					student->setAppTime(rb1514->Text);
+				else if (rb1515->Checked)
+					student->setAppTime(rb1515->Text);
+				else if (rb1516->Checked)
+					student->setAppTime(rb1516->Text);
+				else if (rb1517->Checked)
+					student->setAppTime(rb1517->Text);
+				else if (rb1518->Checked)
+					student->setAppTime(rb1518->Text);
+				else if (rb1519->Checked)
+					student->setAppTime(rb1519->Text);
+				else if (rb1520->Checked)
+					student->setAppTime(rb1520->Text);
+				else if (rb1521->Checked)
+					student->setAppTime(rb1521->Text);
+				else if (rb1522->Checked)
+					student->setAppTime(rb1522->Text);
+				else if (rb1523->Checked)
+					student->setAppTime(rb1523->Text);
+				else if (rb1524->Checked)
+					student->setAppTime(rb1524->Text);
+				else if (rb1525->Checked)
+					student->setAppTime(rb1525->Text);
+				else if (rb1526->Checked)
+					student->setAppTime(rb1526->Text);
+				else if (rb1527->Checked)
+					student->setAppTime(rb1527->Text);
+				else if (rb1528->Checked)
+					student->setAppTime(rb1528->Text);
+				else if (rb1529->Checked)
+					student->setAppTime(rb1529->Text);
+				else if (rb1530->Checked)
+					student->setAppTime(rb1530->Text);
+				else if (rb1531->Checked)
+					student->setAppTime(rb1531->Text);
+				else if (rb1532->Checked)
+					student->setAppTime(rb1532->Text);
+				else if (rb1533->Checked)
+					student->setAppTime(rb1533->Text);
+				else if (rb1534->Checked)
+					student->setAppTime(rb1534->Text);
+				else if (rb1535->Checked)
+					student->setAppTime(rb1535->Text);
+			}
+			else if (gb30->Enabled)
+			{
+				if (rb301->Checked)
+					student->setAppTime(rb301->Text);
+				else if (rb302->Checked)
+					student->setAppTime(rb302->Text);
+				else if (rb303->Checked)
+					student->setAppTime(rb303->Text);
+				else if (rb304->Checked)
+					student->setAppTime(rb304->Text);
+				else if (rb305->Checked)
+					student->setAppTime(rb305->Text);
+				else if (rb306->Checked)
+					student->setAppTime(rb306->Text);
+				else if (rb307->Checked)
+					student->setAppTime(rb307->Text);
+				else if (rb308->Checked)
+					student->setAppTime(rb308->Text);
+				else if (rb309->Checked)
+					student->setAppTime(rb309->Text);
+				else if (rb3010->Checked)
+					student->setAppTime(rb3010->Text);
+				else if (rb3011->Checked)
+					student->setAppTime(rb3011->Text);
+				else if (rb3012->Checked)
+					student->setAppTime(rb3012->Text);
+				else if (rb3013->Checked)
+					student->setAppTime(rb3013->Text);
+				else if (rb3014->Checked)
+					student->setAppTime(rb3014->Text);
+				else if (rb3015->Checked)
+					student->setAppTime(rb3015->Text);
+				else if (rb3016->Checked)
+					student->setAppTime(rb3016->Text);
+				else if (rb3017->Checked)
+					student->setAppTime(rb3017->Text);
+				else if (rb3018->Checked)
+					student->setAppTime(rb3018->Text);
+			}
+			if (student->getAppTime() != "")
+				return true;
+			else
+				return false;
+		}
+	}
+
 	public:
 		TimeSelect(Form^ previous, Student *student)
 		{
@@ -137,60 +263,60 @@ namespace EnTec_Group_Project {
 			this->btnBack = (gcnew System::Windows::Forms::Button());
 			this->cbReason = (gcnew System::Windows::Forms::ComboBox());
 			this->gb30 = (gcnew System::Windows::Forms::GroupBox());
-			this->radioButton18 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton17 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton16 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton15 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton14 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton13 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton12 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton11 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton10 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton9 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton8 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton7 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton6 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton5 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton4 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton3 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton2 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton1 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb3018 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb3017 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb3016 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb3015 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb3014 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb3013 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb3012 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb3011 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb3010 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb309 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb308 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb304 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb306 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb307 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb303 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb305 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb302 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb301 = (gcnew System::Windows::Forms::RadioButton());
 			this->gb15 = (gcnew System::Windows::Forms::GroupBox());
-			this->radioButton53 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton52 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton51 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton50 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton49 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton48 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton47 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton46 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton45 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton44 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton43 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton42 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton41 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton40 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton39 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton38 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton37 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton19 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton20 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton21 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton22 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton23 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton24 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton25 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton26 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton27 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton28 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton29 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton30 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton31 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton32 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton33 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton34 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton35 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton36 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb1535 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb1534 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb1533 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb1532 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb1531 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb1530 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb1529 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb1528 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb1527 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb1526 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb1525 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb1524 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb1523 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb1522 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb1521 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb1520 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb1519 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb1518 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb1517 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb1516 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb1515 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb1514 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb1513 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb1512 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb1511 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb1510 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb159 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb158 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb154 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb156 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb157 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb153 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb155 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb152 = (gcnew System::Windows::Forms::RadioButton());
+			this->rb151 = (gcnew System::Windows::Forms::RadioButton());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->gb30->SuspendLayout();
 			this->gb15->SuspendLayout();
@@ -223,12 +349,13 @@ namespace EnTec_Group_Project {
 			// dateTimePicker
 			// 
 			this->dateTimePicker->Location = System::Drawing::Point(477, 116);
-			this->dateTimePicker->MaxDate = System::DateTime(2100, 12, 31, 0, 0, 0, 0);
-			this->dateTimePicker->MinDate = System::DateTime(1970, 12, 31, 0, 0, 0, 0);
+			this->dateTimePicker->MaxDate = System::DateTime(2050, 12, 31, 0, 0, 0, 0);
+			this->dateTimePicker->MinDate = System::DateTime(1970, 1, 1, 0, 0, 0, 0);
 			this->dateTimePicker->Name = L"dateTimePicker";
 			this->dateTimePicker->Size = System::Drawing::Size(212, 20);
 			this->dateTimePicker->TabIndex = 2;
 			this->dateTimePicker->Value = System::DateTime(2016, 12, 8, 19, 14, 45, 0);
+			this->dateTimePicker->ValueChanged += gcnew System::EventHandler(this, &TimeSelect::dateTimePicker1_ValueChanged);
 			// 
 			// lbTitle
 			// 
@@ -281,24 +408,24 @@ namespace EnTec_Group_Project {
 			// 
 			// gb30
 			// 
-			this->gb30->Controls->Add(this->radioButton18);
-			this->gb30->Controls->Add(this->radioButton17);
-			this->gb30->Controls->Add(this->radioButton16);
-			this->gb30->Controls->Add(this->radioButton15);
-			this->gb30->Controls->Add(this->radioButton14);
-			this->gb30->Controls->Add(this->radioButton13);
-			this->gb30->Controls->Add(this->radioButton12);
-			this->gb30->Controls->Add(this->radioButton11);
-			this->gb30->Controls->Add(this->radioButton10);
-			this->gb30->Controls->Add(this->radioButton9);
-			this->gb30->Controls->Add(this->radioButton8);
-			this->gb30->Controls->Add(this->radioButton7);
-			this->gb30->Controls->Add(this->radioButton6);
-			this->gb30->Controls->Add(this->radioButton5);
-			this->gb30->Controls->Add(this->radioButton4);
-			this->gb30->Controls->Add(this->radioButton3);
-			this->gb30->Controls->Add(this->radioButton2);
-			this->gb30->Controls->Add(this->radioButton1);
+			this->gb30->Controls->Add(this->rb3018);
+			this->gb30->Controls->Add(this->rb3017);
+			this->gb30->Controls->Add(this->rb3016);
+			this->gb30->Controls->Add(this->rb3015);
+			this->gb30->Controls->Add(this->rb3014);
+			this->gb30->Controls->Add(this->rb3013);
+			this->gb30->Controls->Add(this->rb3012);
+			this->gb30->Controls->Add(this->rb3011);
+			this->gb30->Controls->Add(this->rb3010);
+			this->gb30->Controls->Add(this->rb309);
+			this->gb30->Controls->Add(this->rb308);
+			this->gb30->Controls->Add(this->rb304);
+			this->gb30->Controls->Add(this->rb306);
+			this->gb30->Controls->Add(this->rb307);
+			this->gb30->Controls->Add(this->rb303);
+			this->gb30->Controls->Add(this->rb305);
+			this->gb30->Controls->Add(this->rb302);
+			this->gb30->Controls->Add(this->rb301);
 			this->gb30->Enabled = false;
 			this->gb30->Location = System::Drawing::Point(261, 142);
 			this->gb30->Name = L"gb30";
@@ -307,241 +434,241 @@ namespace EnTec_Group_Project {
 			this->gb30->TabStop = false;
 			this->gb30->Visible = false;
 			// 
-			// radioButton18
+			// rb3018
 			// 
-			this->radioButton18->AutoSize = true;
-			this->radioButton18->Location = System::Drawing::Point(151, 88);
-			this->radioButton18->Name = L"radioButton18";
-			this->radioButton18->Size = System::Drawing::Size(63, 17);
-			this->radioButton18->TabIndex = 17;
-			this->radioButton18->TabStop = true;
-			this->radioButton18->Text = L"4:30 pm";
-			this->radioButton18->UseVisualStyleBackColor = true;
+			this->rb3018->AutoSize = true;
+			this->rb3018->Location = System::Drawing::Point(151, 88);
+			this->rb3018->Name = L"rb3018";
+			this->rb3018->Size = System::Drawing::Size(63, 17);
+			this->rb3018->TabIndex = 17;
+			this->rb3018->TabStop = true;
+			this->rb3018->Text = L"4:30 pm";
+			this->rb3018->UseVisualStyleBackColor = true;
 			// 
-			// radioButton17
+			// rb3017
 			// 
-			this->radioButton17->AutoSize = true;
-			this->radioButton17->Location = System::Drawing::Point(82, 88);
-			this->radioButton17->Name = L"radioButton17";
-			this->radioButton17->Size = System::Drawing::Size(63, 17);
-			this->radioButton17->TabIndex = 16;
-			this->radioButton17->TabStop = true;
-			this->radioButton17->Text = L"4:00 pm";
-			this->radioButton17->UseVisualStyleBackColor = true;
+			this->rb3017->AutoSize = true;
+			this->rb3017->Location = System::Drawing::Point(82, 88);
+			this->rb3017->Name = L"rb3017";
+			this->rb3017->Size = System::Drawing::Size(63, 17);
+			this->rb3017->TabIndex = 16;
+			this->rb3017->TabStop = true;
+			this->rb3017->Text = L"4:00 pm";
+			this->rb3017->UseVisualStyleBackColor = true;
 			// 
-			// radioButton16
+			// rb3016
 			// 
-			this->radioButton16->AutoSize = true;
-			this->radioButton16->Location = System::Drawing::Point(13, 88);
-			this->radioButton16->Name = L"radioButton16";
-			this->radioButton16->Size = System::Drawing::Size(63, 17);
-			this->radioButton16->TabIndex = 15;
-			this->radioButton16->TabStop = true;
-			this->radioButton16->Text = L"3:30 pm";
-			this->radioButton16->UseVisualStyleBackColor = true;
+			this->rb3016->AutoSize = true;
+			this->rb3016->Location = System::Drawing::Point(13, 88);
+			this->rb3016->Name = L"rb3016";
+			this->rb3016->Size = System::Drawing::Size(63, 17);
+			this->rb3016->TabIndex = 15;
+			this->rb3016->TabStop = true;
+			this->rb3016->Text = L"3:30 pm";
+			this->rb3016->UseVisualStyleBackColor = true;
 			// 
-			// radioButton15
+			// rb3015
 			// 
-			this->radioButton15->AutoSize = true;
-			this->radioButton15->Location = System::Drawing::Point(289, 65);
-			this->radioButton15->Name = L"radioButton15";
-			this->radioButton15->Size = System::Drawing::Size(63, 17);
-			this->radioButton15->TabIndex = 14;
-			this->radioButton15->TabStop = true;
-			this->radioButton15->Text = L"3:00 pm";
-			this->radioButton15->UseVisualStyleBackColor = true;
+			this->rb3015->AutoSize = true;
+			this->rb3015->Location = System::Drawing::Point(289, 65);
+			this->rb3015->Name = L"rb3015";
+			this->rb3015->Size = System::Drawing::Size(63, 17);
+			this->rb3015->TabIndex = 14;
+			this->rb3015->TabStop = true;
+			this->rb3015->Text = L"3:00 pm";
+			this->rb3015->UseVisualStyleBackColor = true;
 			// 
-			// radioButton14
+			// rb3014
 			// 
-			this->radioButton14->AutoSize = true;
-			this->radioButton14->Location = System::Drawing::Point(220, 65);
-			this->radioButton14->Name = L"radioButton14";
-			this->radioButton14->Size = System::Drawing::Size(63, 17);
-			this->radioButton14->TabIndex = 13;
-			this->radioButton14->TabStop = true;
-			this->radioButton14->Text = L"2:30 pm";
-			this->radioButton14->UseVisualStyleBackColor = true;
+			this->rb3014->AutoSize = true;
+			this->rb3014->Location = System::Drawing::Point(220, 65);
+			this->rb3014->Name = L"rb3014";
+			this->rb3014->Size = System::Drawing::Size(63, 17);
+			this->rb3014->TabIndex = 13;
+			this->rb3014->TabStop = true;
+			this->rb3014->Text = L"2:30 pm";
+			this->rb3014->UseVisualStyleBackColor = true;
 			// 
-			// radioButton13
+			// rb3013
 			// 
-			this->radioButton13->AutoSize = true;
-			this->radioButton13->Location = System::Drawing::Point(151, 65);
-			this->radioButton13->Name = L"radioButton13";
-			this->radioButton13->Size = System::Drawing::Size(63, 17);
-			this->radioButton13->TabIndex = 12;
-			this->radioButton13->TabStop = true;
-			this->radioButton13->Text = L"2:00 pm";
-			this->radioButton13->UseVisualStyleBackColor = true;
+			this->rb3013->AutoSize = true;
+			this->rb3013->Location = System::Drawing::Point(151, 65);
+			this->rb3013->Name = L"rb3013";
+			this->rb3013->Size = System::Drawing::Size(63, 17);
+			this->rb3013->TabIndex = 12;
+			this->rb3013->TabStop = true;
+			this->rb3013->Text = L"2:00 pm";
+			this->rb3013->UseVisualStyleBackColor = true;
 			// 
-			// radioButton12
+			// rb3012
 			// 
-			this->radioButton12->AutoSize = true;
-			this->radioButton12->Location = System::Drawing::Point(82, 65);
-			this->radioButton12->Name = L"radioButton12";
-			this->radioButton12->Size = System::Drawing::Size(63, 17);
-			this->radioButton12->TabIndex = 11;
-			this->radioButton12->TabStop = true;
-			this->radioButton12->Text = L"1:30 pm";
-			this->radioButton12->UseVisualStyleBackColor = true;
+			this->rb3012->AutoSize = true;
+			this->rb3012->Location = System::Drawing::Point(82, 65);
+			this->rb3012->Name = L"rb3012";
+			this->rb3012->Size = System::Drawing::Size(63, 17);
+			this->rb3012->TabIndex = 11;
+			this->rb3012->TabStop = true;
+			this->rb3012->Text = L"1:30 pm";
+			this->rb3012->UseVisualStyleBackColor = true;
 			// 
-			// radioButton11
+			// rb3011
 			// 
-			this->radioButton11->AutoSize = true;
-			this->radioButton11->Location = System::Drawing::Point(13, 65);
-			this->radioButton11->Name = L"radioButton11";
-			this->radioButton11->Size = System::Drawing::Size(63, 17);
-			this->radioButton11->TabIndex = 10;
-			this->radioButton11->TabStop = true;
-			this->radioButton11->Text = L"1:00 pm";
-			this->radioButton11->UseVisualStyleBackColor = true;
+			this->rb3011->AutoSize = true;
+			this->rb3011->Location = System::Drawing::Point(13, 65);
+			this->rb3011->Name = L"rb3011";
+			this->rb3011->Size = System::Drawing::Size(63, 17);
+			this->rb3011->TabIndex = 10;
+			this->rb3011->TabStop = true;
+			this->rb3011->Text = L"1:00 pm";
+			this->rb3011->UseVisualStyleBackColor = true;
 			// 
-			// radioButton10
+			// rb3010
 			// 
-			this->radioButton10->AutoSize = true;
-			this->radioButton10->Location = System::Drawing::Point(289, 42);
-			this->radioButton10->Name = L"radioButton10";
-			this->radioButton10->Size = System::Drawing::Size(69, 17);
-			this->radioButton10->TabIndex = 9;
-			this->radioButton10->TabStop = true;
-			this->radioButton10->Text = L"12:30 pm";
-			this->radioButton10->UseVisualStyleBackColor = true;
+			this->rb3010->AutoSize = true;
+			this->rb3010->Location = System::Drawing::Point(289, 42);
+			this->rb3010->Name = L"rb3010";
+			this->rb3010->Size = System::Drawing::Size(69, 17);
+			this->rb3010->TabIndex = 9;
+			this->rb3010->TabStop = true;
+			this->rb3010->Text = L"12:30 pm";
+			this->rb3010->UseVisualStyleBackColor = true;
 			// 
-			// radioButton9
+			// rb309
 			// 
-			this->radioButton9->AutoSize = true;
-			this->radioButton9->Location = System::Drawing::Point(220, 42);
-			this->radioButton9->Name = L"radioButton9";
-			this->radioButton9->Size = System::Drawing::Size(69, 17);
-			this->radioButton9->TabIndex = 8;
-			this->radioButton9->TabStop = true;
-			this->radioButton9->Text = L"12:00 pm";
-			this->radioButton9->UseVisualStyleBackColor = true;
+			this->rb309->AutoSize = true;
+			this->rb309->Location = System::Drawing::Point(220, 42);
+			this->rb309->Name = L"rb309";
+			this->rb309->Size = System::Drawing::Size(69, 17);
+			this->rb309->TabIndex = 8;
+			this->rb309->TabStop = true;
+			this->rb309->Text = L"12:00 pm";
+			this->rb309->UseVisualStyleBackColor = true;
 			// 
-			// radioButton8
+			// rb308
 			// 
-			this->radioButton8->AutoSize = true;
-			this->radioButton8->Location = System::Drawing::Point(151, 42);
-			this->radioButton8->Name = L"radioButton8";
-			this->radioButton8->Size = System::Drawing::Size(69, 17);
-			this->radioButton8->TabIndex = 7;
-			this->radioButton8->TabStop = true;
-			this->radioButton8->Text = L"11:30 am";
-			this->radioButton8->UseVisualStyleBackColor = true;
+			this->rb308->AutoSize = true;
+			this->rb308->Location = System::Drawing::Point(151, 42);
+			this->rb308->Name = L"rb308";
+			this->rb308->Size = System::Drawing::Size(69, 17);
+			this->rb308->TabIndex = 7;
+			this->rb308->TabStop = true;
+			this->rb308->Text = L"11:30 am";
+			this->rb308->UseVisualStyleBackColor = true;
 			// 
-			// radioButton7
+			// rb304
 			// 
-			this->radioButton7->AutoSize = true;
-			this->radioButton7->Location = System::Drawing::Point(220, 19);
-			this->radioButton7->Name = L"radioButton7";
-			this->radioButton7->Size = System::Drawing::Size(63, 17);
-			this->radioButton7->TabIndex = 6;
-			this->radioButton7->TabStop = true;
-			this->radioButton7->Text = L"9:30 am";
-			this->radioButton7->UseVisualStyleBackColor = true;
+			this->rb304->AutoSize = true;
+			this->rb304->Location = System::Drawing::Point(220, 19);
+			this->rb304->Name = L"rb304";
+			this->rb304->Size = System::Drawing::Size(63, 17);
+			this->rb304->TabIndex = 6;
+			this->rb304->TabStop = true;
+			this->rb304->Text = L"9:30 am";
+			this->rb304->UseVisualStyleBackColor = true;
 			// 
-			// radioButton6
+			// rb306
 			// 
-			this->radioButton6->AutoSize = true;
-			this->radioButton6->Location = System::Drawing::Point(13, 42);
-			this->radioButton6->Name = L"radioButton6";
-			this->radioButton6->Size = System::Drawing::Size(69, 17);
-			this->radioButton6->TabIndex = 5;
-			this->radioButton6->TabStop = true;
-			this->radioButton6->Text = L"10:30 am";
-			this->radioButton6->UseVisualStyleBackColor = true;
+			this->rb306->AutoSize = true;
+			this->rb306->Location = System::Drawing::Point(13, 42);
+			this->rb306->Name = L"rb306";
+			this->rb306->Size = System::Drawing::Size(69, 17);
+			this->rb306->TabIndex = 5;
+			this->rb306->TabStop = true;
+			this->rb306->Text = L"10:30 am";
+			this->rb306->UseVisualStyleBackColor = true;
 			// 
-			// radioButton5
+			// rb307
 			// 
-			this->radioButton5->AutoSize = true;
-			this->radioButton5->Location = System::Drawing::Point(82, 42);
-			this->radioButton5->Name = L"radioButton5";
-			this->radioButton5->Size = System::Drawing::Size(69, 17);
-			this->radioButton5->TabIndex = 4;
-			this->radioButton5->TabStop = true;
-			this->radioButton5->Text = L"11:00 am";
-			this->radioButton5->UseVisualStyleBackColor = true;
+			this->rb307->AutoSize = true;
+			this->rb307->Location = System::Drawing::Point(82, 42);
+			this->rb307->Name = L"rb307";
+			this->rb307->Size = System::Drawing::Size(69, 17);
+			this->rb307->TabIndex = 4;
+			this->rb307->TabStop = true;
+			this->rb307->Text = L"11:00 am";
+			this->rb307->UseVisualStyleBackColor = true;
 			// 
-			// radioButton4
+			// rb303
 			// 
-			this->radioButton4->AutoSize = true;
-			this->radioButton4->Location = System::Drawing::Point(151, 19);
-			this->radioButton4->Name = L"radioButton4";
-			this->radioButton4->Size = System::Drawing::Size(63, 17);
-			this->radioButton4->TabIndex = 3;
-			this->radioButton4->TabStop = true;
-			this->radioButton4->Text = L"9:00 am";
-			this->radioButton4->UseVisualStyleBackColor = true;
+			this->rb303->AutoSize = true;
+			this->rb303->Location = System::Drawing::Point(151, 19);
+			this->rb303->Name = L"rb303";
+			this->rb303->Size = System::Drawing::Size(63, 17);
+			this->rb303->TabIndex = 3;
+			this->rb303->TabStop = true;
+			this->rb303->Text = L"9:00 am";
+			this->rb303->UseVisualStyleBackColor = true;
 			// 
-			// radioButton3
+			// rb305
 			// 
-			this->radioButton3->AutoSize = true;
-			this->radioButton3->Location = System::Drawing::Point(289, 19);
-			this->radioButton3->Name = L"radioButton3";
-			this->radioButton3->Size = System::Drawing::Size(69, 17);
-			this->radioButton3->TabIndex = 2;
-			this->radioButton3->TabStop = true;
-			this->radioButton3->Text = L"10:00 am";
-			this->radioButton3->UseVisualStyleBackColor = true;
+			this->rb305->AutoSize = true;
+			this->rb305->Location = System::Drawing::Point(289, 19);
+			this->rb305->Name = L"rb305";
+			this->rb305->Size = System::Drawing::Size(69, 17);
+			this->rb305->TabIndex = 2;
+			this->rb305->TabStop = true;
+			this->rb305->Text = L"10:00 am";
+			this->rb305->UseVisualStyleBackColor = true;
 			// 
-			// radioButton2
+			// rb302
 			// 
-			this->radioButton2->AutoSize = true;
-			this->radioButton2->Location = System::Drawing::Point(82, 19);
-			this->radioButton2->Name = L"radioButton2";
-			this->radioButton2->Size = System::Drawing::Size(63, 17);
-			this->radioButton2->TabIndex = 1;
-			this->radioButton2->TabStop = true;
-			this->radioButton2->Text = L"8:30 am";
-			this->radioButton2->UseVisualStyleBackColor = true;
+			this->rb302->AutoSize = true;
+			this->rb302->Location = System::Drawing::Point(82, 19);
+			this->rb302->Name = L"rb302";
+			this->rb302->Size = System::Drawing::Size(63, 17);
+			this->rb302->TabIndex = 1;
+			this->rb302->TabStop = true;
+			this->rb302->Text = L"8:30 am";
+			this->rb302->UseVisualStyleBackColor = true;
 			// 
-			// radioButton1
+			// rb301
 			// 
-			this->radioButton1->AutoSize = true;
-			this->radioButton1->Location = System::Drawing::Point(13, 19);
-			this->radioButton1->Name = L"radioButton1";
-			this->radioButton1->Size = System::Drawing::Size(63, 17);
-			this->radioButton1->TabIndex = 0;
-			this->radioButton1->TabStop = true;
-			this->radioButton1->Text = L"8:00 am";
-			this->radioButton1->UseVisualStyleBackColor = true;
+			this->rb301->AutoSize = true;
+			this->rb301->Location = System::Drawing::Point(13, 19);
+			this->rb301->Name = L"rb301";
+			this->rb301->Size = System::Drawing::Size(63, 17);
+			this->rb301->TabIndex = 0;
+			this->rb301->TabStop = true;
+			this->rb301->Text = L"8:00 am";
+			this->rb301->UseVisualStyleBackColor = true;
 			// 
 			// gb15
 			// 
-			this->gb15->Controls->Add(this->radioButton53);
-			this->gb15->Controls->Add(this->radioButton52);
-			this->gb15->Controls->Add(this->radioButton51);
-			this->gb15->Controls->Add(this->radioButton50);
-			this->gb15->Controls->Add(this->radioButton49);
-			this->gb15->Controls->Add(this->radioButton48);
-			this->gb15->Controls->Add(this->radioButton47);
-			this->gb15->Controls->Add(this->radioButton46);
-			this->gb15->Controls->Add(this->radioButton45);
-			this->gb15->Controls->Add(this->radioButton44);
-			this->gb15->Controls->Add(this->radioButton43);
-			this->gb15->Controls->Add(this->radioButton42);
-			this->gb15->Controls->Add(this->radioButton41);
-			this->gb15->Controls->Add(this->radioButton40);
-			this->gb15->Controls->Add(this->radioButton39);
-			this->gb15->Controls->Add(this->radioButton38);
-			this->gb15->Controls->Add(this->radioButton37);
-			this->gb15->Controls->Add(this->radioButton19);
-			this->gb15->Controls->Add(this->radioButton20);
-			this->gb15->Controls->Add(this->radioButton21);
-			this->gb15->Controls->Add(this->radioButton22);
-			this->gb15->Controls->Add(this->radioButton23);
-			this->gb15->Controls->Add(this->radioButton24);
-			this->gb15->Controls->Add(this->radioButton25);
-			this->gb15->Controls->Add(this->radioButton26);
-			this->gb15->Controls->Add(this->radioButton27);
-			this->gb15->Controls->Add(this->radioButton28);
-			this->gb15->Controls->Add(this->radioButton29);
-			this->gb15->Controls->Add(this->radioButton30);
-			this->gb15->Controls->Add(this->radioButton31);
-			this->gb15->Controls->Add(this->radioButton32);
-			this->gb15->Controls->Add(this->radioButton33);
-			this->gb15->Controls->Add(this->radioButton34);
-			this->gb15->Controls->Add(this->radioButton35);
-			this->gb15->Controls->Add(this->radioButton36);
+			this->gb15->Controls->Add(this->rb1535);
+			this->gb15->Controls->Add(this->rb1534);
+			this->gb15->Controls->Add(this->rb1533);
+			this->gb15->Controls->Add(this->rb1532);
+			this->gb15->Controls->Add(this->rb1531);
+			this->gb15->Controls->Add(this->rb1530);
+			this->gb15->Controls->Add(this->rb1529);
+			this->gb15->Controls->Add(this->rb1528);
+			this->gb15->Controls->Add(this->rb1527);
+			this->gb15->Controls->Add(this->rb1526);
+			this->gb15->Controls->Add(this->rb1525);
+			this->gb15->Controls->Add(this->rb1524);
+			this->gb15->Controls->Add(this->rb1523);
+			this->gb15->Controls->Add(this->rb1522);
+			this->gb15->Controls->Add(this->rb1521);
+			this->gb15->Controls->Add(this->rb1520);
+			this->gb15->Controls->Add(this->rb1519);
+			this->gb15->Controls->Add(this->rb1518);
+			this->gb15->Controls->Add(this->rb1517);
+			this->gb15->Controls->Add(this->rb1516);
+			this->gb15->Controls->Add(this->rb1515);
+			this->gb15->Controls->Add(this->rb1514);
+			this->gb15->Controls->Add(this->rb1513);
+			this->gb15->Controls->Add(this->rb1512);
+			this->gb15->Controls->Add(this->rb1511);
+			this->gb15->Controls->Add(this->rb1510);
+			this->gb15->Controls->Add(this->rb159);
+			this->gb15->Controls->Add(this->rb158);
+			this->gb15->Controls->Add(this->rb154);
+			this->gb15->Controls->Add(this->rb156);
+			this->gb15->Controls->Add(this->rb157);
+			this->gb15->Controls->Add(this->rb153);
+			this->gb15->Controls->Add(this->rb155);
+			this->gb15->Controls->Add(this->rb152);
+			this->gb15->Controls->Add(this->rb151);
 			this->gb15->Enabled = false;
 			this->gb15->Location = System::Drawing::Point(261, 142);
 			this->gb15->Name = L"gb15";
@@ -550,390 +677,390 @@ namespace EnTec_Group_Project {
 			this->gb15->TabStop = false;
 			this->gb15->Visible = false;
 			// 
-			// radioButton53
-			// 
-			this->radioButton53->AutoSize = true;
-			this->radioButton53->Location = System::Drawing::Point(289, 157);
-			this->radioButton53->Name = L"radioButton53";
-			this->radioButton53->Size = System::Drawing::Size(63, 17);
-			this->radioButton53->TabIndex = 34;
-			this->radioButton53->TabStop = true;
-			this->radioButton53->Text = L"4:30 pm";
-			this->radioButton53->UseVisualStyleBackColor = true;
-			// 
-			// radioButton52
-			// 
-			this->radioButton52->AutoSize = true;
-			this->radioButton52->Location = System::Drawing::Point(220, 157);
-			this->radioButton52->Name = L"radioButton52";
-			this->radioButton52->Size = System::Drawing::Size(63, 17);
-			this->radioButton52->TabIndex = 33;
-			this->radioButton52->TabStop = true;
-			this->radioButton52->Text = L"4:15 pm";
-			this->radioButton52->UseVisualStyleBackColor = true;
-			// 
-			// radioButton51
-			// 
-			this->radioButton51->AutoSize = true;
-			this->radioButton51->Location = System::Drawing::Point(151, 157);
-			this->radioButton51->Name = L"radioButton51";
-			this->radioButton51->Size = System::Drawing::Size(63, 17);
-			this->radioButton51->TabIndex = 32;
-			this->radioButton51->TabStop = true;
-			this->radioButton51->Text = L"4:00 pm";
-			this->radioButton51->UseVisualStyleBackColor = true;
-			// 
-			// radioButton50
-			// 
-			this->radioButton50->AutoSize = true;
-			this->radioButton50->Location = System::Drawing::Point(82, 157);
-			this->radioButton50->Name = L"radioButton50";
-			this->radioButton50->Size = System::Drawing::Size(63, 17);
-			this->radioButton50->TabIndex = 31;
-			this->radioButton50->TabStop = true;
-			this->radioButton50->Text = L"3:45 pm";
-			this->radioButton50->UseVisualStyleBackColor = true;
-			// 
-			// radioButton49
-			// 
-			this->radioButton49->AutoSize = true;
-			this->radioButton49->Location = System::Drawing::Point(13, 157);
-			this->radioButton49->Name = L"radioButton49";
-			this->radioButton49->Size = System::Drawing::Size(63, 17);
-			this->radioButton49->TabIndex = 30;
-			this->radioButton49->TabStop = true;
-			this->radioButton49->Text = L"3:30 pm";
-			this->radioButton49->UseVisualStyleBackColor = true;
-			// 
-			// radioButton48
-			// 
-			this->radioButton48->AutoSize = true;
-			this->radioButton48->Location = System::Drawing::Point(289, 134);
-			this->radioButton48->Name = L"radioButton48";
-			this->radioButton48->Size = System::Drawing::Size(63, 17);
-			this->radioButton48->TabIndex = 29;
-			this->radioButton48->TabStop = true;
-			this->radioButton48->Text = L"3:15 pm";
-			this->radioButton48->UseVisualStyleBackColor = true;
-			// 
-			// radioButton47
-			// 
-			this->radioButton47->AutoSize = true;
-			this->radioButton47->Location = System::Drawing::Point(220, 134);
-			this->radioButton47->Name = L"radioButton47";
-			this->radioButton47->Size = System::Drawing::Size(63, 17);
-			this->radioButton47->TabIndex = 28;
-			this->radioButton47->TabStop = true;
-			this->radioButton47->Text = L"3:00 pm";
-			this->radioButton47->UseVisualStyleBackColor = true;
-			// 
-			// radioButton46
-			// 
-			this->radioButton46->AutoSize = true;
-			this->radioButton46->Location = System::Drawing::Point(151, 134);
-			this->radioButton46->Name = L"radioButton46";
-			this->radioButton46->Size = System::Drawing::Size(63, 17);
-			this->radioButton46->TabIndex = 27;
-			this->radioButton46->TabStop = true;
-			this->radioButton46->Text = L"2:45 pm";
-			this->radioButton46->UseVisualStyleBackColor = true;
-			// 
-			// radioButton45
-			// 
-			this->radioButton45->AutoSize = true;
-			this->radioButton45->Location = System::Drawing::Point(82, 134);
-			this->radioButton45->Name = L"radioButton45";
-			this->radioButton45->Size = System::Drawing::Size(63, 17);
-			this->radioButton45->TabIndex = 26;
-			this->radioButton45->TabStop = true;
-			this->radioButton45->Text = L"2:30 pm";
-			this->radioButton45->UseVisualStyleBackColor = true;
-			// 
-			// radioButton44
-			// 
-			this->radioButton44->AutoSize = true;
-			this->radioButton44->Location = System::Drawing::Point(13, 134);
-			this->radioButton44->Name = L"radioButton44";
-			this->radioButton44->Size = System::Drawing::Size(63, 17);
-			this->radioButton44->TabIndex = 25;
-			this->radioButton44->TabStop = true;
-			this->radioButton44->Text = L"2:15 pm";
-			this->radioButton44->UseVisualStyleBackColor = true;
-			// 
-			// radioButton43
-			// 
-			this->radioButton43->AutoSize = true;
-			this->radioButton43->Location = System::Drawing::Point(289, 111);
-			this->radioButton43->Name = L"radioButton43";
-			this->radioButton43->Size = System::Drawing::Size(63, 17);
-			this->radioButton43->TabIndex = 24;
-			this->radioButton43->TabStop = true;
-			this->radioButton43->Text = L"2:00 pm";
-			this->radioButton43->UseVisualStyleBackColor = true;
-			// 
-			// radioButton42
-			// 
-			this->radioButton42->AutoSize = true;
-			this->radioButton42->Location = System::Drawing::Point(220, 111);
-			this->radioButton42->Name = L"radioButton42";
-			this->radioButton42->Size = System::Drawing::Size(63, 17);
-			this->radioButton42->TabIndex = 23;
-			this->radioButton42->TabStop = true;
-			this->radioButton42->Text = L"1:45 pm";
-			this->radioButton42->UseVisualStyleBackColor = true;
-			// 
-			// radioButton41
-			// 
-			this->radioButton41->AutoSize = true;
-			this->radioButton41->Location = System::Drawing::Point(151, 111);
-			this->radioButton41->Name = L"radioButton41";
-			this->radioButton41->Size = System::Drawing::Size(63, 17);
-			this->radioButton41->TabIndex = 22;
-			this->radioButton41->TabStop = true;
-			this->radioButton41->Text = L"1:30 pm";
-			this->radioButton41->UseVisualStyleBackColor = true;
-			// 
-			// radioButton40
-			// 
-			this->radioButton40->AutoSize = true;
-			this->radioButton40->Location = System::Drawing::Point(82, 111);
-			this->radioButton40->Name = L"radioButton40";
-			this->radioButton40->Size = System::Drawing::Size(63, 17);
-			this->radioButton40->TabIndex = 21;
-			this->radioButton40->TabStop = true;
-			this->radioButton40->Text = L"1:15 pm";
-			this->radioButton40->UseVisualStyleBackColor = true;
-			// 
-			// radioButton39
-			// 
-			this->radioButton39->AutoSize = true;
-			this->radioButton39->Location = System::Drawing::Point(13, 111);
-			this->radioButton39->Name = L"radioButton39";
-			this->radioButton39->Size = System::Drawing::Size(63, 17);
-			this->radioButton39->TabIndex = 20;
-			this->radioButton39->TabStop = true;
-			this->radioButton39->Text = L"1:00 pm";
-			this->radioButton39->UseVisualStyleBackColor = true;
-			// 
-			// radioButton38
-			// 
-			this->radioButton38->AutoSize = true;
-			this->radioButton38->Location = System::Drawing::Point(289, 88);
-			this->radioButton38->Name = L"radioButton38";
-			this->radioButton38->Size = System::Drawing::Size(69, 17);
-			this->radioButton38->TabIndex = 19;
-			this->radioButton38->TabStop = true;
-			this->radioButton38->Text = L"12:45 pm";
-			this->radioButton38->UseVisualStyleBackColor = true;
-			// 
-			// radioButton37
-			// 
-			this->radioButton37->AutoSize = true;
-			this->radioButton37->Location = System::Drawing::Point(220, 88);
-			this->radioButton37->Name = L"radioButton37";
-			this->radioButton37->Size = System::Drawing::Size(69, 17);
-			this->radioButton37->TabIndex = 18;
-			this->radioButton37->TabStop = true;
-			this->radioButton37->Text = L"12:30 pm";
-			this->radioButton37->UseVisualStyleBackColor = true;
-			// 
-			// radioButton19
-			// 
-			this->radioButton19->AutoSize = true;
-			this->radioButton19->Location = System::Drawing::Point(151, 88);
-			this->radioButton19->Name = L"radioButton19";
-			this->radioButton19->Size = System::Drawing::Size(69, 17);
-			this->radioButton19->TabIndex = 17;
-			this->radioButton19->TabStop = true;
-			this->radioButton19->Text = L"12:15 pm";
-			this->radioButton19->UseVisualStyleBackColor = true;
-			// 
-			// radioButton20
-			// 
-			this->radioButton20->AutoSize = true;
-			this->radioButton20->Location = System::Drawing::Point(82, 88);
-			this->radioButton20->Name = L"radioButton20";
-			this->radioButton20->Size = System::Drawing::Size(69, 17);
-			this->radioButton20->TabIndex = 16;
-			this->radioButton20->TabStop = true;
-			this->radioButton20->Text = L"12:00 pm";
-			this->radioButton20->UseVisualStyleBackColor = true;
-			// 
-			// radioButton21
-			// 
-			this->radioButton21->AutoSize = true;
-			this->radioButton21->Location = System::Drawing::Point(13, 88);
-			this->radioButton21->Name = L"radioButton21";
-			this->radioButton21->Size = System::Drawing::Size(69, 17);
-			this->radioButton21->TabIndex = 15;
-			this->radioButton21->TabStop = true;
-			this->radioButton21->Text = L"11:45 am";
-			this->radioButton21->UseVisualStyleBackColor = true;
-			// 
-			// radioButton22
-			// 
-			this->radioButton22->AutoSize = true;
-			this->radioButton22->Location = System::Drawing::Point(289, 65);
-			this->radioButton22->Name = L"radioButton22";
-			this->radioButton22->Size = System::Drawing::Size(69, 17);
-			this->radioButton22->TabIndex = 14;
-			this->radioButton22->TabStop = true;
-			this->radioButton22->Text = L"11:30 am";
-			this->radioButton22->UseVisualStyleBackColor = true;
-			// 
-			// radioButton23
-			// 
-			this->radioButton23->AutoSize = true;
-			this->radioButton23->Location = System::Drawing::Point(220, 65);
-			this->radioButton23->Name = L"radioButton23";
-			this->radioButton23->Size = System::Drawing::Size(69, 17);
-			this->radioButton23->TabIndex = 13;
-			this->radioButton23->TabStop = true;
-			this->radioButton23->Text = L"11:15 am";
-			this->radioButton23->UseVisualStyleBackColor = true;
-			// 
-			// radioButton24
-			// 
-			this->radioButton24->AutoSize = true;
-			this->radioButton24->Location = System::Drawing::Point(151, 65);
-			this->radioButton24->Name = L"radioButton24";
-			this->radioButton24->Size = System::Drawing::Size(69, 17);
-			this->radioButton24->TabIndex = 12;
-			this->radioButton24->TabStop = true;
-			this->radioButton24->Text = L"11:00 am";
-			this->radioButton24->UseVisualStyleBackColor = true;
-			// 
-			// radioButton25
-			// 
-			this->radioButton25->AutoSize = true;
-			this->radioButton25->Location = System::Drawing::Point(82, 65);
-			this->radioButton25->Name = L"radioButton25";
-			this->radioButton25->Size = System::Drawing::Size(69, 17);
-			this->radioButton25->TabIndex = 11;
-			this->radioButton25->TabStop = true;
-			this->radioButton25->Text = L"10:45 am";
-			this->radioButton25->UseVisualStyleBackColor = true;
-			// 
-			// radioButton26
-			// 
-			this->radioButton26->AutoSize = true;
-			this->radioButton26->Location = System::Drawing::Point(13, 65);
-			this->radioButton26->Name = L"radioButton26";
-			this->radioButton26->Size = System::Drawing::Size(69, 17);
-			this->radioButton26->TabIndex = 10;
-			this->radioButton26->TabStop = true;
-			this->radioButton26->Text = L"10:30 am";
-			this->radioButton26->UseVisualStyleBackColor = true;
-			// 
-			// radioButton27
-			// 
-			this->radioButton27->AutoSize = true;
-			this->radioButton27->Location = System::Drawing::Point(289, 42);
-			this->radioButton27->Name = L"radioButton27";
-			this->radioButton27->Size = System::Drawing::Size(69, 17);
-			this->radioButton27->TabIndex = 9;
-			this->radioButton27->TabStop = true;
-			this->radioButton27->Text = L"10:15 am";
-			this->radioButton27->UseVisualStyleBackColor = true;
-			// 
-			// radioButton28
-			// 
-			this->radioButton28->AutoSize = true;
-			this->radioButton28->Location = System::Drawing::Point(220, 42);
-			this->radioButton28->Name = L"radioButton28";
-			this->radioButton28->Size = System::Drawing::Size(69, 17);
-			this->radioButton28->TabIndex = 8;
-			this->radioButton28->TabStop = true;
-			this->radioButton28->Text = L"10:00 am";
-			this->radioButton28->UseVisualStyleBackColor = true;
-			// 
-			// radioButton29
-			// 
-			this->radioButton29->AutoSize = true;
-			this->radioButton29->Location = System::Drawing::Point(151, 42);
-			this->radioButton29->Name = L"radioButton29";
-			this->radioButton29->Size = System::Drawing::Size(63, 17);
-			this->radioButton29->TabIndex = 7;
-			this->radioButton29->TabStop = true;
-			this->radioButton29->Text = L"9:45 am";
-			this->radioButton29->UseVisualStyleBackColor = true;
-			// 
-			// radioButton30
-			// 
-			this->radioButton30->AutoSize = true;
-			this->radioButton30->Location = System::Drawing::Point(220, 19);
-			this->radioButton30->Name = L"radioButton30";
-			this->radioButton30->Size = System::Drawing::Size(63, 17);
-			this->radioButton30->TabIndex = 6;
-			this->radioButton30->TabStop = true;
-			this->radioButton30->Text = L"8:45 am";
-			this->radioButton30->UseVisualStyleBackColor = true;
-			// 
-			// radioButton31
-			// 
-			this->radioButton31->AutoSize = true;
-			this->radioButton31->Location = System::Drawing::Point(13, 42);
-			this->radioButton31->Name = L"radioButton31";
-			this->radioButton31->Size = System::Drawing::Size(63, 17);
-			this->radioButton31->TabIndex = 5;
-			this->radioButton31->TabStop = true;
-			this->radioButton31->Text = L"9:15 am";
-			this->radioButton31->UseVisualStyleBackColor = true;
-			// 
-			// radioButton32
-			// 
-			this->radioButton32->AutoSize = true;
-			this->radioButton32->Location = System::Drawing::Point(82, 42);
-			this->radioButton32->Name = L"radioButton32";
-			this->radioButton32->Size = System::Drawing::Size(63, 17);
-			this->radioButton32->TabIndex = 4;
-			this->radioButton32->TabStop = true;
-			this->radioButton32->Text = L"9:30 am";
-			this->radioButton32->UseVisualStyleBackColor = true;
-			// 
-			// radioButton33
-			// 
-			this->radioButton33->AutoSize = true;
-			this->radioButton33->Location = System::Drawing::Point(151, 19);
-			this->radioButton33->Name = L"radioButton33";
-			this->radioButton33->Size = System::Drawing::Size(63, 17);
-			this->radioButton33->TabIndex = 3;
-			this->radioButton33->TabStop = true;
-			this->radioButton33->Text = L"8:30 am";
-			this->radioButton33->UseVisualStyleBackColor = true;
-			// 
-			// radioButton34
-			// 
-			this->radioButton34->AutoSize = true;
-			this->radioButton34->Location = System::Drawing::Point(289, 19);
-			this->radioButton34->Name = L"radioButton34";
-			this->radioButton34->Size = System::Drawing::Size(63, 17);
-			this->radioButton34->TabIndex = 2;
-			this->radioButton34->TabStop = true;
-			this->radioButton34->Text = L"9:00 am";
-			this->radioButton34->UseVisualStyleBackColor = true;
-			// 
-			// radioButton35
-			// 
-			this->radioButton35->AutoSize = true;
-			this->radioButton35->Location = System::Drawing::Point(82, 19);
-			this->radioButton35->Name = L"radioButton35";
-			this->radioButton35->Size = System::Drawing::Size(63, 17);
-			this->radioButton35->TabIndex = 1;
-			this->radioButton35->TabStop = true;
-			this->radioButton35->Text = L"8:15 am";
-			this->radioButton35->UseVisualStyleBackColor = true;
-			// 
-			// radioButton36
-			// 
-			this->radioButton36->AutoSize = true;
-			this->radioButton36->Location = System::Drawing::Point(13, 19);
-			this->radioButton36->Name = L"radioButton36";
-			this->radioButton36->Size = System::Drawing::Size(63, 17);
-			this->radioButton36->TabIndex = 0;
-			this->radioButton36->TabStop = true;
-			this->radioButton36->Text = L"8:00 am";
-			this->radioButton36->UseVisualStyleBackColor = true;
+			// rb1535
+			// 
+			this->rb1535->AutoSize = true;
+			this->rb1535->Location = System::Drawing::Point(289, 157);
+			this->rb1535->Name = L"rb1535";
+			this->rb1535->Size = System::Drawing::Size(63, 17);
+			this->rb1535->TabIndex = 34;
+			this->rb1535->TabStop = true;
+			this->rb1535->Text = L"4:30 pm";
+			this->rb1535->UseVisualStyleBackColor = true;
+			// 
+			// rb1534
+			// 
+			this->rb1534->AutoSize = true;
+			this->rb1534->Location = System::Drawing::Point(220, 157);
+			this->rb1534->Name = L"rb1534";
+			this->rb1534->Size = System::Drawing::Size(63, 17);
+			this->rb1534->TabIndex = 33;
+			this->rb1534->TabStop = true;
+			this->rb1534->Text = L"4:15 pm";
+			this->rb1534->UseVisualStyleBackColor = true;
+			// 
+			// rb1533
+			// 
+			this->rb1533->AutoSize = true;
+			this->rb1533->Location = System::Drawing::Point(151, 157);
+			this->rb1533->Name = L"rb1533";
+			this->rb1533->Size = System::Drawing::Size(63, 17);
+			this->rb1533->TabIndex = 32;
+			this->rb1533->TabStop = true;
+			this->rb1533->Text = L"4:00 pm";
+			this->rb1533->UseVisualStyleBackColor = true;
+			// 
+			// rb1532
+			// 
+			this->rb1532->AutoSize = true;
+			this->rb1532->Location = System::Drawing::Point(82, 157);
+			this->rb1532->Name = L"rb1532";
+			this->rb1532->Size = System::Drawing::Size(63, 17);
+			this->rb1532->TabIndex = 31;
+			this->rb1532->TabStop = true;
+			this->rb1532->Text = L"3:45 pm";
+			this->rb1532->UseVisualStyleBackColor = true;
+			// 
+			// rb1531
+			// 
+			this->rb1531->AutoSize = true;
+			this->rb1531->Location = System::Drawing::Point(13, 157);
+			this->rb1531->Name = L"rb1531";
+			this->rb1531->Size = System::Drawing::Size(63, 17);
+			this->rb1531->TabIndex = 30;
+			this->rb1531->TabStop = true;
+			this->rb1531->Text = L"3:30 pm";
+			this->rb1531->UseVisualStyleBackColor = true;
+			// 
+			// rb1530
+			// 
+			this->rb1530->AutoSize = true;
+			this->rb1530->Location = System::Drawing::Point(289, 134);
+			this->rb1530->Name = L"rb1530";
+			this->rb1530->Size = System::Drawing::Size(63, 17);
+			this->rb1530->TabIndex = 29;
+			this->rb1530->TabStop = true;
+			this->rb1530->Text = L"3:15 pm";
+			this->rb1530->UseVisualStyleBackColor = true;
+			// 
+			// rb1529
+			// 
+			this->rb1529->AutoSize = true;
+			this->rb1529->Location = System::Drawing::Point(220, 134);
+			this->rb1529->Name = L"rb1529";
+			this->rb1529->Size = System::Drawing::Size(63, 17);
+			this->rb1529->TabIndex = 28;
+			this->rb1529->TabStop = true;
+			this->rb1529->Text = L"3:00 pm";
+			this->rb1529->UseVisualStyleBackColor = true;
+			// 
+			// rb1528
+			// 
+			this->rb1528->AutoSize = true;
+			this->rb1528->Location = System::Drawing::Point(151, 134);
+			this->rb1528->Name = L"rb1528";
+			this->rb1528->Size = System::Drawing::Size(63, 17);
+			this->rb1528->TabIndex = 27;
+			this->rb1528->TabStop = true;
+			this->rb1528->Text = L"2:45 pm";
+			this->rb1528->UseVisualStyleBackColor = true;
+			// 
+			// rb1527
+			// 
+			this->rb1527->AutoSize = true;
+			this->rb1527->Location = System::Drawing::Point(82, 134);
+			this->rb1527->Name = L"rb1527";
+			this->rb1527->Size = System::Drawing::Size(63, 17);
+			this->rb1527->TabIndex = 26;
+			this->rb1527->TabStop = true;
+			this->rb1527->Text = L"2:30 pm";
+			this->rb1527->UseVisualStyleBackColor = true;
+			// 
+			// rb1526
+			// 
+			this->rb1526->AutoSize = true;
+			this->rb1526->Location = System::Drawing::Point(13, 134);
+			this->rb1526->Name = L"rb1526";
+			this->rb1526->Size = System::Drawing::Size(63, 17);
+			this->rb1526->TabIndex = 25;
+			this->rb1526->TabStop = true;
+			this->rb1526->Text = L"2:15 pm";
+			this->rb1526->UseVisualStyleBackColor = true;
+			// 
+			// rb1525
+			// 
+			this->rb1525->AutoSize = true;
+			this->rb1525->Location = System::Drawing::Point(289, 111);
+			this->rb1525->Name = L"rb1525";
+			this->rb1525->Size = System::Drawing::Size(63, 17);
+			this->rb1525->TabIndex = 24;
+			this->rb1525->TabStop = true;
+			this->rb1525->Text = L"2:00 pm";
+			this->rb1525->UseVisualStyleBackColor = true;
+			// 
+			// rb1524
+			// 
+			this->rb1524->AutoSize = true;
+			this->rb1524->Location = System::Drawing::Point(220, 111);
+			this->rb1524->Name = L"rb1524";
+			this->rb1524->Size = System::Drawing::Size(63, 17);
+			this->rb1524->TabIndex = 23;
+			this->rb1524->TabStop = true;
+			this->rb1524->Text = L"1:45 pm";
+			this->rb1524->UseVisualStyleBackColor = true;
+			// 
+			// rb1523
+			// 
+			this->rb1523->AutoSize = true;
+			this->rb1523->Location = System::Drawing::Point(151, 111);
+			this->rb1523->Name = L"rb1523";
+			this->rb1523->Size = System::Drawing::Size(63, 17);
+			this->rb1523->TabIndex = 22;
+			this->rb1523->TabStop = true;
+			this->rb1523->Text = L"1:30 pm";
+			this->rb1523->UseVisualStyleBackColor = true;
+			// 
+			// rb1522
+			// 
+			this->rb1522->AutoSize = true;
+			this->rb1522->Location = System::Drawing::Point(82, 111);
+			this->rb1522->Name = L"rb1522";
+			this->rb1522->Size = System::Drawing::Size(63, 17);
+			this->rb1522->TabIndex = 21;
+			this->rb1522->TabStop = true;
+			this->rb1522->Text = L"1:15 pm";
+			this->rb1522->UseVisualStyleBackColor = true;
+			// 
+			// rb1521
+			// 
+			this->rb1521->AutoSize = true;
+			this->rb1521->Location = System::Drawing::Point(13, 111);
+			this->rb1521->Name = L"rb1521";
+			this->rb1521->Size = System::Drawing::Size(63, 17);
+			this->rb1521->TabIndex = 20;
+			this->rb1521->TabStop = true;
+			this->rb1521->Text = L"1:00 pm";
+			this->rb1521->UseVisualStyleBackColor = true;
+			// 
+			// rb1520
+			// 
+			this->rb1520->AutoSize = true;
+			this->rb1520->Location = System::Drawing::Point(289, 88);
+			this->rb1520->Name = L"rb1520";
+			this->rb1520->Size = System::Drawing::Size(69, 17);
+			this->rb1520->TabIndex = 19;
+			this->rb1520->TabStop = true;
+			this->rb1520->Text = L"12:45 pm";
+			this->rb1520->UseVisualStyleBackColor = true;
+			// 
+			// rb1519
+			// 
+			this->rb1519->AutoSize = true;
+			this->rb1519->Location = System::Drawing::Point(220, 88);
+			this->rb1519->Name = L"rb1519";
+			this->rb1519->Size = System::Drawing::Size(69, 17);
+			this->rb1519->TabIndex = 18;
+			this->rb1519->TabStop = true;
+			this->rb1519->Text = L"12:30 pm";
+			this->rb1519->UseVisualStyleBackColor = true;
+			// 
+			// rb1518
+			// 
+			this->rb1518->AutoSize = true;
+			this->rb1518->Location = System::Drawing::Point(151, 88);
+			this->rb1518->Name = L"rb1518";
+			this->rb1518->Size = System::Drawing::Size(69, 17);
+			this->rb1518->TabIndex = 17;
+			this->rb1518->TabStop = true;
+			this->rb1518->Text = L"12:15 pm";
+			this->rb1518->UseVisualStyleBackColor = true;
+			// 
+			// rb1517
+			// 
+			this->rb1517->AutoSize = true;
+			this->rb1517->Location = System::Drawing::Point(82, 88);
+			this->rb1517->Name = L"rb1517";
+			this->rb1517->Size = System::Drawing::Size(69, 17);
+			this->rb1517->TabIndex = 16;
+			this->rb1517->TabStop = true;
+			this->rb1517->Text = L"12:00 pm";
+			this->rb1517->UseVisualStyleBackColor = true;
+			// 
+			// rb1516
+			// 
+			this->rb1516->AutoSize = true;
+			this->rb1516->Location = System::Drawing::Point(13, 88);
+			this->rb1516->Name = L"rb1516";
+			this->rb1516->Size = System::Drawing::Size(69, 17);
+			this->rb1516->TabIndex = 15;
+			this->rb1516->TabStop = true;
+			this->rb1516->Text = L"11:45 am";
+			this->rb1516->UseVisualStyleBackColor = true;
+			// 
+			// rb1515
+			// 
+			this->rb1515->AutoSize = true;
+			this->rb1515->Location = System::Drawing::Point(289, 65);
+			this->rb1515->Name = L"rb1515";
+			this->rb1515->Size = System::Drawing::Size(69, 17);
+			this->rb1515->TabIndex = 14;
+			this->rb1515->TabStop = true;
+			this->rb1515->Text = L"11:30 am";
+			this->rb1515->UseVisualStyleBackColor = true;
+			// 
+			// rb1514
+			// 
+			this->rb1514->AutoSize = true;
+			this->rb1514->Location = System::Drawing::Point(220, 65);
+			this->rb1514->Name = L"rb1514";
+			this->rb1514->Size = System::Drawing::Size(69, 17);
+			this->rb1514->TabIndex = 13;
+			this->rb1514->TabStop = true;
+			this->rb1514->Text = L"11:15 am";
+			this->rb1514->UseVisualStyleBackColor = true;
+			// 
+			// rb1513
+			// 
+			this->rb1513->AutoSize = true;
+			this->rb1513->Location = System::Drawing::Point(151, 65);
+			this->rb1513->Name = L"rb1513";
+			this->rb1513->Size = System::Drawing::Size(69, 17);
+			this->rb1513->TabIndex = 12;
+			this->rb1513->TabStop = true;
+			this->rb1513->Text = L"11:00 am";
+			this->rb1513->UseVisualStyleBackColor = true;
+			// 
+			// rb1512
+			// 
+			this->rb1512->AutoSize = true;
+			this->rb1512->Location = System::Drawing::Point(82, 65);
+			this->rb1512->Name = L"rb1512";
+			this->rb1512->Size = System::Drawing::Size(69, 17);
+			this->rb1512->TabIndex = 11;
+			this->rb1512->TabStop = true;
+			this->rb1512->Text = L"10:45 am";
+			this->rb1512->UseVisualStyleBackColor = true;
+			// 
+			// rb1511
+			// 
+			this->rb1511->AutoSize = true;
+			this->rb1511->Location = System::Drawing::Point(13, 65);
+			this->rb1511->Name = L"rb1511";
+			this->rb1511->Size = System::Drawing::Size(69, 17);
+			this->rb1511->TabIndex = 10;
+			this->rb1511->TabStop = true;
+			this->rb1511->Text = L"10:30 am";
+			this->rb1511->UseVisualStyleBackColor = true;
+			// 
+			// rb1510
+			// 
+			this->rb1510->AutoSize = true;
+			this->rb1510->Location = System::Drawing::Point(289, 42);
+			this->rb1510->Name = L"rb1510";
+			this->rb1510->Size = System::Drawing::Size(69, 17);
+			this->rb1510->TabIndex = 9;
+			this->rb1510->TabStop = true;
+			this->rb1510->Text = L"10:15 am";
+			this->rb1510->UseVisualStyleBackColor = true;
+			// 
+			// rb159
+			// 
+			this->rb159->AutoSize = true;
+			this->rb159->Location = System::Drawing::Point(220, 42);
+			this->rb159->Name = L"rb159";
+			this->rb159->Size = System::Drawing::Size(69, 17);
+			this->rb159->TabIndex = 8;
+			this->rb159->TabStop = true;
+			this->rb159->Text = L"10:00 am";
+			this->rb159->UseVisualStyleBackColor = true;
+			// 
+			// rb158
+			// 
+			this->rb158->AutoSize = true;
+			this->rb158->Location = System::Drawing::Point(151, 42);
+			this->rb158->Name = L"rb158";
+			this->rb158->Size = System::Drawing::Size(63, 17);
+			this->rb158->TabIndex = 7;
+			this->rb158->TabStop = true;
+			this->rb158->Text = L"9:45 am";
+			this->rb158->UseVisualStyleBackColor = true;
+			// 
+			// rb154
+			// 
+			this->rb154->AutoSize = true;
+			this->rb154->Location = System::Drawing::Point(220, 19);
+			this->rb154->Name = L"rb154";
+			this->rb154->Size = System::Drawing::Size(63, 17);
+			this->rb154->TabIndex = 6;
+			this->rb154->TabStop = true;
+			this->rb154->Text = L"8:45 am";
+			this->rb154->UseVisualStyleBackColor = true;
+			// 
+			// rb156
+			// 
+			this->rb156->AutoSize = true;
+			this->rb156->Location = System::Drawing::Point(13, 42);
+			this->rb156->Name = L"rb156";
+			this->rb156->Size = System::Drawing::Size(63, 17);
+			this->rb156->TabIndex = 5;
+			this->rb156->TabStop = true;
+			this->rb156->Text = L"9:15 am";
+			this->rb156->UseVisualStyleBackColor = true;
+			// 
+			// rb157
+			// 
+			this->rb157->AutoSize = true;
+			this->rb157->Location = System::Drawing::Point(82, 42);
+			this->rb157->Name = L"rb157";
+			this->rb157->Size = System::Drawing::Size(63, 17);
+			this->rb157->TabIndex = 4;
+			this->rb157->TabStop = true;
+			this->rb157->Text = L"9:30 am";
+			this->rb157->UseVisualStyleBackColor = true;
+			// 
+			// rb153
+			// 
+			this->rb153->AutoSize = true;
+			this->rb153->Location = System::Drawing::Point(151, 19);
+			this->rb153->Name = L"rb153";
+			this->rb153->Size = System::Drawing::Size(63, 17);
+			this->rb153->TabIndex = 3;
+			this->rb153->TabStop = true;
+			this->rb153->Text = L"8:30 am";
+			this->rb153->UseVisualStyleBackColor = true;
+			// 
+			// rb155
+			// 
+			this->rb155->AutoSize = true;
+			this->rb155->Location = System::Drawing::Point(289, 19);
+			this->rb155->Name = L"rb155";
+			this->rb155->Size = System::Drawing::Size(63, 17);
+			this->rb155->TabIndex = 2;
+			this->rb155->TabStop = true;
+			this->rb155->Text = L"9:00 am";
+			this->rb155->UseVisualStyleBackColor = true;
+			// 
+			// rb152
+			// 
+			this->rb152->AutoSize = true;
+			this->rb152->Location = System::Drawing::Point(82, 19);
+			this->rb152->Name = L"rb152";
+			this->rb152->Size = System::Drawing::Size(63, 17);
+			this->rb152->TabIndex = 1;
+			this->rb152->TabStop = true;
+			this->rb152->Text = L"8:15 am";
+			this->rb152->UseVisualStyleBackColor = true;
+			// 
+			// rb151
+			// 
+			this->rb151->AutoSize = true;
+			this->rb151->Location = System::Drawing::Point(13, 19);
+			this->rb151->Name = L"rb151";
+			this->rb151->Size = System::Drawing::Size(63, 17);
+			this->rb151->TabIndex = 0;
+			this->rb151->TabStop = true;
+			this->rb151->Text = L"8:00 am";
+			this->rb151->UseVisualStyleBackColor = true;
 			// 
 			// TimeSelect
 			// 
@@ -950,8 +1077,8 @@ namespace EnTec_Group_Project {
 			this->Controls->Add(this->dateTimePicker);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->lbAdvisorList);
-			this->Controls->Add(this->gb30);
 			this->Controls->Add(this->gb15);
+			this->Controls->Add(this->gb30);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"TimeSelect";
 			this->Text = L"EnTec Advisor Apointments";
@@ -968,76 +1095,77 @@ namespace EnTec_Group_Project {
 
 		}
 #pragma endregion
+	private: System::Void dateTimePicker1_ValueChanged(System::Object^  sender, System::EventArgs^  e) {
+	}
 	private: System::Void comboBox1_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
 	}
-private: System::Void btnBack_Click(System::Object^  sender, System::EventArgs^  e) {
+	private: System::Void btnBack_Click(System::Object^  sender, System::EventArgs^  e) {
 
-	this->Hide();
-	this->previous->Show();
-
-}
-private: System::Void btnNext_Click(System::Object^  sender, System::EventArgs^  e) {
-	if (lbAdvisorList->Text->IsNullOrWhiteSpace(lbAdvisorList->Text) || cbReason->Text->IsNullOrWhiteSpace(cbReason->Text))
-	{
-		MessageBox::Show("Whoops Looks like You left something empty!", "Error",
-			MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
-	}
-	else
-	{
-		student->setAdvisor(lbAdvisorList->Text);
-		student->setAppReason(cbReason->Text);
-		student->setAppDate(dateTimePicker->Text);
-		//TODO: Time Selector
-		//student->setAppTime(Something);
 		this->Hide();
-		this->finalizeForm->ShowDialog();
-	}
+		this->previous->Show();
 
-}
-private: System::Void TimeSelect_Load(System::Object^  sender, System::EventArgs^  e) {
-	finalizeForm = gcnew FinalizeScreen(this, student);
-}
-private: System::Void TimeSelect_FormClosed(System::Object^  sender, System::Windows::Forms::FormClosedEventArgs^  e) {
-	delete student;
-	student = nullptr;
-	exit(0);
-}
-private: System::Void TimeSelect_VisibleChanged(System::Object^  sender, System::EventArgs^  e) {
-	lbAdvisorList->Items->Clear();
-	if (student->getDegreeType() == "Technology")
-	{
-		lbAdvisorList->Items->Add("Barake, Maria, mrodrig4@mdc.edu");
-		lbAdvisorList->Items->Add("Telfort, Roseline, rtelfort@mdc.edu");
 	}
-	else if (student->getDegreeType() == "Engineering")
-	{
-		lbAdvisorList->Items->Add("Moscoso, Federico, fmoscoso@mdc.edu");
-		lbAdvisorList->Items->Add("Ramirez, Janet, jramir1@mdc.edu");
-	}
-	else if (student->getDegreeType() == "MAGIC")
-	{
-		lbAdvisorList->Items->Add("Auguste, Mylinda, mauguste@mdc.edu");
-	}
-}
-private: System::Void cbReason_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
-	e->KeyChar = (char)0;
-}
-private: System::Void cbReason_TextChanged(System::Object^  sender, System::EventArgs^  e) {
-	if (cbReason->Text == "IEP" || cbReason->Text == "Registration" || cbReason->Text == "Career Planning")
-	{
-		gb15->Enabled = false;
-		gb15->Visible = false;
-		gb30->Enabled = true;
-		gb30->Visible = true;
-	}
-	else
-	{
-		gb30->Enabled = false;
-		gb30->Visible = false;
-		gb15->Enabled = true;
-		gb15->Visible = true;
-	}
+	private: System::Void btnNext_Click(System::Object^  sender, System::EventArgs^  e) {
+		if (lbAdvisorList->Text->IsNullOrWhiteSpace(lbAdvisorList->Text) || cbReason->Text->IsNullOrWhiteSpace(cbReason->Text)
+			|| (gb15->Enabled == false && gb30->Enabled == false) || isTimeSelected() == false)
+		{
+			MessageBox::Show("Whoops looks like you left something empty!", "Error",
+				MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
+		}
+		else
+		{
+			student->setAdvisor(lbAdvisorList->Text);
+			student->setAppReason(cbReason->Text);
+			student->setAppDate(dateTimePicker->Text);
+			this->Hide();
+			this->finalizeForm->ShowDialog();
+		}
 
-}
-};
+	}
+	private: System::Void TimeSelect_Load(System::Object^  sender, System::EventArgs^  e) {
+		finalizeForm = gcnew FinalizeScreen(this, student);
+	}
+	private: System::Void TimeSelect_FormClosed(System::Object^  sender, System::Windows::Forms::FormClosedEventArgs^  e) {
+		delete student;
+		student = nullptr;
+		exit(0);
+	}
+	private: System::Void TimeSelect_VisibleChanged(System::Object^  sender, System::EventArgs^  e) {
+		lbAdvisorList->Items->Clear();
+		if (student->getDegreeType() == "Technology")
+		{
+			lbAdvisorList->Items->Add("Barake, Maria, mrodrig4@mdc.edu");
+			lbAdvisorList->Items->Add("Telfort, Roseline, rtelfort@mdc.edu");
+		}
+		else if (student->getDegreeType() == "Engineering")
+		{
+			lbAdvisorList->Items->Add("Moscoso, Federico, fmoscoso@mdc.edu");
+			lbAdvisorList->Items->Add("Ramirez, Janet, jramir1@mdc.edu");
+		}
+		else if (student->getDegreeType() == "MAGIC")
+		{
+			lbAdvisorList->Items->Add("Auguste, Mylinda, mauguste@mdc.edu");
+		}
+	}
+	private: System::Void cbReason_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
+		e->KeyChar = (char)0;
+	}
+	private: System::Void cbReason_TextChanged(System::Object^  sender, System::EventArgs^  e) {
+		if (cbReason->Text == "IEP" || cbReason->Text == "Registration" || cbReason->Text == "Career Planning")
+		{
+			gb15->Enabled = false;
+			gb15->Visible = false;
+			gb30->Enabled = true;
+			gb30->Visible = true;
+		}
+		else
+		{
+			gb30->Enabled = false;
+			gb30->Visible = false;
+			gb15->Enabled = true;
+			gb15->Visible = true;
+		}
+
+	}
+	};
 }

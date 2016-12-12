@@ -355,7 +355,6 @@ namespace EnTec_Group_Project {
 			this->dateTimePicker->Size = System::Drawing::Size(212, 20);
 			this->dateTimePicker->TabIndex = 2;
 			this->dateTimePicker->Value = System::DateTime(2016, 12, 8, 19, 14, 45, 0);
-			this->dateTimePicker->ValueChanged += gcnew System::EventHandler(this, &TimeSelect::dateTimePicker1_ValueChanged);
 			// 
 			// lbTitle
 			// 
@@ -1095,8 +1094,6 @@ namespace EnTec_Group_Project {
 
 		}
 #pragma endregion
-	private: System::Void dateTimePicker1_ValueChanged(System::Object^  sender, System::EventArgs^  e) {
-	}
 	private: System::Void comboBox1_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
 	}
 private: System::Void btnBack_Click(System::Object^  sender, System::EventArgs^  e) {

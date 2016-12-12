@@ -529,13 +529,13 @@ private: System::Void btnFinish_Click(System::Object^  sender, System::EventArgs
 	//SaveToDatabase *db = new SaveToDatabase();
 	//if (db->openDB() && db->write(student))
 	//{
-	//	MessageBox::Show("Apointment has been set!", "Done",
-	//	MessageBoxButtons::OK, MessageBoxIcon::Information);
+	MessageBox::Show("Apointment has been set!", "Done",
+	MessageBoxButtons::OK, MessageBoxIcon::Information);
 
 	//	delete db;
 	//	db = nullptr;
-	//	student->clearStudent(); //  clears the student class of any pervious data that was stored
-	//	this->Hide();
+	student->clearStudent(); //  clears the student class of any pervious data that was stored
+	this->Hide();
 	//}
 	//else
 	//{

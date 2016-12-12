@@ -10,6 +10,7 @@ namespace EnTec_Group_Project {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace MySql::Data::MySqlClient;
 
 	/// <summary>
 	/// Summary for FinalizeScreen
@@ -526,25 +527,27 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 }
 private: System::Void btnFinish_Click(System::Object^  sender, System::EventArgs^  e) {
 	
-	//SaveToDatabase *db = new SaveToDatabase();
-	//if (db->openDB() && db->write(student))
-	//{
-	MessageBox::Show("Apointment has been set!", "Done",
-	MessageBoxButtons::OK, MessageBoxIcon::Information);
+	String^ constring = L"datasource=104.45.140.230;port=3306;username=root;password=Disismyhat1!";
+	MySqlConnection^ conDatabase = gcnew MySqlConnection(constring);
+	MySqlCommand^ cmdDataBase = gcnew MySqlCommand("INSERT INTO sys.students (Name, ID, Email, Degree, Degree_Type, Advisor, Reason, Date, Time, Status)"
+		"VALUES('"+student->getName()+"', '" +student->getID()+ "', '" +student->getEmailAddress()+ "', '" +student->getDegree()+ "', '" 
+		+student->getDegreeType()+ "', '" +student->getAdvisor()+ "', '" +student->getAppReason()+ "', '" +student->getAppDate()+ "','" 
+		+student->getAppTime()+ "', \"SET\");", conDatabase);
+	MySqlDataReader^ myReader;
+	try{
+		conDatabase->Open();
+		myReader = cmdDataBase->ExecuteReader();
+		MessageBox::Show("Apointment has been set!", "Done",
+		MessageBoxButtons::OK, MessageBoxIcon::Information);
 
-	//	delete db;
-	//	db = nullptr;
-	student->clearStudent(); //  clears the student class of any pervious data that was stored
-	this->Hide();
-	//}
-	//else
-	//{
-	//	MessageBox::Show("AN ERROR OCCURED WHILE TRYING TO SAVE YOUR APPOINTMENT!\nPlEASE TRY AGAIN LATER.", "ERROR",
-	//	MessageBoxButtons::OK, MessageBoxIcon::Error);
-	//	delete db;
-	//	db = nullptr;
-	//}
-	//TODO: FIX THIS GARBAGE
+		student->clearStudent(); //  clears the student class of any pervious data that was stored
+		this->Hide();
+	
+	}catch(Exception^ ex){
+		MessageBox::Show("AN ERROR OCCURED WHILE TRYING TO SAVE YOUR APPOINTMENT!\nPLEASE TRY AGAIN LATER.", "ERROR",
+		MessageBoxButtons::OK, MessageBoxIcon::Error);
+	}
+
 	
 }
 private: System::Void FinalizeScreen_FormClosed(System::Object^  sender, System::Windows::Forms::FormClosedEventArgs^  e) {

@@ -1,7 +1,6 @@
 #pragma once
 #include "Student.h"
 #include <stdlib.h> 
-#include "SaveToDatabase.h"
 
 namespace EnTec_Group_Project {
 
@@ -527,25 +526,25 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 }
 private: System::Void btnFinish_Click(System::Object^  sender, System::EventArgs^  e) {
 	
-	SaveToDatabase *db = new SaveToDatabase();
-	if (db->openDB() && db->write(student))
-	{
-		MessageBox::Show("Apointment has been set!", "Done",
-		MessageBoxButtons::OK, MessageBoxIcon::Information);
+	//SaveToDatabase *db = new SaveToDatabase();
+	//if (db->openDB() && db->write(student))
+	//{
+	//	MessageBox::Show("Apointment has been set!", "Done",
+	//	MessageBoxButtons::OK, MessageBoxIcon::Information);
 
-		delete db;
-		db = nullptr;
-		student->clearStudent(); //  clears the student class of any pervious data that was stored
-		this->Hide();
-	}
-	else
-	{
-		MessageBox::Show("AN ERROR OCCURED WHILE TRYING TO SAVE YOUR APPOINTMENT!\nPlEASE TRY AGAIN LATER.", "ERROR",
-		MessageBoxButtons::OK, MessageBoxIcon::Error);
-		delete db;
-		db = nullptr;
-	}
-
+	//	delete db;
+	//	db = nullptr;
+	//	student->clearStudent(); //  clears the student class of any pervious data that was stored
+	//	this->Hide();
+	//}
+	//else
+	//{
+	//	MessageBox::Show("AN ERROR OCCURED WHILE TRYING TO SAVE YOUR APPOINTMENT!\nPlEASE TRY AGAIN LATER.", "ERROR",
+	//	MessageBoxButtons::OK, MessageBoxIcon::Error);
+	//	delete db;
+	//	db = nullptr;
+	//}
+	//TODO: FIX THIS GARBAGE
 	
 }
 private: System::Void FinalizeScreen_FormClosed(System::Object^  sender, System::Windows::Forms::FormClosedEventArgs^  e) {

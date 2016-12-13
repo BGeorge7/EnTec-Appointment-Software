@@ -20,6 +20,7 @@ namespace EnTec_Group_Project {
 	private: Student *student = new Student(); //Create and Instance of Student for storing the users data
 
 	private: DegreeSelect^ degreeForm = gcnew DegreeSelect(this, student);
+	private: System::Windows::Forms::Button^  button2;
 	private: Form^ previous;
 	public:
 		StudentSplash(Form^ previous)
@@ -86,6 +87,7 @@ namespace EnTec_Group_Project {
 			this->btnNext = (gcnew System::Windows::Forms::Button());
 			this->btnBack = (gcnew System::Windows::Forms::Button());
 			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -208,6 +210,15 @@ namespace EnTec_Group_Project {
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &StudentSplash::button1_Click);
 			// 
+			// button2
+			// 
+			this->button2->Location = System::Drawing::Point(10, 217);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(118, 59);
+			this->button2->TabIndex = 12;
+			this->button2->Text = L"Check In";
+			this->button2->UseVisualStyleBackColor = true;
+			// 
 			// StudentSplash
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -215,6 +226,7 @@ namespace EnTec_Group_Project {
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(85)), static_cast<System::Int32>(static_cast<System::Byte>(140)),
 				static_cast<System::Int32>(static_cast<System::Byte>(137)));
 			this->ClientSize = System::Drawing::Size(752, 393);
+			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->btnBack);
 			this->Controls->Add(this->btnNext);

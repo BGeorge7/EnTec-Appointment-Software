@@ -165,6 +165,7 @@
     <ClInclude Include="MainSplash.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="resource.h" />
     <ClInclude Include="Student.h" />
     <ClInclude Include="StudentSplash.h">
       <FileType>CppForm</FileType>
@@ -204,6 +205,9 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="EnTec Group Project.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

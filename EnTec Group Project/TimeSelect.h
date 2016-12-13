@@ -1134,17 +1134,17 @@ namespace EnTec_Group_Project {
 		lbAdvisorList->Items->Clear();
 		if (student->getDegreeType() == "Technology")
 		{
-			lbAdvisorList->Items->Add("Barake, Maria, mrodrig4@mdc.edu");
-			lbAdvisorList->Items->Add("Telfort, Roseline, rtelfort@mdc.edu");
+			lbAdvisorList->Items->Add("Barake, Maria");
+			lbAdvisorList->Items->Add("Telfort, Roseline");
 		}
 		else if (student->getDegreeType() == "Engineering")
 		{
-			lbAdvisorList->Items->Add("Moscoso, Federico, fmoscoso@mdc.edu");
-			lbAdvisorList->Items->Add("Ramirez, Janet, jramir1@mdc.edu");
+			lbAdvisorList->Items->Add("Moscoso, Federico");
+			lbAdvisorList->Items->Add("Ramirez, Janet");
 		}
 		else if (student->getDegreeType() == "MAGIC")
 		{
-			lbAdvisorList->Items->Add("Auguste, Mylinda, mauguste@mdc.edu");
+			lbAdvisorList->Items->Add("Auguste, Mylinda");
 		}
 	}
 	private: System::Void cbReason_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {

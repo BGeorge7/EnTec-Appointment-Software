@@ -63,6 +63,10 @@ namespace EnTec_Group_Project {
 
 
 
+
+
+
+
 	private:
 		/// <summary>
 		/// Required designer variable.
@@ -78,7 +82,6 @@ namespace EnTec_Group_Project {
 		{
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(AdvisorView::typeid));
 			this->dataGridAppointments = (gcnew System::Windows::Forms::DataGridView());
-			this->Done = (gcnew System::Windows::Forms::DataGridViewButtonColumn());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->tbSearch = (gcnew System::Windows::Forms::TextBox());
 			this->rbName = (gcnew System::Windows::Forms::RadioButton());
@@ -93,6 +96,7 @@ namespace EnTec_Group_Project {
 			this->gb2lb2 = (gcnew System::Windows::Forms::Label());
 			this->gb2lb1 = (gcnew System::Windows::Forms::Label());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->Done = (gcnew System::Windows::Forms::DataGridViewButtonColumn());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridAppointments))->BeginInit();
 			this->groupBox1->SuspendLayout();
 			this->groupBox2->SuspendLayout();
@@ -113,14 +117,6 @@ namespace EnTec_Group_Project {
 			this->dataGridAppointments->TabIndex = 0;
 			this->dataGridAppointments->CellClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &AdvisorView::dataGridAppointments_CellClick);
 			this->dataGridAppointments->CellDoubleClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &AdvisorView::dataGridAppointments_CellDoubleClick);
-			// 
-			// Done
-			// 
-			this->Done->FillWeight = 75;
-			this->Done->HeaderText = L"Done";
-			this->Done->Name = L"Done";
-			this->Done->ReadOnly = true;
-			this->Done->Text = L"Done";
 			// 
 			// label1
 			// 
@@ -277,6 +273,16 @@ namespace EnTec_Group_Project {
 			this->panel1->Size = System::Drawing::Size(161, 24);
 			this->panel1->TabIndex = 10;
 			// 
+			// Done
+			// 
+			this->Done->FillWeight = 75;
+			this->Done->HeaderText = L"Done";
+			this->Done->Name = L"Done";
+			this->Done->ReadOnly = true;
+			this->Done->Text = L"Done";
+			this->Done->ToolTipText = L"Done";
+			this->Done->Width = 60;
+			// 
 			// AdvisorView
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -355,6 +361,7 @@ private: System::Void AdvisorView_VisibleChanged(System::Object^  sender, System
 
 		bSource->DataSource = dbdataset;
 		dataGridAppointments->DataSource = bSource;
+		Done->UseColumnTextForButtonValue = true;
 		sda->Update(dbdataset);
 		conDatabase->Close();
 	}
@@ -367,12 +374,6 @@ private: System::Void backgroundWorker1_DoWork(System::Object^  sender, System::
 
 }
 private: System::Void dataGridAppointments_CellDoubleClick(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e) {
-		String^ str;
-		str = dataGridAppointments->Rows[e->RowIndex]->Cells[e->ColumnIndex]->Value->ToString();
-		MessageBox::Show(str, "ERROR",
-			MessageBoxButtons::OK, MessageBoxIcon::Error);
-
-	
 }
 private: System::Void dataGridAppointments_CellClick(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e) {
 	if (e->ColumnIndex == dataGridAppointments->Columns["Done"]->Index && e->RowIndex >= 0)

@@ -147,6 +147,7 @@
     <ClCompile Include="AdvisorView.cpp" />
     <ClCompile Include="DegreeSelect.cpp" />
     <ClCompile Include="FinalizeScreen.cpp" />
+    <ClCompile Include="LoadDB.cpp" />
     <ClCompile Include="MainSplash.cpp" />
     <ClCompile Include="Student.cpp" />
     <ClCompile Include="StudentSplash.cpp" />
@@ -162,6 +163,7 @@
     <ClInclude Include="FinalizeScreen.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="LoadDB.h" />
     <ClInclude Include="MainSplash.h">
       <FileType>CppForm</FileType>
     </ClInclude>

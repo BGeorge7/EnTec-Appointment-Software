@@ -1,5 +1,6 @@
 #pragma once
 #include <stdlib.h>
+#include "LoadDB.h"
 
 namespace EnTec_Group_Project {
 
@@ -16,10 +17,13 @@ namespace EnTec_Group_Project {
 	/// </summary>
 	public ref class AdvisorView : public System::Windows::Forms::Form
 	{
+	private: 
+		String^ constring;
 	public:
 		AdvisorView(void)
 		{
 			InitializeComponent();
+			constring = L"datasource=104.45.140.230;port=3306;username=root;password=Disismyhat1!";
 		}
 
 	protected:
@@ -60,13 +64,6 @@ namespace EnTec_Group_Project {
 	private: System::Windows::Forms::DataGridViewButtonColumn^  Done;
 
 
-
-
-
-
-
-
-
 	private:
 		/// <summary>
 		/// Required designer variable.
@@ -82,6 +79,7 @@ namespace EnTec_Group_Project {
 		{
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(AdvisorView::typeid));
 			this->dataGridAppointments = (gcnew System::Windows::Forms::DataGridView());
+			this->Done = (gcnew System::Windows::Forms::DataGridViewButtonColumn());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->tbSearch = (gcnew System::Windows::Forms::TextBox());
 			this->rbName = (gcnew System::Windows::Forms::RadioButton());
@@ -96,7 +94,6 @@ namespace EnTec_Group_Project {
 			this->gb2lb2 = (gcnew System::Windows::Forms::Label());
 			this->gb2lb1 = (gcnew System::Windows::Forms::Label());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
-			this->Done = (gcnew System::Windows::Forms::DataGridViewButtonColumn());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridAppointments))->BeginInit();
 			this->groupBox1->SuspendLayout();
 			this->groupBox2->SuspendLayout();
@@ -116,7 +113,16 @@ namespace EnTec_Group_Project {
 			this->dataGridAppointments->Size = System::Drawing::Size(762, 510);
 			this->dataGridAppointments->TabIndex = 0;
 			this->dataGridAppointments->CellClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &AdvisorView::dataGridAppointments_CellClick);
-			this->dataGridAppointments->CellDoubleClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &AdvisorView::dataGridAppointments_CellDoubleClick);
+			// 
+			// Done
+			// 
+			this->Done->FillWeight = 75;
+			this->Done->HeaderText = L"Done";
+			this->Done->Name = L"Done";
+			this->Done->ReadOnly = true;
+			this->Done->Text = L"Done";
+			this->Done->ToolTipText = L"Done";
+			this->Done->Width = 60;
 			// 
 			// label1
 			// 
@@ -273,16 +279,6 @@ namespace EnTec_Group_Project {
 			this->panel1->Size = System::Drawing::Size(161, 24);
 			this->panel1->TabIndex = 10;
 			// 
-			// Done
-			// 
-			this->Done->FillWeight = 75;
-			this->Done->HeaderText = L"Done";
-			this->Done->Name = L"Done";
-			this->Done->ReadOnly = true;
-			this->Done->Text = L"Done";
-			this->Done->ToolTipText = L"Done";
-			this->Done->Width = 60;
-			// 
 			// AdvisorView
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -302,7 +298,6 @@ namespace EnTec_Group_Project {
 			this->Name = L"AdvisorView";
 			this->Text = L"EnTec Advisor Apointments";
 			this->FormClosed += gcnew System::Windows::Forms::FormClosedEventHandler(this, &AdvisorView::AdvisorView_FormClosed);
-			this->Load += gcnew System::EventHandler(this, &AdvisorView::AdvisorView_Load);
 			this->VisibleChanged += gcnew System::EventHandler(this, &AdvisorView::AdvisorView_VisibleChanged);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridAppointments))->EndInit();
 			this->groupBox1->ResumeLayout(false);
@@ -316,64 +311,25 @@ namespace EnTec_Group_Project {
 
 		}
 #pragma endregion
-	private: System::Void AdvisorView_Load(System::Object^  sender, System::EventArgs^  e) {
-	}
-
 
 private: System::Void AdvisorView_FormClosed(System::Object^  sender, System::Windows::Forms::FormClosedEventArgs^  e) {
 	exit(0);
 }
 
 private: System::Void btnRefresh_Click(System::Object^  sender, System::EventArgs^  e) {
-	String^ constring = L"datasource=104.45.140.230;port=3306;username=root;password=Disismyhat1!";
-	MySqlConnection^ conDatabase = gcnew MySqlConnection(constring);
-	MySqlCommand^ cmdDataBase = gcnew MySqlCommand("SELECT * FROM sys.students", conDatabase);
-	MySqlDataReader^ myReader;
-	try {
-		MySqlDataAdapter^ sda = gcnew MySqlDataAdapter();
-		sda->SelectCommand = cmdDataBase;
-		DataTable^ dbdataset = gcnew DataTable();
-		sda->Fill(dbdataset);
-		BindingSource^ bSource = gcnew BindingSource();
+	LoadDB^ db = gcnew LoadDB(constring);
 
-		bSource->DataSource = dbdataset;
-		dataGridAppointments->DataSource = bSource;
-		sda->Update(dbdataset);
-		conDatabase->Close();
-	}
-	catch (Exception^ ex) {
-		MessageBox::Show("COULD NOT CONNECT TO THE DATABASE, PLEASE TRY AGAIN LATER\nPLEASE TRY AGAIN LATER.", "ERROR",
-			MessageBoxButtons::OK, MessageBoxIcon::Error);
-	}
+	dataGridAppointments->DataSource = db->BindingQuery();
+
+	Done->UseColumnTextForButtonValue = true;
 
 }
 private: System::Void AdvisorView_VisibleChanged(System::Object^  sender, System::EventArgs^  e) {
-	String^ constring = L"datasource=104.45.140.230;port=3306;username=root;password=Disismyhat1!";
-	MySqlConnection^ conDatabase = gcnew MySqlConnection(constring);
-	MySqlCommand^ cmdDataBase = gcnew MySqlCommand("SELECT * FROM sys.students", conDatabase);
-	MySqlDataReader^ myReader;
-	try {
-		MySqlDataAdapter^ sda = gcnew MySqlDataAdapter();
-		sda->SelectCommand = cmdDataBase;
-		DataTable^ dbdataset = gcnew DataTable();
-		sda->Fill(dbdataset);
-		BindingSource^ bSource = gcnew BindingSource();
+	LoadDB^ db = gcnew LoadDB(constring);
 
-		bSource->DataSource = dbdataset;
-		dataGridAppointments->DataSource = bSource;
-		Done->UseColumnTextForButtonValue = true;
-		sda->Update(dbdataset);
-		conDatabase->Close();
-	}
-	catch (Exception^ ex) {
-		MessageBox::Show("COULD NOT CONNECT TO THE DATABASE, PLEASE TRY AGAIN LATER\nPLEASE TRY AGAIN LATER.", "ERROR",
-			MessageBoxButtons::OK, MessageBoxIcon::Error);
-	}
-}
-private: System::Void backgroundWorker1_DoWork(System::Object^  sender, System::ComponentModel::DoWorkEventArgs^  e) {
+	dataGridAppointments->DataSource = db->BindingQuery();
 
-}
-private: System::Void dataGridAppointments_CellDoubleClick(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e) {
+	Done->UseColumnTextForButtonValue = true;
 }
 private: System::Void dataGridAppointments_CellClick(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e) {
 	if (e->ColumnIndex == dataGridAppointments->Columns["Done"]->Index && e->RowIndex >= 0)
@@ -381,48 +337,38 @@ private: System::Void dataGridAppointments_CellClick(System::Object^  sender, Sy
 		String^ str;
 		str = dataGridAppointments->Rows[e->RowIndex]->Cells[1]->Value->ToString();
 
+		LoadDB^ db = gcnew LoadDB(constring);
+
 		if (dataGridAppointments->Rows[e->RowIndex]->Cells[11]->Value->ToString() == "SET")
 		{
-			String^ constring = L"datasource=104.45.140.230;port=3306;username=root;password=Disismyhat1!";
-			MySqlConnection^ conDatabase = gcnew MySqlConnection(constring);
-			MySqlCommand^ cmdDataBase = gcnew MySqlCommand("UPDATE sys.students SET `Status`=\"INPROGRESS\" WHERE `key`='" + str + "'", conDatabase);
-			MySqlDataReader^ myReader;
-			try {
-				conDatabase->Open();
-				myReader = cmdDataBase->ExecuteReader();
-				MessageBox::Show("Appointment in progress", "ERROR",
+			if (db->ExecuteQuery("UPDATE sys.students SET `Status`=\"INPROGRESS\" WHERE `key`='" + str + "'"))
+			{
+				MessageBox::Show("Appointment now in progress", "Success",
 					MessageBoxButtons::OK, MessageBoxIcon::Information);
 
+				dataGridAppointments->DataSource = db->BindingQuery();
 				gb1lb2->Text = dataGridAppointments->Rows[e->RowIndex]->Cells[2]->Value->ToString();
-
 			}
-			catch (Exception^ ex) {
+			else {
 				MessageBox::Show("AN ERROR OCCURED", "ERROR",
 					MessageBoxButtons::OK, MessageBoxIcon::Error);
 			}
-
 		}
-		else if (dataGridAppointments->Rows[e->RowIndex]->Cells[11]->Value->ToString() == "INPROGRESS") {
-			String^ constring = L"datasource=104.45.140.230;port=3306;username=root;password=Disismyhat1!";
-			MySqlConnection^ conDatabase = gcnew MySqlConnection(constring);
-			MySqlCommand^ cmdDataBase = gcnew MySqlCommand("UPDATE sys.students SET `Status`=\"DONE\" WHERE `key`='" +str+ "'", conDatabase);
-			MySqlDataReader^ myReader;
-			try {
-				conDatabase->Open();
-				myReader = cmdDataBase->ExecuteReader();
-				MessageBox::Show("Appointment in finished", "ERROR",
+		else if (dataGridAppointments->Rows[e->RowIndex]->Cells[11]->Value->ToString() == "INPROGRESS") 
+		{
+			if (db->ExecuteQuery("UPDATE sys.students SET `Status`=\"DONE\" WHERE `key`='" + str + "'"))
+			{
+				MessageBox::Show("Appointment now complette", "Success",
 					MessageBoxButtons::OK, MessageBoxIcon::Information);
 
-				gb1lb2->Text = "No One";
+				dataGridAppointments->DataSource = db->BindingQuery();
+				gb1lb2->Text = dataGridAppointments->Rows[e->RowIndex]->Cells[2]->Value->ToString();
 			}
-			catch (Exception^ ex) {
+			else {
 				MessageBox::Show("AN ERROR OCCURED", "ERROR",
 					MessageBoxButtons::OK, MessageBoxIcon::Error);
 			}
-
 		}
-
-
 	}
 }
 };

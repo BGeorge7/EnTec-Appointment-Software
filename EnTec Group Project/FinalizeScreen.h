@@ -527,7 +527,7 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 }
 private: System::Void btnFinish_Click(System::Object^  sender, System::EventArgs^  e) {
 	
-	String^ constring = L"datasource=104.45.140.230;port=3306;username=root;password=Disismyhat1!";
+	String^ constring = L"datasource=50.154.251.128;port=3306;username=root;password=toti2084";
 	MySqlConnection^ conDatabase = gcnew MySqlConnection(constring);
 	MySqlCommand^ cmdDataBase = gcnew MySqlCommand("INSERT INTO sys.students (Name, ID, Email, Degree, Degree_Type, Advisor, Reason, Date, Time, Status)"
 		"VALUES('"+student->getName()+"', '" +student->getID()+ "', '" +student->getEmailAddress()+ "', '" +student->getDegree()+ "', '" 

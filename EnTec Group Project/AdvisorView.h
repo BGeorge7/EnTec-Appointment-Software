@@ -23,7 +23,7 @@ namespace EnTec_Group_Project {
 		AdvisorView(void)
 		{
 			InitializeComponent();
-			constring = L"datasource=104.45.140.230;port=3306;username=root;password=Disismyhat1!";
+			constring = L"datasource=50.154.251.128;port=3306;username=root;password=toti2084";
 		}
 
 	protected:
@@ -328,6 +328,7 @@ private: System::Void AdvisorView_VisibleChanged(System::Object^  sender, System
 	LoadDB^ db = gcnew LoadDB(constring);
 
 	dataGridAppointments->DataSource = db->BindingQuery();
+	dataGridAppointments->Columns["key"]->Visible = false;
 
 	Done->UseColumnTextForButtonValue = true;
 }

@@ -61,7 +61,8 @@ namespace EnTec_Group_Project {
 
 	private: System::Windows::Forms::Label^  gb2lb1;
 	private: System::Windows::Forms::Panel^  panel1;
-	private: System::Windows::Forms::DataGridViewButtonColumn^  Done;
+	private: System::Windows::Forms::DataGridViewCheckBoxColumn^  doneCheck;
+	private: System::Windows::Forms::Button^  btnStartFinish;
 
 
 	private:
@@ -79,7 +80,7 @@ namespace EnTec_Group_Project {
 		{
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(AdvisorView::typeid));
 			this->dataGridAppointments = (gcnew System::Windows::Forms::DataGridView());
-			this->Done = (gcnew System::Windows::Forms::DataGridViewButtonColumn());
+			this->doneCheck = (gcnew System::Windows::Forms::DataGridViewCheckBoxColumn());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->tbSearch = (gcnew System::Windows::Forms::TextBox());
 			this->rbName = (gcnew System::Windows::Forms::RadioButton());
@@ -94,6 +95,7 @@ namespace EnTec_Group_Project {
 			this->gb2lb2 = (gcnew System::Windows::Forms::Label());
 			this->gb2lb1 = (gcnew System::Windows::Forms::Label());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->btnStartFinish = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridAppointments))->BeginInit();
 			this->groupBox1->SuspendLayout();
 			this->groupBox2->SuspendLayout();
@@ -104,25 +106,23 @@ namespace EnTec_Group_Project {
 			// 
 			this->dataGridAppointments->AllowUserToAddRows = false;
 			this->dataGridAppointments->AllowUserToDeleteRows = false;
-			this->dataGridAppointments->AllowUserToOrderColumns = true;
 			this->dataGridAppointments->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridAppointments->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(1) { this->Done });
+			this->dataGridAppointments->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(1) { this->doneCheck });
 			this->dataGridAppointments->Location = System::Drawing::Point(12, 12);
 			this->dataGridAppointments->Name = L"dataGridAppointments";
-			this->dataGridAppointments->ReadOnly = true;
 			this->dataGridAppointments->Size = System::Drawing::Size(762, 510);
 			this->dataGridAppointments->TabIndex = 0;
 			this->dataGridAppointments->CellClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &AdvisorView::dataGridAppointments_CellClick);
+			this->dataGridAppointments->CellValueChanged += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &AdvisorView::dataGridAppointments_CellValueChanged);
 			// 
-			// Done
+			// doneCheck
 			// 
-			this->Done->FillWeight = 75;
-			this->Done->HeaderText = L"Done";
-			this->Done->Name = L"Done";
-			this->Done->ReadOnly = true;
-			this->Done->Text = L"Done";
-			this->Done->ToolTipText = L"Done";
-			this->Done->Width = 60;
+			this->doneCheck->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::ColumnHeader;
+			this->doneCheck->HeaderText = L"*";
+			this->doneCheck->Name = L"doneCheck";
+			this->doneCheck->Resizable = System::Windows::Forms::DataGridViewTriState::False;
+			this->doneCheck->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::Automatic;
+			this->doneCheck->Width = 36;
 			// 
 			// label1
 			// 
@@ -190,7 +190,7 @@ namespace EnTec_Group_Project {
 			// 
 			// btnRefresh
 			// 
-			this->btnRefresh->Location = System::Drawing::Point(781, 489);
+			this->btnRefresh->Location = System::Drawing::Point(781, 499);
 			this->btnRefresh->Name = L"btnRefresh";
 			this->btnRefresh->Size = System::Drawing::Size(161, 23);
 			this->btnRefresh->TabIndex = 7;
@@ -240,9 +240,9 @@ namespace EnTec_Group_Project {
 			this->groupBox2->Controls->Add(this->gb2lb2);
 			this->groupBox2->Controls->Add(this->gb2lb1);
 			this->groupBox2->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->groupBox2->Location = System::Drawing::Point(790, 257);
+			this->groupBox2->Location = System::Drawing::Point(790, 286);
 			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Size = System::Drawing::Size(146, 209);
+			this->groupBox2->Size = System::Drawing::Size(146, 197);
 			this->groupBox2->TabIndex = 9;
 			this->groupBox2->TabStop = false;
 			// 
@@ -279,6 +279,17 @@ namespace EnTec_Group_Project {
 			this->panel1->Size = System::Drawing::Size(161, 24);
 			this->panel1->TabIndex = 10;
 			// 
+			// btnStartFinish
+			// 
+			this->btnStartFinish->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->btnStartFinish->Location = System::Drawing::Point(790, 257);
+			this->btnStartFinish->Name = L"btnStartFinish";
+			this->btnStartFinish->Size = System::Drawing::Size(146, 23);
+			this->btnStartFinish->TabIndex = 2;
+			this->btnStartFinish->Text = L"Start/Finish";
+			this->btnStartFinish->UseVisualStyleBackColor = true;
+			this->btnStartFinish->Click += gcnew System::EventHandler(this, &AdvisorView::button1_Click);
+			// 
 			// AdvisorView
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -286,6 +297,7 @@ namespace EnTec_Group_Project {
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(85)), static_cast<System::Int32>(static_cast<System::Byte>(140)),
 				static_cast<System::Int32>(static_cast<System::Byte>(137)));
 			this->ClientSize = System::Drawing::Size(957, 534);
+			this->Controls->Add(this->btnStartFinish);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->groupBox2);
 			this->Controls->Add(this->groupBox1);
@@ -321,8 +333,8 @@ private: System::Void btnRefresh_Click(System::Object^  sender, System::EventArg
 
 	dataGridAppointments->DataSource = db->BindingQuery();
 
-	Done->UseColumnTextForButtonValue = true;
-
+	for (int i = 1; i < dataGridAppointments->ColumnCount; i++) //sets all columns to read only except the first checkboc column
+		dataGridAppointments->Columns[i]->ReadOnly = true;
 }
 private: System::Void AdvisorView_VisibleChanged(System::Object^  sender, System::EventArgs^  e) {
 	LoadDB^ db = gcnew LoadDB(constring);
@@ -330,47 +342,74 @@ private: System::Void AdvisorView_VisibleChanged(System::Object^  sender, System
 	dataGridAppointments->DataSource = db->BindingQuery();
 	dataGridAppointments->Columns["key"]->Visible = false;
 
-	Done->UseColumnTextForButtonValue = true;
+	for (int i = 1; i < dataGridAppointments->ColumnCount; i++) //sets all columns to read only except the first checkboc column
+		dataGridAppointments->Columns[i]->ReadOnly = true;
 }
 private: System::Void dataGridAppointments_CellClick(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e) {
-	if (e->ColumnIndex == dataGridAppointments->Columns["Done"]->Index && e->RowIndex >= 0)
-	{
-		String^ str;
-		str = dataGridAppointments->Rows[e->RowIndex]->Cells[1]->Value->ToString();
+	//------------------This Code Handles The Done Button in The Cells------------------------//
+	//if (e->ColumnIndex == dataGridAppointments->Columns["Done"]->Index && e->RowIndex >= 0)// Check if the cell that was clicked was the done cell
+	//{
+	//	String^ str;
+	//	str = dataGridAppointments->Rows[e->RowIndex]->Cells[1]->Value->ToString();
 
-		LoadDB^ db = gcnew LoadDB(constring);
+	//	LoadDB^ db = gcnew LoadDB(constring);
 
-		if (dataGridAppointments->Rows[e->RowIndex]->Cells[11]->Value->ToString() == "SET")
+	//	if (dataGridAppointments->Rows[e->RowIndex]->Cells[11]->Value->ToString() == "SET")
+	//	{
+	//		if (db->ExecuteQuery("UPDATE sys.students SET `Status`=\"INPROGRESS\" WHERE `key`='" + str + "'"))
+	//		{
+	//			MessageBox::Show("Appointment now in progress", "Success",
+	//				MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+	//			dataGridAppointments->DataSource = db->BindingQuery();
+	//			gb1lb2->Text = dataGridAppointments->Rows[e->RowIndex]->Cells[2]->Value->ToString();
+	//		}
+	//		else {
+	//			MessageBox::Show("AN ERROR OCCURED", "ERROR",
+	//				MessageBoxButtons::OK, MessageBoxIcon::Error);
+	//		}
+	//	}
+	//	else if (dataGridAppointments->Rows[e->RowIndex]->Cells[11]->Value->ToString() == "INPROGRESS") 
+	//	{
+	//		if (db->ExecuteQuery("UPDATE sys.students SET `Status`=\"DONE\" WHERE `key`='" + str + "'"))
+	//		{
+	//			MessageBox::Show("Appointment now complette", "Success",
+	//				MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+	//			dataGridAppointments->DataSource = db->BindingQuery();
+	//			gb1lb2->Text = dataGridAppointments->Rows[e->RowIndex]->Cells[2]->Value->ToString();
+	//		}
+	//		else {
+	//			MessageBox::Show("AN ERROR OCCURED", "ERROR",
+	//				MessageBoxButtons::OK, MessageBoxIcon::Error);
+	//		}
+	//	}
+	//}
+	//--------------------------------------------------------------------------------//
+}
+private: System::Void dataGridAppointments_CellValueChanged(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e) {
+
+		if (e->ColumnIndex == doneCheck->Index && e->RowIndex != -1)
 		{
-			if (db->ExecuteQuery("UPDATE sys.students SET `Status`=\"INPROGRESS\" WHERE `key`='" + str + "'"))
+			if (e->ColumnIndex == 0)
 			{
-				MessageBox::Show("Appointment now in progress", "Success",
-					MessageBoxButtons::OK, MessageBoxIcon::Information);
-
-				dataGridAppointments->DataSource = db->BindingQuery();
-				gb1lb2->Text = dataGridAppointments->Rows[e->RowIndex]->Cells[2]->Value->ToString();
-			}
-			else {
-				MessageBox::Show("AN ERROR OCCURED", "ERROR",
-					MessageBoxButtons::OK, MessageBoxIcon::Error);
+				// If the user checked this box, then uncheck all the other rows
+				bool isChecked = (bool)dataGridAppointments->Rows[e->RowIndex]->Cells[e->ColumnIndex]->Value;
+				if (isChecked)
+				{
+					for(int i = 0;i < dataGridAppointments->RowCount;i++)
+					{
+						if (i != (int)e->RowIndex)
+						{
+							dataGridAppointments->Rows[e->RowIndex]->Cells[0]->Value = !isChecked;
+						}
+					}
+				}
 			}
 		}
-		else if (dataGridAppointments->Rows[e->RowIndex]->Cells[11]->Value->ToString() == "INPROGRESS") 
-		{
-			if (db->ExecuteQuery("UPDATE sys.students SET `Status`=\"DONE\" WHERE `key`='" + str + "'"))
-			{
-				MessageBox::Show("Appointment now complette", "Success",
-					MessageBoxButtons::OK, MessageBoxIcon::Information);
+}
+private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 
-				dataGridAppointments->DataSource = db->BindingQuery();
-				gb1lb2->Text = dataGridAppointments->Rows[e->RowIndex]->Cells[2]->Value->ToString();
-			}
-			else {
-				MessageBox::Show("AN ERROR OCCURED", "ERROR",
-					MessageBoxButtons::OK, MessageBoxIcon::Error);
-			}
-		}
-	}
 }
 };
 }

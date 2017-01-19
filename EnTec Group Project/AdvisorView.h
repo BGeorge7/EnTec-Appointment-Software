@@ -23,7 +23,7 @@ namespace EnTec_Group_Project {
 		AdvisorView(void)
 		{
 			InitializeComponent();
-			constring = L"datasource=50.154.251.128;port=3306;username=root;password=toti2084";
+			constring = L"datasource=localhost;port=3306;username=root;password=password";
 		}
 
 	protected:
@@ -114,6 +114,7 @@ namespace EnTec_Group_Project {
 			this->dataGridAppointments->TabIndex = 0;
 			this->dataGridAppointments->CellClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &AdvisorView::dataGridAppointments_CellClick);
 			this->dataGridAppointments->CellValueChanged += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &AdvisorView::dataGridAppointments_CellValueChanged);
+			this->dataGridAppointments->CurrentCellDirtyStateChanged += gcnew System::EventHandler(this, &AdvisorView::dataGridAppointments_CurrentCellDirtyStateChanged);
 			// 
 			// doneCheck
 			// 
@@ -346,6 +347,7 @@ private: System::Void AdvisorView_VisibleChanged(System::Object^  sender, System
 		dataGridAppointments->Columns[i]->ReadOnly = true;
 }
 private: System::Void dataGridAppointments_CellClick(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e) {
+	
 	//------------------This Code Handles The Done Button in The Cells------------------------//
 	//if (e->ColumnIndex == dataGridAppointments->Columns["Done"]->Index && e->RowIndex >= 0)// Check if the cell that was clicked was the done cell
 	//{
@@ -388,21 +390,19 @@ private: System::Void dataGridAppointments_CellClick(System::Object^  sender, Sy
 	//--------------------------------------------------------------------------------//
 }
 private: System::Void dataGridAppointments_CellValueChanged(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e) {
-
+	//checks if there are any cells other than the current cell that are checked, then if it finds any it unchecks them
 		if (e->ColumnIndex == doneCheck->Index && e->RowIndex != -1)
 		{
-			if (e->ColumnIndex == 0)
+			bool isChecked;
+			isChecked = Convert::ToBoolean(dataGridAppointments->Rows[e->RowIndex]->Cells[e->ColumnIndex]->Value);
+			if (isChecked)
 			{
-				// If the user checked this box, then uncheck all the other rows
-				bool isChecked = (bool)dataGridAppointments->Rows[e->RowIndex]->Cells[e->ColumnIndex]->Value;
-				if (isChecked)
+				
+				for (int i = 0; i < dataGridAppointments->RowCount; i++)
 				{
-					for(int i = 0;i < dataGridAppointments->RowCount;i++)
-					{
-						if (i != (int)e->RowIndex)
-						{
-							dataGridAppointments->Rows[e->RowIndex]->Cells[0]->Value = !isChecked;
-						}
+					if (i != e->RowIndex) {
+
+						dataGridAppointments->Rows[i]->Cells[0]->Value = false;
 					}
 				}
 			}
@@ -410,6 +410,13 @@ private: System::Void dataGridAppointments_CellValueChanged(System::Object^  sen
 }
 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 
+}
+private: System::Void dataGridAppointments_CurrentCellDirtyStateChanged(System::Object^  sender, System::EventArgs^  e) {
+	//comits edits to any cells in the dirty state
+	if (dataGridAppointments->IsCurrentCellDirty)
+	{
+		dataGridAppointments->CommitEdit(DataGridViewDataErrorContexts::Commit);
+	}
 }
 };
 }

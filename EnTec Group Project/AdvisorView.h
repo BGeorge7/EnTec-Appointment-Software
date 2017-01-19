@@ -23,9 +23,8 @@ namespace EnTec_Group_Project {
 		AdvisorView(void)
 		{
 			InitializeComponent();
-			constring = L"datasource=localhost;port=3306;username=root;password=password";
+			constring = L"datasource=50.154.251.128;port=3306;username=root;password=toti2084";
 		}
-
 	protected:
 		/// <summary>
 		/// Clean up any resources being used.
@@ -215,13 +214,14 @@ namespace EnTec_Group_Project {
 			// 
 			// gb1lb2
 			// 
-			this->gb1lb2->AutoSize = true;
 			this->gb1lb2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->gb1lb2->Location = System::Drawing::Point(34, 23);
+			this->gb1lb2->Location = System::Drawing::Point(2, 22);
 			this->gb1lb2->Name = L"gb1lb2";
-			this->gb1lb2->Size = System::Drawing::Size(81, 13);
+			this->gb1lb2->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->gb1lb2->Size = System::Drawing::Size(144, 13);
 			this->gb1lb2->TabIndex = 1;
 			this->gb1lb2->Text = L"George Barroso";
+			this->gb1lb2->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// gb1lb1
 			// 
@@ -249,13 +249,13 @@ namespace EnTec_Group_Project {
 			// 
 			// gb2lb2
 			// 
-			this->gb2lb2->AutoSize = true;
 			this->gb2lb2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->gb2lb2->Location = System::Drawing::Point(45, 23);
+			this->gb2lb2->Location = System::Drawing::Point(1, 24);
 			this->gb2lb2->Name = L"gb2lb2";
-			this->gb2lb2->Size = System::Drawing::Size(46, 13);
+			this->gb2lb2->Size = System::Drawing::Size(144, 13);
 			this->gb2lb2->TabIndex = 1;
 			this->gb2lb2->Text = L"Tim Bob";
+			this->gb2lb2->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// gb2lb1
 			// 
@@ -323,6 +323,18 @@ namespace EnTec_Group_Project {
 			this->PerformLayout();
 
 		}
+	
+	int isInProgress() // checks if there is an appointment already in progress.
+	{
+		for (int i = 0; i < dataGridAppointments->RowCount; i++)
+		{
+			if (dataGridAppointments->Rows[i]->Cells[11]->Value->ToString() == "INPROGRESS")
+			{
+				return i;
+			}
+		}
+		return -1;
+	}
 #pragma endregion
 
 private: System::Void AdvisorView_FormClosed(System::Object^  sender, System::Windows::Forms::FormClosedEventArgs^  e) {
@@ -397,7 +409,6 @@ private: System::Void dataGridAppointments_CellValueChanged(System::Object^  sen
 			isChecked = Convert::ToBoolean(dataGridAppointments->Rows[e->RowIndex]->Cells[e->ColumnIndex]->Value);
 			if (isChecked)
 			{
-				
 				for (int i = 0; i < dataGridAppointments->RowCount; i++)
 				{
 					if (i != e->RowIndex) {
@@ -410,6 +421,62 @@ private: System::Void dataGridAppointments_CellValueChanged(System::Object^  sen
 }
 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 
+	String^ str;
+	LoadDB^ db = gcnew LoadDB(constring);
+
+	for (int i = 0; i < dataGridAppointments->RowCount; i++)
+	{
+		if ((bool)dataGridAppointments->Rows[i]->Cells[0]->Value)
+		{
+			if (dataGridAppointments->Rows[i]->Cells[11]->Value->ToString() == "DONE")
+			{
+				MessageBox::Show("This appointment was already finished.", "!",
+					MessageBoxButtons::OK, MessageBoxIcon::Information);
+				break;
+			}
+			else if (isInProgress() >= 0 && isInProgress() != i)
+			{
+				MessageBox::Show("An appointment for the student \""+ dataGridAppointments->Rows[isInProgress()]->Cells[2]->Value->ToString()+"\" is already in progress\n"
+					+"Please finish this appointment first.", "!",
+					MessageBoxButtons::OK, MessageBoxIcon::Information);
+				break;
+			}
+			else if (dataGridAppointments->Rows[i]->Cells[11]->Value->ToString() == "SET")
+			{
+				str = dataGridAppointments->Rows[i]->Cells[1]->Value->ToString();
+				if (db->ExecuteQuery("UPDATE sys.students SET `Status`=\"INPROGRESS\" WHERE `key`='" + str + "'"))
+				{
+					MessageBox::Show("Appointment now in progress.", "Success",
+						MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+					dataGridAppointments->DataSource = db->BindingQuery();
+					gb1lb2->Text = dataGridAppointments->Rows[i]->Cells[2]->Value->ToString();
+				}
+				else {
+					MessageBox::Show("AN ERROR OCCURED CONNECTING TO THE DATABASE", "ERROR",
+						MessageBoxButtons::OK, MessageBoxIcon::Error);
+				}
+				break;
+			}
+			else if (dataGridAppointments->Rows[i]->Cells[11]->Value->ToString() == "INPROGRESS")
+			{
+				str = dataGridAppointments->Rows[i]->Cells[1]->Value->ToString();
+				if (db->ExecuteQuery("UPDATE sys.students SET `Status`=\"DONE\" WHERE `key`='" + str + "'"))
+				{
+					MessageBox::Show("Appointment now complete", "Success",
+						MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+					dataGridAppointments->DataSource = db->BindingQuery();
+					gb1lb2->Text = "NONE";
+				}
+				else {
+					MessageBox::Show("AN ERROR OCCURED CONNECTING TO THE DATABASE", "ERROR",
+						MessageBoxButtons::OK, MessageBoxIcon::Error);
+				}
+				break;
+			}
+		}
+	}
 }
 private: System::Void dataGridAppointments_CurrentCellDirtyStateChanged(System::Object^  sender, System::EventArgs^  e) {
 	//comits edits to any cells in the dirty state

@@ -360,46 +360,6 @@ private: System::Void AdvisorView_VisibleChanged(System::Object^  sender, System
 }
 private: System::Void dataGridAppointments_CellClick(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e) {
 	
-	//------------------This Code Handles The Done Button in The Cells------------------------//
-	//if (e->ColumnIndex == dataGridAppointments->Columns["Done"]->Index && e->RowIndex >= 0)// Check if the cell that was clicked was the done cell
-	//{
-	//	String^ str;
-	//	str = dataGridAppointments->Rows[e->RowIndex]->Cells[1]->Value->ToString();
-
-	//	LoadDB^ db = gcnew LoadDB(constring);
-
-	//	if (dataGridAppointments->Rows[e->RowIndex]->Cells[11]->Value->ToString() == "SET")
-	//	{
-	//		if (db->ExecuteQuery("UPDATE sys.students SET `Status`=\"INPROGRESS\" WHERE `key`='" + str + "'"))
-	//		{
-	//			MessageBox::Show("Appointment now in progress", "Success",
-	//				MessageBoxButtons::OK, MessageBoxIcon::Information);
-
-	//			dataGridAppointments->DataSource = db->BindingQuery();
-	//			gb1lb2->Text = dataGridAppointments->Rows[e->RowIndex]->Cells[2]->Value->ToString();
-	//		}
-	//		else {
-	//			MessageBox::Show("AN ERROR OCCURED", "ERROR",
-	//				MessageBoxButtons::OK, MessageBoxIcon::Error);
-	//		}
-	//	}
-	//	else if (dataGridAppointments->Rows[e->RowIndex]->Cells[11]->Value->ToString() == "INPROGRESS") 
-	//	{
-	//		if (db->ExecuteQuery("UPDATE sys.students SET `Status`=\"DONE\" WHERE `key`='" + str + "'"))
-	//		{
-	//			MessageBox::Show("Appointment now complette", "Success",
-	//				MessageBoxButtons::OK, MessageBoxIcon::Information);
-
-	//			dataGridAppointments->DataSource = db->BindingQuery();
-	//			gb1lb2->Text = dataGridAppointments->Rows[e->RowIndex]->Cells[2]->Value->ToString();
-	//		}
-	//		else {
-	//			MessageBox::Show("AN ERROR OCCURED", "ERROR",
-	//				MessageBoxButtons::OK, MessageBoxIcon::Error);
-	//		}
-	//	}
-	//}
-	//--------------------------------------------------------------------------------//
 }
 private: System::Void dataGridAppointments_CellValueChanged(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e) {
 	//checks if there are any cells other than the current cell that are checked, then if it finds any it unchecks them
@@ -428,21 +388,26 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 	{
 		if ((bool)dataGridAppointments->Rows[i]->Cells[0]->Value)
 		{
-			if (dataGridAppointments->Rows[i]->Cells[11]->Value->ToString() == "DONE")
+			if (dataGridAppointments->Rows[i]->Cells[11]->Value->ToString() == "DONE") //CHECK IF CHECKED APPOINTMENT IS ALREADY DONE
 			{
 				MessageBox::Show("This appointment was already finished.", "!",
 					MessageBoxButtons::OK, MessageBoxIcon::Information);
 				break;
 			}
-			else if (isInProgress() >= 0 && isInProgress() != i)
+			else if (isInProgress() >= 0 && isInProgress() != i) //CHECK IF ANY APPOINTMENTS ARE IN PROGGRESS
 			{
 				MessageBox::Show("An appointment for the student \""+ dataGridAppointments->Rows[isInProgress()]->Cells[2]->Value->ToString()+"\" is already in progress\n"
 					+"Please finish this appointment first.", "!",
 					MessageBoxButtons::OK, MessageBoxIcon::Information);
 				break;
 			}
-			else if (dataGridAppointments->Rows[i]->Cells[11]->Value->ToString() == "SET")
+			else if (dataGridAppointments->Rows[i]->Cells[11]->Value->ToString() == "SET") //TAKE THE APPOINTMENT
 			{
+				int result = (int)MessageBox::Show("Are you sure you would like to START the appointment.", "!",
+					MessageBoxButtons::YesNo, MessageBoxIcon::Question);
+				if (result == 7) // for some reason 7 is the integer value of No, O.o
+					break;
+
 				str = dataGridAppointments->Rows[i]->Cells[1]->Value->ToString();
 				if (db->ExecuteQuery("UPDATE sys.students SET `Status`=\"INPROGRESS\" WHERE `key`='" + str + "'"))
 				{
@@ -458,8 +423,13 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 				}
 				break;
 			}
-			else if (dataGridAppointments->Rows[i]->Cells[11]->Value->ToString() == "INPROGRESS")
+			else if (dataGridAppointments->Rows[i]->Cells[11]->Value->ToString() == "INPROGRESS") //FINISH AN APPOINTMENT
 			{
+				int result = (int)MessageBox::Show("Are you sure you would like to FINISH the appointment.", "!",
+					MessageBoxButtons::YesNo, MessageBoxIcon::Question);
+				if (result == 7) // for some reason 7 is the integer value of No, O.o
+					break;
+
 				str = dataGridAppointments->Rows[i]->Cells[1]->Value->ToString();
 				if (db->ExecuteQuery("UPDATE sys.students SET `Status`=\"DONE\" WHERE `key`='" + str + "'"))
 				{

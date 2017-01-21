@@ -187,6 +187,7 @@ namespace EnTec_Group_Project {
 			this->btnSearch->TabIndex = 6;
 			this->btnSearch->Text = L"Search";
 			this->btnSearch->UseVisualStyleBackColor = true;
+			this->btnSearch->Click += gcnew System::EventHandler(this, &AdvisorView::btnSearch_Click);
 			// 
 			// btnRefresh
 			// 
@@ -220,7 +221,7 @@ namespace EnTec_Group_Project {
 			this->gb1lb2->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->gb1lb2->Size = System::Drawing::Size(144, 13);
 			this->gb1lb2->TabIndex = 1;
-			this->gb1lb2->Text = L"George Barroso";
+			this->gb1lb2->Text = L"NONE";
 			this->gb1lb2->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// gb1lb1
@@ -254,7 +255,7 @@ namespace EnTec_Group_Project {
 			this->gb2lb2->Name = L"gb2lb2";
 			this->gb2lb2->Size = System::Drawing::Size(144, 13);
 			this->gb2lb2->TabIndex = 1;
-			this->gb2lb2->Text = L"Tim Bob";
+			this->gb2lb2->Text = L"NONE";
 			this->gb2lb2->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// gb2lb1
@@ -454,6 +455,41 @@ private: System::Void dataGridAppointments_CurrentCellDirtyStateChanged(System::
 	{
 		dataGridAppointments->CommitEdit(DataGridViewDataErrorContexts::Commit);
 	}
+}
+private: System::Void btnSearch_Click(System::Object^  sender, System::EventArgs^  e) { //TODO: Time search
+
+	LoadDB^ db = gcnew LoadDB(constring);
+	String^ query;
+	BindingSource^ test;
+
+	if (rbName->Checked)
+	{
+		query = "SELECT * FROM sys.students WHERE name LIKE '%" + tbSearch->Text + "%';";
+
+		test = db->BindingQuery(query);
+		if(test->Count == 0)
+			MessageBox::Show("Search Returned No Results!", "INFORMATION",
+				MessageBoxButtons::OK, MessageBoxIcon::Error);
+		else
+			dataGridAppointments->DataSource = db->BindingQuery(query);
+	}
+	else if (rbID->Checked)
+	{
+		query = "SELECT * FROM sys.students WHERE id LIKE '%" + tbSearch->Text + "%';";
+		test = db->BindingQuery(query);
+		if (test->Count == 0)
+			MessageBox::Show("Search Returned No Results!", "INFORMATION",
+				MessageBoxButtons::OK, MessageBoxIcon::Error);
+		else
+			dataGridAppointments->DataSource = db->BindingQuery(query);
+	}
+	else if (rdTime->Checked)
+	{
+		MessageBox::Show("This Feature has not yet been implemented!");
+	}
+	else
+		MessageBox::Show("Please select a catagory before searching.", "INFORMATION",
+			MessageBoxButtons::OK, MessageBoxIcon::Information);
 }
 };
 }

@@ -18,6 +18,8 @@ namespace EnTec_Group_Project {
 	public ref class FinalizeScreen : public System::Windows::Forms::Form
 	{
 	private: Student *student;
+	private: System::Windows::Forms::DateTimePicker^  dateTimePicker1;
+	private: System::Windows::Forms::Button^  button1;
 	private: Form^ previous;
 	public:
 		FinalizeScreen(Form^ previous, Student *student)
@@ -150,6 +152,8 @@ namespace EnTec_Group_Project {
 			this->btnBack = (gcnew System::Windows::Forms::Button());
 			this->btnFinish = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->groupBox1->SuspendLayout();
 			this->groupBox2->SuspendLayout();
 			this->groupBox3->SuspendLayout();
@@ -467,6 +471,23 @@ namespace EnTec_Group_Project {
 			this->label1->TabIndex = 13;
 			this->label1->Text = L"Appointment Info";
 			// 
+			// dateTimePicker1
+			// 
+			this->dateTimePicker1->Location = System::Drawing::Point(290, 290);
+			this->dateTimePicker1->Name = L"dateTimePicker1";
+			this->dateTimePicker1->Size = System::Drawing::Size(200, 20);
+			this->dateTimePicker1->TabIndex = 14;
+			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(354, 335);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(75, 23);
+			this->button1->TabIndex = 15;
+			this->button1->Text = L"button1";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &FinalizeScreen::button1_Click_1);
+			// 
 			// FinalizeScreen
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -474,6 +495,8 @@ namespace EnTec_Group_Project {
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(85)), static_cast<System::Int32>(static_cast<System::Byte>(140)),
 				static_cast<System::Int32>(static_cast<System::Byte>(137)));
 			this->ClientSize = System::Drawing::Size(752, 393);
+			this->Controls->Add(this->button1);
+			this->Controls->Add(this->dateTimePicker1);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->btnFinish);
 			this->Controls->Add(this->btnBack);
@@ -565,6 +588,9 @@ private: System::Void FinalizeScreen_VisibleChanged(System::Object^  sender, Sys
 	lbAppDText->Text = student->getAppDate();
 	lbAppTText->Text = student->getAppTime();
 	lbAppRText->Text = student->getAppReason();
+}
+private: System::Void button1_Click_1(System::Object^  sender, System::EventArgs^  e) {
+	dateTimePicker1->Value = Convert::ToDateTime(student->getAppDate());
 }
 };
 }

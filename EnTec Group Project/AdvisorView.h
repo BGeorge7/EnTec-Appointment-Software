@@ -460,14 +460,14 @@ private: System::Void btnSearch_Click(System::Object^  sender, System::EventArgs
 
 	LoadDB^ db = gcnew LoadDB(constring);
 	String^ query;
-	BindingSource^ test;
+	BindingSource^ dbQuery;
 
 	if (rbName->Checked)
 	{
 		query = "SELECT * FROM sys.students WHERE name LIKE '%" + tbSearch->Text + "%';";
 
-		test = db->BindingQuery(query);
-		if(test->Count == 0)
+		dbQuery = db->BindingQuery(query);
+		if(dbQuery->Count == 0)
 			MessageBox::Show("Search Returned No Results!", "INFORMATION",
 				MessageBoxButtons::OK, MessageBoxIcon::Error);
 		else
@@ -476,16 +476,22 @@ private: System::Void btnSearch_Click(System::Object^  sender, System::EventArgs
 	else if (rbID->Checked)
 	{
 		query = "SELECT * FROM sys.students WHERE id LIKE '%" + tbSearch->Text + "%';";
-		test = db->BindingQuery(query);
-		if (test->Count == 0)
+		dbQuery = db->BindingQuery(query);
+		if (dbQuery->Count == 0)
 			MessageBox::Show("Search Returned No Results!", "INFORMATION",
 				MessageBoxButtons::OK, MessageBoxIcon::Error);
 		else
 			dataGridAppointments->DataSource = db->BindingQuery(query);
 	}
-	else if (rdTime->Checked)
+	else if (rdTime->Checked) //TODO: Date Time search sucks. need to figure out a better way later
 	{
-		MessageBox::Show("This Feature has not yet been implemented!");
+		query = "SELECT * FROM sys.students WHERE date LIKE '%" + tbSearch->Text + "%';";
+		dbQuery = db->BindingQuery(query);
+		if (dbQuery->Count == 0)
+			MessageBox::Show("Search Returned No Results!", "INFORMATION",
+				MessageBoxButtons::OK, MessageBoxIcon::Error);
+		else
+			dataGridAppointments->DataSource = db->BindingQuery(query);
 	}
 	else
 		MessageBox::Show("Please select a catagory before searching.", "INFORMATION",

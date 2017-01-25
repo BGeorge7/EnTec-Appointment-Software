@@ -569,7 +569,6 @@ private: System::Void FinalizeScreen_VisibleChanged(System::Object^  sender, Sys
 	lbAppRText->Text = student->getAppReason();
 }
 private: System::Void button1_Click_1(System::Object^  sender, System::EventArgs^  e) {
-	dateTimePicker1->Value = Convert::ToDateTime(student->getAppDate());
 }
 };
 }

@@ -176,7 +176,8 @@ namespace EnTec_Group_Project {
 			this->rdTime->Size = System::Drawing::Size(48, 17);
 			this->rdTime->TabIndex = 5;
 			this->rdTime->TabStop = true;
-			this->rdTime->Text = L"Time";
+			this->rdTime->Text = L"Date";
+			this->rdTime->UseMnemonic = false;
 			this->rdTime->UseVisualStyleBackColor = true;
 			// 
 			// btnSearch

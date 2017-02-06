@@ -23,7 +23,7 @@ namespace EnTec_Group_Project {
 		AdvisorView(void)
 		{
 			InitializeComponent();
-			constring = L"datasource=50.154.251.128;port=3306;username=root;password=toti2084";
+			constring = L"datasource=40.121.162.149;port=3306;username=AppGroup;password=Sh]d1KMYEkTTum0M";
 		}
 	protected:
 		/// <summary>

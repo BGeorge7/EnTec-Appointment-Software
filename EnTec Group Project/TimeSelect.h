@@ -348,14 +348,16 @@ namespace EnTec_Group_Project {
 			// 
 			// dateTimePicker
 			// 
+			//TODO: Limit daytime picker to weekdays only.
+			//TODO Implement Block System.
 			this->dateTimePicker->CustomFormat = L"yyyy-MM-dd";
 			this->dateTimePicker->Location = System::Drawing::Point(477, 116);
-			this->dateTimePicker->MaxDate = System::DateTime(2050, 12, 31, 0, 0, 0, 0);
-			this->dateTimePicker->MinDate = System::DateTime(1970, 1, 1, 0, 0, 0, 0);
+			this->dateTimePicker->MaxDate = System::DateTime::Today.AddMonths(2); //Limits the appointment window two months in advance	
+			this->dateTimePicker->MinDate = System::DateTime::Today; //sets the Minimum date to todays date.
 			this->dateTimePicker->Name = L"dateTimePicker";
 			this->dateTimePicker->Size = System::Drawing::Size(212, 20);
 			this->dateTimePicker->TabIndex = 2;
-			this->dateTimePicker->Value = System::DateTime(2017, 1, 24, 0, 0, 0, 0);
+			this->dateTimePicker->Value = System::DateTime::Today; //sets the current value to todays date
 			this->dateTimePicker->ValueChanged += gcnew System::EventHandler(this, &TimeSelect::dateTimePicker1_ValueChanged);
 			// 
 			// lbTitle

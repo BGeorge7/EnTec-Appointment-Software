@@ -202,6 +202,7 @@ namespace EnTec_Group_Project {
 			// 
 			// button1
 			// 
+			this->button1->Enabled = false;
 			this->button1->Location = System::Drawing::Point(10, 282);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(118, 59);
@@ -212,6 +213,7 @@ namespace EnTec_Group_Project {
 			// 
 			// button2
 			// 
+			this->button2->Enabled = false;
 			this->button2->Location = System::Drawing::Point(10, 217);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(118, 59);

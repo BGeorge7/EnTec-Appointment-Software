@@ -352,7 +352,10 @@ namespace EnTec_Group_Project {
 			//TODO Implement Block System.
 			this->dateTimePicker->CustomFormat = L"yyyy-MM-dd";
 			this->dateTimePicker->Location = System::Drawing::Point(477, 116);
+
+			//When editing this form, please comment this line out, because it will not work with out it commented
 			this->dateTimePicker->MaxDate = System::DateTime::Today.AddMonths(2); //Limits the appointment window two months in advance	
+
 			this->dateTimePicker->MinDate = System::DateTime::Today; //sets the Minimum date to todays date.
 			this->dateTimePicker->Name = L"dateTimePicker";
 			this->dateTimePicker->Size = System::Drawing::Size(212, 20);

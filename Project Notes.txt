@@ -14,3 +14,15 @@ Each Page should use the calander icon and have the follow text at the top
 
 Next/Back Button Size
 ----83, 23----
+
+CheckIn/ Edit Cancel
+----83, 38----
+
+Note To self. Stop fucking making 10 branches for one thing
+
+cpp files with table reference
+AdvisorView
+FinalizeScreen
+StudentSplash
+LoadDB
+

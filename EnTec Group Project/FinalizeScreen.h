@@ -1,5 +1,6 @@
 #pragma once
 #include "Student.h"
+#include "LoadDB.h"
 #include <stdlib.h> 
 
 namespace EnTec_Group_Project {
@@ -21,11 +22,14 @@ namespace EnTec_Group_Project {
 
 
 	private: Form^ previous;
+
+	String^ constring;
 	public:
 		FinalizeScreen(Form^ previous, Student *student)
 		{
 			this->student = student;
 			this->previous = previous;
+			constring = L"datasource=50.154.251.128;port=3306;username=AppGroup;password=Sh]d1KMYEkTTum0M";
 
 			InitializeComponent();
 		}
@@ -530,31 +534,28 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 private: System::Void btnFinish_Click(System::Object^  sender, System::EventArgs^  e) {
 	
 	//String^ constring = L"datasource=50.154.251.128;port=3306;username=root;password=toti2084"; old server
-	String^ constring = L"datasource=50.154.251.128;port=3306;username=AppGroup;password=Sh]d1KMYEkTTum0M";
+	
+	LoadDB^ db = gcnew LoadDB(constring);
+	String^ query;
 
-	//String^ constring = L"datasource=40.121.162.149;port=3306;username=AppGroup;password=Sh]d1KMYEkTTum0M"; old login
+	query = "INSERT INTO sys.teststudent (Name, ID, Email, Degree, Degree_Type, Advisor, Reason, Date, Time, Status)"
+		"VALUES('" + student->getName() + "', '" + student->getID() + "', '" + student->getEmailAddress() + "', '" + student->getDegree() + "', '"
+		+ student->getDegreeType() + "', '" + student->getAdvisor() + "', '" + student->getAppReason() + "', '" + student->getAppDate() + "','"
+		+ student->getAppTime() + "', \"SET\");";
 
-	MySqlConnection^ conDatabase = gcnew MySqlConnection(constring);
-	MySqlCommand^ cmdDataBase = gcnew MySqlCommand("INSERT INTO sys.students (Name, ID, Email, Degree, Degree_Type, Advisor, Reason, Date, Time, Status)"
-		"VALUES('"+student->getName()+"', '" +student->getID()+ "', '" +student->getEmailAddress()+ "', '" +student->getDegree()+ "', '" 
-		+student->getDegreeType()+ "', '" +student->getAdvisor()+ "', '" +student->getAppReason()+ "', '" +student->getAppDate()+ "','" 
-		+student->getAppTime()+ "', \"SET\");", conDatabase);
-	MySqlDataReader^ myReader;
-	try{
-		conDatabase->Open();
-		myReader = cmdDataBase->ExecuteReader();
+	if (db->ExecuteQuery(query))
+	{
 		MessageBox::Show("Apointment has been set!", "Done",
-		MessageBoxButtons::OK, MessageBoxIcon::Information);
-
+			MessageBoxButtons::OK, MessageBoxIcon::Information);
 		student->clearStudent(); //  clears the student class of any pervious data that was stored
 		this->Hide();
-	
-	}catch(Exception^ ex){
+	}
+	else
+	{
 		MessageBox::Show("AN ERROR OCCURED WHILE TRYING TO SAVE YOUR APPOINTMENT!\nPLEASE TRY AGAIN LATER.", "ERROR",
-		MessageBoxButtons::OK, MessageBoxIcon::Error);
+			MessageBoxButtons::OK, MessageBoxIcon::Error);
 	}
 
-	
 }
 private: System::Void FinalizeScreen_FormClosed(System::Object^  sender, System::Windows::Forms::FormClosedEventArgs^  e) {
 	delete student;

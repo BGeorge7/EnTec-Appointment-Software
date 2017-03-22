@@ -413,7 +413,7 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 					break;
 
 				str = dataGridAppointments->Rows[i]->Cells[1]->Value->ToString();
-				if (db->ExecuteQuery("UPDATE sys.students SET `Status`=\"INPROGRESS\" WHERE `key`='" + str + "'"))
+				if (db->ExecuteQuery("UPDATE sys.teststudent SET `Status`=\"INPROGRESS\" WHERE `key`='" + str + "'"))
 				{
 					MessageBox::Show("Appointment now in progress.", "Success",
 						MessageBoxButtons::OK, MessageBoxIcon::Information);
@@ -435,7 +435,7 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 					break;
 
 				str = dataGridAppointments->Rows[i]->Cells[1]->Value->ToString();
-				if (db->ExecuteQuery("UPDATE sys.students SET `Status`=\"DONE\" WHERE `key`='" + str + "'"))
+				if (db->ExecuteQuery("UPDATE sys.teststudent SET `Status`=\"DONE\" WHERE `key`='" + str + "'"))
 				{
 					MessageBox::Show("Appointment now complete", "Success",
 						MessageBoxButtons::OK, MessageBoxIcon::Information);
@@ -467,7 +467,7 @@ private: System::Void btnSearch_Click(System::Object^  sender, System::EventArgs
 
 	if (rbName->Checked)
 	{
-		query = "SELECT * FROM sys.students WHERE name LIKE '%" + tbSearch->Text + "%';";
+		query = "SELECT * FROM sys.teststudent WHERE name LIKE '%" + tbSearch->Text + "%';";
 
 		dbQuery = db->BindingQuery(query);
 		if(dbQuery->Count == 0)
@@ -478,7 +478,7 @@ private: System::Void btnSearch_Click(System::Object^  sender, System::EventArgs
 	}
 	else if (rbID->Checked)
 	{
-		query = "SELECT * FROM sys.students WHERE id LIKE '%" + tbSearch->Text + "%';";
+		query = "SELECT * FROM sys.teststudent WHERE id LIKE '%" + tbSearch->Text + "%';";
 		dbQuery = db->BindingQuery(query);
 		if (dbQuery->Count == 0)
 			MessageBox::Show("Search Returned No Results!", "INFORMATION",
@@ -488,7 +488,7 @@ private: System::Void btnSearch_Click(System::Object^  sender, System::EventArgs
 	}
 	else if (rdTime->Checked) //TODO: Date Time search sucks. need to figure out a better way later
 	{
-		query = "SELECT * FROM sys.students WHERE date LIKE '%" + tbSearch->Text + "%';";
+		query = "SELECT * FROM sys.teststudent WHERE date LIKE '%" + tbSearch->Text + "%';";
 		dbQuery = db->BindingQuery(query);
 		if (dbQuery->Count == 0)
 			MessageBox::Show("Search Returned No Results!", "INFORMATION",

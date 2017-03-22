@@ -13,7 +13,7 @@ LoadDB::LoadDB(String^ constring)
 
 BindingSource^ LoadDB::BindingQuery()
 {
-	MySqlCommand^ cmdDataBase = gcnew MySqlCommand("SELECT * FROM sys.students", conDatabase);
+	MySqlCommand^ cmdDataBase = gcnew MySqlCommand("SELECT * FROM sys.teststudent", conDatabase);
 	try {
 		MySqlDataAdapter^ sda = gcnew MySqlDataAdapter();
 		sda->SelectCommand = cmdDataBase;
@@ -65,4 +65,21 @@ bool LoadDB::ExecuteQuery(String^ query)
 	catch (Exception^ ex) {
 		return false;
 	}
+}
+MySqlDataReader^ LoadDB::ReaderQuery(String^ query)
+{
+	MySqlDataReader^ reader;
+	MySqlCommand^ cmdDataBase = gcnew MySqlCommand(query, conDatabase);
+	try {
+		conDatabase->Open();
+		reader = cmdDataBase->ExecuteReader();
+		conDatabase->Close();
+		return reader;
+	}
+	catch (Exception^ ex) {
+		MessageBox::Show("COULD NOT CONNECT TO THE DATABASE, PLEASE TRY AGAIN LATER\nPLEASE TRY AGAIN LATER.", "ERROR",
+			MessageBoxButtons::OK, MessageBoxIcon::Error);
+		return nullptr;
+	}
+
 }

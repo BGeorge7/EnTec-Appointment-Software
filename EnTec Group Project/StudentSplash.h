@@ -1,6 +1,7 @@
 #pragma once
 #include "DegreeSelect.h"
 #include "Student.h"
+#include "LoadDB.h"
 #include <stdlib.h>
 
 namespace EnTec_Group_Project {
@@ -20,11 +21,14 @@ namespace EnTec_Group_Project {
 	private: Student *student = new Student(); //Create and Instance of Student for storing the users data
 
 	private: DegreeSelect^ degreeForm = gcnew DegreeSelect(this, student);
-	private: System::Windows::Forms::Button^  button2;
+	private: System::Windows::Forms::Button^  btnCheckIn;
+
 	private: Form^ previous;
+	private: String^ constring;
 	public:
 		StudentSplash(Form^ previous)
 		{
+			constring = L"datasource=50.154.251.128;port=3306;username=AppGroup;password=Sh]d1KMYEkTTum0M";
 			this->previous = previous;
 			InitializeComponent();
 		}
@@ -57,8 +61,9 @@ namespace EnTec_Group_Project {
 
 	private: System::Windows::Forms::Button^  btnNext;
 	private: System::Windows::Forms::Button^  btnBack;
+	private: System::Windows::Forms::Button^  btnEditCancel;
 
-	private: System::Windows::Forms::Button^  button1;
+
 
 	protected:
 
@@ -86,8 +91,8 @@ namespace EnTec_Group_Project {
 			this->txtbEmail = (gcnew System::Windows::Forms::TextBox());
 			this->btnNext = (gcnew System::Windows::Forms::Button());
 			this->btnBack = (gcnew System::Windows::Forms::Button());
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->btnEditCancel = (gcnew System::Windows::Forms::Button());
+			this->btnCheckIn = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -200,26 +205,25 @@ namespace EnTec_Group_Project {
 			this->btnBack->UseVisualStyleBackColor = true;
 			this->btnBack->Click += gcnew System::EventHandler(this, &StudentSplash::btnBack_Click);
 			// 
-			// button1
+			// btnEditCancel
 			// 
-			this->button1->Enabled = false;
-			this->button1->Location = System::Drawing::Point(10, 282);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(118, 59);
-			this->button1->TabIndex = 11;
-			this->button1->Text = L"Edit Or Cancel Previous Appointment";
-			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &StudentSplash::button1_Click);
+			this->btnEditCancel->Location = System::Drawing::Point(266, 343);
+			this->btnEditCancel->Name = L"btnEditCancel";
+			this->btnEditCancel->Size = System::Drawing::Size(83, 38);
+			this->btnEditCancel->TabIndex = 11;
+			this->btnEditCancel->Text = L"Edit/Cancel Appointment";
+			this->btnEditCancel->UseVisualStyleBackColor = true;
+			this->btnEditCancel->Click += gcnew System::EventHandler(this, &StudentSplash::button1_Click);
 			// 
-			// button2
+			// btnCheckIn
 			// 
-			this->button2->Enabled = false;
-			this->button2->Location = System::Drawing::Point(10, 217);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(118, 59);
-			this->button2->TabIndex = 12;
-			this->button2->Text = L"Check In";
-			this->button2->UseVisualStyleBackColor = true;
+			this->btnCheckIn->Location = System::Drawing::Point(357, 343);
+			this->btnCheckIn->Name = L"btnCheckIn";
+			this->btnCheckIn->Size = System::Drawing::Size(83, 38);
+			this->btnCheckIn->TabIndex = 12;
+			this->btnCheckIn->Text = L"Check In";
+			this->btnCheckIn->UseVisualStyleBackColor = true;
+			this->btnCheckIn->Click += gcnew System::EventHandler(this, &StudentSplash::btnCheckIn_Click);
 			// 
 			// StudentSplash
 			// 
@@ -228,8 +232,8 @@ namespace EnTec_Group_Project {
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(85)), static_cast<System::Int32>(static_cast<System::Byte>(140)),
 				static_cast<System::Int32>(static_cast<System::Byte>(137)));
 			this->ClientSize = System::Drawing::Size(752, 393);
-			this->Controls->Add(this->button2);
-			this->Controls->Add(this->button1);
+			this->Controls->Add(this->btnCheckIn);
+			this->Controls->Add(this->btnEditCancel);
 			this->Controls->Add(this->btnBack);
 			this->Controls->Add(this->btnNext);
 			this->Controls->Add(this->txtbEmail);
@@ -279,7 +283,6 @@ private: System::Void btnBack_Click(System::Object^  sender, System::EventArgs^ 
 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 
 	//TODO: Edit Dialog
-	//TODO: Make this button look better it's existance kills me
 }
 private: System::Void StudentSplash_FormClosed(System::Object^  sender, System::Windows::Forms::FormClosedEventArgs^  e) {
 	delete student;
@@ -295,6 +298,48 @@ private: System::Void txtbID_KeyPress(System::Object^  sender, System::Windows::
 private: System::Void txtbName_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
 	if (!((e->KeyChar >= 'A' && e->KeyChar <= 'Z') || (e->KeyChar >= 'a' && e->KeyChar <= 'z')||e->KeyChar == 32 || e->KeyChar == 8 || e->KeyChar == '-'))
 		e->KeyChar = (char)0;
+}
+private: System::Void btnCheckIn_Click(System::Object^  sender, System::EventArgs^  e) {
+	bool isID = false, isName = false, isEmail = false;
+	LoadDB^ db = gcnew LoadDB(constring);
+	String^ query = "UPDATE sys.teststudent SET `Status`=\"CHECKEDIN\" WHERE `STATUS`='SET' ";
+	
+	MySql::Data::MySqlClient::MySqlDataReader^ reader;
+
+	if (!(txtbEmail->Text->IsNullOrWhiteSpace(txtbEmail->Text) && txtbID->Text->IsNullOrWhiteSpace(txtbID->Text) && txtbName->Text->IsNullOrWhiteSpace(txtbName->Text)))
+	{
+		if (!(txtbEmail->Text->IsNullOrWhiteSpace(txtbEmail->Text)))
+			isEmail = true;
+		if (!(txtbID->Text->IsNullOrWhiteSpace(txtbID->Text)))
+			isID = true;
+		if (!(txtbName->Text->IsNullOrWhiteSpace(txtbName->Text)))
+			isName = true;
+
+		if (isEmail)
+			query += "AND `EMAIL`='" + txtbEmail->Text + "' ";
+		if(isID)
+			query += "AND `ID`='" + txtbID->Text + "' ";
+		if(isName)
+			query += "AND `Name`='" + txtbName->Text + "' ";
+
+		query += ";";
+		reader = db->ReaderQuery(query);
+
+		if (reader->RecordsAffected == 0)
+		{
+			MessageBox::Show("We did not finding any appointments under that information."
+				"\nPlease make sure you have spelled it exactly like it was writen when the appointment was set"
+				"\nor try removing some fields to broden your query.", "Error",
+				MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
+		}
+		else
+			MessageBox::Show("You have been checked in!\nPlease take a seat and wait to be called.", "SUCCESS",
+				MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
+	else
+		MessageBox::Show("Looks like you left something Empty.\nPlease fill in atleast one box in order to check in.", "Error",
+			MessageBoxButtons::OK, MessageBoxIcon::Exclamation);
+
 }
 };
 }
